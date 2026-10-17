@@ -1,0 +1,245 @@
+@import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap");
+@import "tailwindcss";
+
+/* =============================================================================
+   1. LIGHT MODE (Active when theme is switched to Light)
+   ============================================================================= */
+:root {
+  --bg: #F2EFE9;
+  --surface: #FFFFFF;
+  --text: #0E0E10;
+  --muted: #6B6B70;
+  --border: #DCD8D0;
+
+  /* Accent / Highlight for Light Mode */
+  --accent: #947EFF;
+  --accent-rgb: 148, 126, 255;
+  --accent-foreground: #0E0E10;
+  --accent-secondary: #0060FF;
+
+  --font-display: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-body: var(--font-inter, system-ui, sans-serif);
+  --font-mono: var(--font-mono-jetbrains, monospace);
+}
+
+/* =============================================================================
+   2. DARK MODE (Active by default on the website)
+   ⚠️ NOTE: Because the website defaults to Dark Mode, if you edit --accent above
+   in :root, you will only see it in Light Mode.
+   To change the accent color in Dark Mode, change --accent below!
+   ============================================================================= */
+.dark {
+  --bg: #0E0E10;
+  --surface: #17171A;
+  --text: #F2EFE9;
+  --muted: #8A8A8F;
+  --border: #2A2A2E;
+
+  /* Accent / Highlight for Dark Mode (Website Default) */
+  --accent: #7A7DF8;
+  --accent-rgb: 122, 125, 248;
+  --accent-foreground: #0E0E10;
+  --accent-secondary: #38BDF8;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent-secondary: var(--accent-secondary);
+}
+
+/* Base resets & typography */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  overflow-x: hidden;
+  min-height: 100vh;
+  position: relative;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: #0E0E10;
+}
+
+.dark ::selection {
+  background-color: var(--accent);
+  color: #0E0E10;
+}
+
+/* Custom fonts */
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.04em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-mono-custom {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Lenis smooth scroll */
+html.lenis,
+html.lenis-smooth {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Hide default cursor on desktop when custom cursor is active */
+@media (hover: hover) and (pointer: fine) {
+
+  body.has-custom-cursor,
+  body.has-custom-cursor a,
+  body.has-custom-cursor button,
+  body.has-custom-cursor input,
+  body.has-custom-cursor select,
+  body.has-custom-cursor textarea,
+  body.has-custom-cursor [role="button"] {
+    cursor: none !important;
+  }
+}
+
+/* Film grain overlay */
+.grain-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.035;
+}
+
+.dark .grain-overlay {
+  opacity: 0.05;
+}
+
+/* Marquee keyframes */
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Fluid display headings */
+.headline-huge {
+  font-size: clamp(3rem, 9.5vw, 9.5rem);
+  line-height: 0.92;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.headline-large {
+  font-size: clamp(2.25rem, 6vw, 5.5rem);
+  line-height: 0.96;
+  letter-spacing: -0.04em;
+  font-weight: 600;
+}
+
+.headline-medium {
+  font-size: clamp(1.75rem, 3.8vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+/* Custom thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
+}
+
+/* RTL Support & Arabic typography refinement */
+html[dir="rtl"] {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans Arabic", "Cairo", "Tahoma", sans-serif;
+}
+
+html[dir="rtl"] .font-display {
+  letter-spacing: 0em;
+}
+
+html[dir="rtl"] .font-mono-custom {
+  letter-spacing: 0.03em;
+}
+
+/* RTL-aware icon flipping */
+html[dir="rtl"] .rtl-flip {
+  transform: scaleX(-1);
+}

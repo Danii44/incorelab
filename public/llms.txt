@@ -1,0 +1,49 @@
+# incorelab
+
+> Independent software engineering, design, and applied AI studio based in Dubai, UAE and Zurich, Switzerland.
+
+We build fast Next.js websites, custom Shopify stores, React Native mobile apps, and practical AI automation systems for growing companies and modern brands worldwide.
+
+## Key Facts
+
+- **Locations**: Dubai, UAE (Business Bay) and Zurich, Switzerland (Bahnhofstrasse)
+- **Primary Website**: https://incorelab.com
+- **Languages**: English and Arabic (العربية)
+- **Currencies**: AED (United Arab Emirates Dirham) and USD (US Dollars)
+- **Direct Contact**: hello@incorelab.com
+- **WhatsApp**: +971 50 123 4567
+- **Project Inquiry**: https://incorelab.com/contact
+
+## Services
+
+- [Next.js Web Development](https://incorelab.com/services#service-web): High-speed websites and web applications built with Next.js, React, TypeScript, and edge hosting.
+- [E-Commerce & Shopify](https://incorelab.com/services#service-ecommerce): Custom Shopify themes, Shopify Plus setups, headless commerce, and high-converting checkout flows.
+- [Mobile Apps](https://incorelab.com/services#service-mobile): Native-feel iOS and Android mobile apps built on React Native and Expo.
+- [3D & WebGL Experiences](https://incorelab.com/services#service-3d): Interactive 3D graphics, Three.js product showcases, and interactive web tools.
+- [Branding & UI/UX Design](https://incorelab.com/services#service-brand): Complete design systems in Figma, wireframing, rapid prototyping, and identity design.
+- [Applied AI & Automation](https://incorelab.com/services#service-ai): Custom AI workflows, document parsing, automated lead intake, and LLM integrations that save real working hours.
+- [Growth & Search Marketing](https://incorelab.com/services#service-growth): Technical SEO, Answer Engine Optimization (AEO), Generative Engine Optimization (GEO), Core Web Vitals, and conversion rate optimization.
+- [Cloud Hosting & DevOps](https://incorelab.com/services#service-cloud): Infrastructure on Vercel, AWS, and Cloudflare with zero-downtime CI/CD and secure API integrations.
+
+## Transparent Pricing (Dubai & International)
+
+We publish realistic project tiers for clients in the UAE and worldwide:
+
+- **Sprint / MVP / Focused Tool**: AED 5,000 to AED 15,000 (approx. $1,400 to $4,000 USD). Ideal for landing pages, Framer setups, and single-purpose workflow tools.
+- **Custom Web Application or Shopify Store**: AED 15,000 to AED 35,000 (approx. $4,000 to $9,500 USD). Full Next.js marketing websites or custom-built Shopify stores with custom integrations.
+- **Full Platform & Mobile App**: AED 35,000 to AED 75,000 (approx. $9,500 to $20,000 USD). React Native iOS and Android apps, 3D WebGL experiences, and end-to-end web platforms.
+- **Enterprise Systems**: AED 75,000+ (approx. $20,000+ USD). Multi-vendor marketplaces, ERP backends, high-traffic portals, and complex corporate infrastructure.
+
+## Case Studies & Work
+
+- [Paynex Terminal](https://incorelab.com/work/paynex-terminal): High-frequency algorithmic trading visualization and financial terminal.
+- [DriveGo Mobility](https://incorelab.com/work/drivego-mobility): Luxury car rental platform with keyless Bluetooth mobile access.
+- [ProERP Enterprise Suite](https://incorelab.com/work/proerp-suite): Global cloud ERP dashboard orchestrating supply chains and automated ledgers.
+- [FlowAI Intelligence](https://incorelab.com/work/flowai-automation): Autonomous multi-agent workflow pipeline powered by n8n and Claude 3.5 Sonnet.
+- [NEXA Architecture](https://incorelab.com/work/nexa-architecture): Monolithic architectural space translated into an editorial monograph.
+- [Monolith Horology](https://incorelab.com/work/monolith-horology): Digital provenance vault and showroom for rare haute horlogerie timepieces.
+- [Luxury AeroJet](https://incorelab.com/work/luxury-aerojet): On-demand private aviation booking engine with real-time ADS-B radar flight tracking.
+
+## Optional Link
+
+- Full documentation and details: https://incorelab.com/llms-full.txt

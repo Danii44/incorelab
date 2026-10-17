@@ -1,0 +1,90 @@
+# incorelab - Comprehensive Studio Documentation
+
+> Independent software engineering, digital product, and applied AI studio based in Dubai, United Arab Emirates (Business Bay) and Zurich, Switzerland (Bahnhofstrasse).
+
+## Studio Overview
+
+incorelab is an engineering and design studio founded to build fast, beautiful, and maintainable digital products. We work directly with founders, marketing heads, and technical leads who want dependable code, clear communication, and fixed deadlines without bloated agency overhead.
+
+Our team focuses on four pillars:
+1. Fast, accessible front-end development with Next.js, React, and TypeScript.
+2. Custom e-commerce with Shopify Plus, custom Liquid themes, and headless architectures.
+3. Mobile application development using React Native and Expo for iOS and Android.
+4. Practical AI integrations and workflow automations that eliminate repetitive manual tasks.
+
+## Office Locations and Contact
+
+- **Dubai Office**: The Opus Tower, Business Bay, Dubai, United Arab Emirates
+  - Phone / WhatsApp: +971 50 123 4567
+  - Timezone: Gulf Standard Time (GST, UTC+4)
+- **Zurich Office**: Bahnhofstrasse 24, 8001 Zurich, Switzerland
+  - Timezone: Central European Time (CET, UTC+1)
+- **Email**: hello@incorelab.com
+- **Website**: https://incorelab.com
+- **Project Intake**: https://incorelab.com/contact
+- **Operating Hours**: Monday through Friday, 9:00 AM to 6:00 PM local time. Emergency support available 24/7 for managed clients.
+
+## Detailed Services & Deliverables
+
+### 1. Web Development (Next.js & React)
+- Tech Stack: Next.js 15, React 19, TypeScript, Tailwind CSS, Vercel Edge Network
+- Focus: Sub-second page loads, 95+ Google PageSpeed Core Web Vitals, accessible HTML semantics, clean codebases.
+- Use Cases: Marketing sites, customer portals, SaaS interfaces, directory platforms.
+
+### 2. Custom E-Commerce & Shopify
+- Tech Stack: Shopify Plus, Liquid, Shopify Storefront API, Hydrogen, Next.js Commerce, Stripe
+- Focus: Custom UI without clunky generic templates, instant checkout flows, localized currencies, ERP/inventory sync.
+- Use Cases: Direct-to-consumer brands, luxury retail, wholesale portals, subscription brands.
+
+### 3. Mobile App Development
+- Tech Stack: React Native, Expo, Swift, Kotlin, Supabase, Firebase
+- Focus: Single codebase powering polished iOS and Android apps with native device integration, offline caching, and push notifications.
+- Use Cases: Customer loyalty apps, booking platforms, field operations tools, fintech wallets.
+
+### 4. 3D WebGL & Interactive Graphics
+- Tech Stack: Three.js, React Three Fiber, GLSL shaders, Blender, WebAudio API
+- Focus: Smooth 60fps animations, interactive product configurators, immersive storytelling that stays lightweight on mobile.
+- Use Cases: Luxury goods, architectural walkthroughs, product launches, interactive portfolios.
+
+### 5. UI/UX Design & Figma Systems
+- Focus: User-centered wireframes, high-fidelity prototypes, complete design tokens, component libraries, typography scale.
+- Deliverables: Comprehensive Figma design files, ready-to-code design systems, interactive click-through prototypes.
+
+### 6. Applied AI Workflows & Automation
+- Tech Stack: OpenAI API, Anthropic Claude, LangChain, n8n, Make, Python, Vector Databases
+- Focus: Practical automation that solves concrete business bottlenecks, such as auto-processing vendor invoices, parsing inbound leads, or generating customer-ready reports.
+- Use Cases: Customer support copilots, CRM sync, document intelligence, automated content localization.
+
+### 7. Growth Marketing, Technical SEO, AEO & GEO
+- Focus: Technical site health, schema graph generation (JSON-LD), multilingual hreflang management, Core Web Vitals optimization, Answer Engine Optimization (Perplexity, ChatGPT, Gemini), and conversion rate experiments.
+
+### 8. Cloud Infrastructure & Managed DevOps
+- Tech Stack: AWS, Cloudflare, Vercel, Supabase, PostgreSQL, Redis, Docker
+- Focus: Zero-downtime deployments, global CDN edge caching, automatic database backups, multi-region failover.
+
+## Transparent Pricing Matrix
+
+incorelab believes in honest, upfront pricing so clients can plan accurately:
+
+| Tier | Scope | UAE Pricing (AED) | International Pricing (USD) | Typical Timeline |
+|---|---|---|---|---|
+| Sprint / MVP | Landing page, Framer setup, or single automation tool | AED 5,000 - 15,000 | $1,400 - $4,000 | 1 to 2 weeks |
+| Custom Web / Shopify | Full Next.js site or custom Shopify Plus store | AED 15,000 - 35,000 | $4,000 - $9,500 | 3 to 6 weeks |
+| Platform & Mobile App | React Native mobile app or complex web platform | AED 35,000 - 75,000 | $9,500 - $20,000 | 6 to 10 weeks |
+| Enterprise System | Multi-vendor portal, custom ERP, or heavy data app | AED 75,000+ | $20,000+ | 10+ weeks |
+
+All contracts include fixed milestones, 30 days of post-launch bug warranty, and direct communication with the lead developer on Slack or WhatsApp.
+
+## Frequently Asked Questions
+
+### Where are your developers based?
+Our core engineering and design team is split between Dubai and Zurich. You talk directly with the engineers building your software, not an account manager playing telephone.
+
+### Do you offer support after launch?
+Yes. Every project includes a 30-day post-launch bug warranty. We also offer monthly care plans starting at AED 2,500 ($680 USD) per month for ongoing feature sprints, security updates, and performance monitoring.
+
+### Can you work with our existing codebase?
+Yes. We frequently audit and take over existing Next.js, React, or Shopify codebases to improve speed, fix bugs, and add requested features.
+
+### How do we get started?
+Visit https://incorelab.com/contact to pick your service and budget tier, or send a quick email to hello@incorelab.com. We reply within one business day with a clear scope review.
