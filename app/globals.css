@@ -12,9 +12,9 @@
   --border: #DCD8D0;
 
   /* Accent / Highlight for Light Mode */
-  --accent: #947EFF;
-  --accent-rgb: 148, 126, 255;
-  --accent-foreground: #0E0E10;
+  --accent: #947eff;
+  --accent-rgb: 85, 56, 238;
+  --accent-foreground: #FFFFFF;
   --accent-secondary: #0060FF;
 
   --font-display: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -78,7 +78,7 @@ body {
 
 ::selection {
   background-color: var(--accent);
-  color: #0E0E10;
+  color: #FFFFFF;
 }
 
 .dark ::selection {
