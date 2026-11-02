@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext, useEffect, useRef } from "react";
+import React, { createContext, useContext, useEffect, useRef, useSyncExternalStore, useMemo } from "react";
 import Lenis from "lenis";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -17,7 +17,26 @@ const LenisContext = createContext<LenisContextType>({
 
 export const useLenis = () => useContext(LenisContext);
 
+let globalLenis: Lenis | null = null;
+const listeners = new Set<() => void>();
+
+function subscribeLenis(callback: () => void) {
+  listeners.add(callback);
+  return () => {
+    listeners.delete(callback);
+  };
+}
+
+function getLenisSnapshot() {
+  return globalLenis;
+}
+
+function getServerSnapshot() {
+  return null;
+}
+
 export function SmoothScrollProvider({ children }: { children: React.ReactNode }) {
+  const lenisInstance = useSyncExternalStore(subscribeLenis, getLenisSnapshot, getServerSnapshot);
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
@@ -35,6 +54,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     });
 
     lenisRef.current = lenis;
+    globalLenis = lenis;
+    listeners.forEach((listener) => listener());
 
     // Sync Lenis scroll with GSAP ScrollTrigger
     lenis.on("scroll", ScrollTrigger.update);
@@ -50,6 +71,8 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
       gsap.ticker.remove(updateTicker);
       lenis.destroy();
       lenisRef.current = null;
+      globalLenis = null;
+      listeners.forEach((listener) => listener());
     };
   }, []);
 
@@ -68,8 +91,13 @@ export function SmoothScrollProvider({ children }: { children: React.ReactNode }
     }
   };
 
+  const contextValue = useMemo(() => ({
+    lenis: lenisInstance,
+    scrollTo,
+  }), [lenisInstance]);
+
   return (
-    <LenisContext.Provider value={{ lenis: lenisRef.current, scrollTo }}>
+    <LenisContext.Provider value={contextValue}>
       {children}
     </LenisContext.Provider>
   );

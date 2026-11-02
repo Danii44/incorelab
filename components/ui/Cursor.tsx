@@ -1,11 +1,15 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useSyncExternalStore } from "react";
 import { motion, useSpring, useMotionValue } from "framer-motion";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
+function emptySubscribe() {
+  return () => {};
+}
+
 export function Cursor() {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const [cursorText, setCursorText] = useState<string>("");
   const [isHovered, setIsHovered] = useState(false);
   const [isPointer, setIsPointer] = useState(false);
@@ -26,7 +30,6 @@ export function Cursor() {
     const isTouch = window.matchMedia("(hover: none) and (pointer: coarse)").matches;
     if (isTouch || reducedMotion) return;
 
-    setMounted(true);
     document.body.classList.add("has-custom-cursor");
 
     const onMouseMove = (e: MouseEvent) => {

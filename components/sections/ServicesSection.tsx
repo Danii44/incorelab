@@ -2,13 +2,12 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { servicesData, ServiceItem } from "@/data/services";
-import { ArrowUpRight, Plus, Minus, Check, Layers } from "lucide-react";
+import { Plus, Minus, Check, Layers } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
 function ServiceRow({

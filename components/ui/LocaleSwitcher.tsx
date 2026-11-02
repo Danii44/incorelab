@@ -2,7 +2,6 @@
 
 import React from "react";
 import { useLocale } from "@/context/LocaleContext";
-import { Globe } from "lucide-react";
 
 export function LocaleSwitcher() {
   const { locale, setLocale, currency, setCurrency } = useLocale();

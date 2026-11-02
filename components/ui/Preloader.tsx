@@ -13,17 +13,27 @@ export function Preloader({ onComplete }: { onComplete?: () => void }) {
   useEffect(() => {
     // If reduced motion is preferred, complete almost immediately
     if (reducedMotion) {
-      setIsCompleted(true);
-      onComplete?.();
-      return;
+      const timer = setTimeout(() => {
+        setIsCompleted(true);
+        onComplete?.();
+      }, 0);
+      return () => clearTimeout(timer);
     }
 
     // Check if session has already seen preloader
-    const hasSeen = sessionStorage.getItem("incorelab_loaded");
+    let hasSeen = false;
+    try {
+      hasSeen = !!sessionStorage.getItem("incorelab_loaded");
+    } catch {
+      hasSeen = false;
+    }
+
     if (hasSeen) {
-      setIsCompleted(true);
-      onComplete?.();
-      return;
+      const timer = setTimeout(() => {
+        setIsCompleted(true);
+        onComplete?.();
+      }, 0);
+      return () => clearTimeout(timer);
     }
 
     let current = 0;
@@ -84,6 +94,7 @@ export function Preloader({ onComplete }: { onComplete?: () => void }) {
                 alt="incorelab"
                 width={260}
                 height={60}
+                style={{ width: "auto" }}
                 className="h-10 sm:h-14 w-auto object-contain"
                 priority
               />

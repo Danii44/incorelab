@@ -15,11 +15,18 @@ import { useLocale } from "@/context/LocaleContext";
 
 export function Navbar() {
   const pathname = usePathname();
-  const { t, locale, isRTL } = useLocale();
+  const { t } = useLocale();
   const [isVisible, setIsVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [prevPathname, setPrevPathname] = useState(pathname);
+
+  // Close mobile menu on route change directly during render
+  if (prevPathname !== pathname) {
+    setPrevPathname(pathname);
+    setMobileMenuOpen(false);
+  }
 
   // Helper to get translated nav label
   const getNavLabel = (href: string, fallback: string) => {
@@ -62,10 +69,6 @@ export function Navbar() {
     };
   }, [mobileMenuOpen]);
 
-  // Close mobile menu on route change
-  useEffect(() => {
-    setMobileMenuOpen(false);
-  }, [pathname]);
 
   return (
     <>
@@ -97,6 +100,7 @@ export function Navbar() {
                     alt="incorelab"
                     width={130}
                     height={28}
+                    style={{ width: "auto" }}
                     className="h-6 sm:h-7 w-auto object-contain transition-transform duration-300 group-hover:scale-[1.02]"
                     priority
                   />

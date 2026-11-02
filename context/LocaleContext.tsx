@@ -26,7 +26,6 @@ const GULF_TIMEZONES = [
 export function LocaleProvider({ children }: { children: React.ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>("en");
   const [currency, setCurrencyState] = useState<Currency>("AED");
-  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     // 1. Check URL query params first (for direct links & crawlers)
@@ -75,9 +74,10 @@ export function LocaleProvider({ children }: { children: React.ReactNode }) {
       initialCurrency = "AED";
     }
 
-    setLocaleState(initialLocale);
-    setCurrencyState(initialCurrency);
-    setMounted(true);
+    queueMicrotask(() => {
+      setLocaleState(initialLocale);
+      setCurrencyState(initialCurrency);
+    });
 
     // Apply document direction and language attribute
     document.documentElement.dir = initialLocale === "ar" ? "rtl" : "ltr";

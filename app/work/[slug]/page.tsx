@@ -4,10 +4,9 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { Section } from "@/components/ui/Section";
 import { Button } from "@/components/ui/Button";
 import { projectsData } from "@/data/projects";
-import { ArrowLeft, ArrowUpRight, CheckCircle } from "lucide-react";
+import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -250,7 +249,7 @@ export default async function CaseStudyPage({ params }: Props) {
             <div className="flex items-center justify-between">
               <div>
                 <span className="font-mono-custom text-xs text-accent mb-2 block">
-                  {nextProject.number} // {nextProject.category}
+                  {nextProject.number} {"//"} {nextProject.category}
                 </span>
                 <h3 className="font-display headline-medium font-bold text-text group-hover:text-accent transition-colors">
                   {nextProject.name}

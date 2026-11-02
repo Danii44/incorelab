@@ -5,7 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { servicesData } from "@/data/services";
 import { FaqSection } from "@/components/sections/FaqSection";
-import { Check, ArrowUpRight, Layers } from "lucide-react";
+import { Check, Layers } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Services & Capabilities | What We Build",
@@ -57,7 +57,7 @@ export default function ServicesPage() {
                 <div className="lg:col-span-6 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center gap-3 font-mono-custom text-xs text-accent font-semibold mb-3">
-                      <span>{service.number} //</span>
+                      <span>{service.number} {"//"}</span>
                       <span>{service.category}</span>
                     </div>
 

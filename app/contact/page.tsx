@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import { useForm, Controller } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -15,9 +15,7 @@ import {
   ArrowUpRight,
   MessageCircle,
   Copy,
-  Clock,
   ShieldCheck,
-  Globe2,
   Sparkles,
   Phone,
 } from "lucide-react";
@@ -103,7 +101,7 @@ const serviceChoices: ServiceChoice[] = [
 ];
 
 export default function ContactPage() {
-  const { t, locale, currency, isRTL } = useLocale();
+  const { t, currency, isRTL } = useLocale();
   const c = t.contact;
 
   const [isSubmitting, setIsSubmitting] = useState(false);

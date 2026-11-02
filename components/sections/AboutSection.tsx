@@ -6,7 +6,7 @@ import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 import { statsData, StatItem } from "@/data/stats";
-import { CheckCircle2, Zap, ShieldCheck, Users } from "lucide-react";
+import { Zap, ShieldCheck, Users } from "lucide-react";
 
 function CounterStat({ stat }: { stat: StatItem }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -16,7 +16,6 @@ function CounterStat({ stat }: { stat: StatItem }) {
   useEffect(() => {
     if (!isInView) return;
 
-    let start = 0;
     const end = stat.number;
     const duration = 1500;
     const startTime = performance.now();

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Container } from "@/components/ui/Container";
@@ -45,6 +45,7 @@ export function Footer() {
                     alt="incorelab"
                     width={150}
                     height={32}
+                    style={{ width: "auto" }}
                     className="h-7 sm:h-8 w-auto object-contain"
                   />
                 </div>

@@ -9,7 +9,7 @@ import { projectsData, ProjectItem } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 import { useReducedMotion } from "@/hooks/useReducedMotion";
 
-function ProjectCard({ project, index }: { project: ProjectItem; index: number }) {
+function ProjectCard({ project }: { project: ProjectItem }) {
   return (
     <div
       className="group relative flex flex-col justify-between h-full w-[82vw] sm:w-[60vw] md:w-[50vw] lg:w-[42vw] xl:w-[38vw] flex-shrink-0 rounded-2xl border border-border bg-surface p-6 sm:p-8 transition-all duration-500 hover:border-accent/60 shadow-sm"
@@ -183,8 +183,8 @@ export function WorkSection() {
               style={reducedMotion ? {} : { x }}
               className="flex gap-6 sm:gap-8 pl-8 sm:pl-12 xl:pl-16 pr-24 w-max"
             >
-              {projectsData.slice(0, 8).map((project, idx) => (
-                <ProjectCard key={project.slug} project={project} index={idx} />
+              {projectsData.slice(0, 8).map((project) => (
+                <ProjectCard key={project.slug} project={project} />
               ))}
 
               {/* End Archive Card */}
@@ -246,8 +246,8 @@ export function WorkSection() {
           </div>
 
           <div className="flex flex-col gap-10">
-            {projectsData.slice(0, 6).map((project, idx) => (
-              <ProjectCard key={project.slug} project={project} index={idx} />
+            {projectsData.slice(0, 6).map((project) => (
+              <ProjectCard key={project.slug} project={project} />
             ))}
           </div>
 

@@ -36,7 +36,7 @@ function ProcessStepItem({
         initial={reducedMotion ? {} : { opacity: 0, x: 20 }}
         whileInView={reducedMotion ? {} : { opacity: 1, x: 0 }}
         viewport={{ once: true, margin: "-15%" }}
-        transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+        transition={{ duration: 0.6, delay: 0.1 + index * 0.05, ease: [0.16, 1, 0.3, 1] }}
         className="rounded-2xl border border-border bg-surface/50 p-6 sm:p-10 backdrop-blur-sm"
       >
         <div className="flex flex-col sm:flex-row sm:items-baseline justify-between gap-4 border-b border-border pb-6">

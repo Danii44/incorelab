@@ -44,7 +44,7 @@ export default function WorkPage() {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 pt-16">
-          {projectsData.map((project, idx) => (
+          {projectsData.map((project) => (
             <article
               key={project.slug}
               className="group relative flex flex-col justify-between rounded-2xl border border-border bg-surface p-6 sm:p-10 transition-all duration-300 hover:border-accent"
@@ -53,7 +53,7 @@ export default function WorkPage() {
               <Link href={`/work/${project.slug}`} className="flex flex-col h-full justify-between">
                 <div>
                   <div className="flex items-center justify-between pb-6 font-mono-custom text-xs text-muted">
-                    <span className="text-accent font-semibold">{project.number} // {project.category}</span>
+                    <span className="text-accent font-semibold">{project.number} {"//"} {project.category}</span>
                     <span className="rounded-full border border-border px-2.5 py-0.5">{project.year}</span>
                   </div>
 

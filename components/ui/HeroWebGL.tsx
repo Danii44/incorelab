@@ -88,7 +88,11 @@ export function HeroWebGL() {
         // Subtle rim glow
         color += uColorAccent * fresnel * 0.65;
 
-        gl_FragColor = vec4(color, 0.88);
+        // Smooth radial & silhouette falloff so the fluid mesh blends seamlessly like living ambient mist
+        float centerFacing = max(dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0);
+        float softFalloff = pow(centerFacing, 1.4) * 0.32;
+
+        gl_FragColor = vec4(color, softFalloff);
       }
     `;
 
@@ -208,7 +212,7 @@ export function HeroWebGL() {
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 -z-10 h-full w-full pointer-events-none overflow-hidden opacity-90 transition-opacity duration-700"
+      className="absolute inset-0 z-[0] h-full w-full pointer-events-none overflow-hidden opacity-40 transition-opacity duration-700"
       aria-hidden="true"
     />
   );
