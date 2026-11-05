@@ -7,9 +7,9 @@ import { projectsData } from "@/data/projects";
 import { ArrowUpRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Selected Work | Client Projects & Case Studies",
+  title: "Selected Work | Projects & Design Demos",
   description:
-    "Explore our recent client work across custom Next.js web applications, headless Shopify stores, 3D WebGL configurators, and AI systems.",
+    "Explore our original website demos, app concepts, and client case studies.",
   alternates: {
     canonical: "/work",
   },
@@ -25,7 +25,7 @@ export default function WorkPage() {
         <div className="border-b border-border pb-12 sm:pb-16">
           <div className="flex items-center gap-3 font-mono-custom text-xs text-muted mb-4">
             <span className="text-accent font-bold">PORTFOLIO //</span>
-            <span>PROVEN CLIENT RESULTS</span>
+            <span>PROJECTS & ORIGINAL DEMOS</span>
           </div>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div>
@@ -33,11 +33,11 @@ export default function WorkPage() {
                 Selected Work<span className="text-accent">.</span>
               </h1>
               <p className="mt-4 max-w-2xl font-display text-xl text-muted font-normal">
-                Real software shipped for real clients. From high-frequency trading interfaces and headless Shopify stores to 3D vehicle configurators and spatial audio tools.
+                Explore website designs, app concepts, and client work. Original demo projects include a preview you can open and explore.
               </p>
             </div>
             <p className="font-mono-custom text-xs text-muted">
-              [ {projectsData.length} FEATURED CASE STUDIES ]
+              [ {projectsData.length} PROJECTS ]
             </p>
           </div>
         </div>
@@ -57,7 +57,7 @@ export default function WorkPage() {
                     <span className="rounded-full border border-border px-2.5 py-0.5">{project.year}</span>
                   </div>
 
-                  <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-border/40 mb-8">
+                  <div className={`relative ${project.projectType === "demo" ? "aspect-[4/3]" : "aspect-[16/10]"} w-full overflow-hidden rounded-xl bg-border/40 mb-8`}>
                     <Image
                       src={project.heroImage}
                       alt={project.name}
@@ -84,11 +84,19 @@ export default function WorkPage() {
                       <ArrowUpRight className="h-5 w-5 stroke-[2]" />
                     </div>
                   </div>
+                  {project.projectType === "demo" && (
+                    <span className="mt-3 inline-block rounded-full border border-accent/40 px-3 py-1 font-mono-custom text-xs text-accent">Original project · Demo</span>
+                  )}
                   <p className="mt-3 font-body text-sm text-muted leading-relaxed line-clamp-2">
                     {project.headline}
                   </p>
                 </div>
               </Link>
+              {project.projectType === "demo" && project.liveUrl && (
+                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex min-h-11 items-center gap-2 self-start font-mono-custom text-xs text-accent hover:underline focus-visible:outline-2 focus-visible:outline-accent">
+                  Open demo <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+                </a>
+              )}
             </article>
           ))}
         </div>

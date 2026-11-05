@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VELVET & CO. | Fashion Store</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#222;line-height:1.6;background:#fdfaf7}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}a{color:inherit;text-decoration:none}
+.top{background:#111;color:#fff;text-align:center;padding:9px;font-size:13px;letter-spacing:1px}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-family:Georgia,serif;font-size:28px;letter-spacing:2px}
+nav a{margin-left:20px;font-size:14px}.cart{background:#111;color:#fff;padding:10px 18px;border-radius:30px;font-weight:700}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:30px 0 60px}
+.hero h1{font-family:Georgia,serif;font-size:56px;line-height:1.05}.hero p{color:#666;margin:18px 0 25px}
+.btn{background:#111;color:#fff;padding:13px 24px;border-radius:30px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.hero img{width:100%;height:520px;object-fit:cover;border-radius:24px}
+section{padding:50px 0}h2{font-family:Georgia,serif;font-size:34px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.product{background:#fff;border-radius:16px;overflow:hidden;border:1px solid #eee}
+.product img{width:100%;height:260px;object-fit:cover}.product div{padding:16px}.price{font-weight:900}.old{color:#999;text-decoration:line-through;margin-left:8px;font-weight:400}
+.add{width:100%;margin-top:10px;background:#f3ede6;border:0;padding:11px;border-radius:10px;font-weight:700;cursor:pointer}
+.banner{background:#111;color:#fff;border-radius:24px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.checkout{max-width:620px;margin:auto;background:#fff;border:1px solid #eee;border-radius:18px;padding:30px;display:grid;gap:12px}
+input,select{width:100%;padding:12px;border-radius:10px;border:1px solid #ddd;font:inherit}footer{text-align:center;padding:30px;color:#888}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero img{height:360px}.grid{grid-template-columns:repeat(2,1fr)}.banner{flex-direction:column;text-align:center}nav a{display:none}}
+</style></head><body>
+<div class="top">FREE SHIPPING OVER $75 • NEW SEASON DROP IS LIVE</div><div class="wrap">
+<header><div class="logo">VELVET &amp; CO.</div><nav><a href="#shop">New In</a><a href="#shop">Women</a><a href="#shop">Men</a><a href="#checkout">Sale</a></nav><a class="cart" href="#checkout">🛒 Cart (2)</a></header>
+
+<div class="hero"><div><p style="letter-spacing:2px;color:#b7794c">NEW COLLECTION — AUTUMN 2026</p><h1>Wear confidence.<br>Every single day.</h1><p>Premium fabrics, timeless cuts and pieces made to last beyond one season. Designed for real life, styled for photos.</p><a class="btn" href="#shop">Shop New Arrivals →</a><p style="margin-top:18px;font-size:14px;color:#888">★ 4.8 from 12,400 reviews • Easy 30-day returns</p></div>
+<img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=1000&q=80"></div>
+
+<section id="shop"><h2>Best Sellers</h2><div class="grid">
+<div class="product"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80"><div><b>Oversized Wool Coat</b><br><span class="price">$129</span><span class="old">$179</span><button class="add">Add to Cart</button></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80"><div><b>Classic Linen Shirt</b><br><span class="price">$59</span><button class="add">Add to Cart</button></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=700&q=80"><div><b>Everyday Denim Set</b><br><span class="price">$89</span><span class="old">$119</span><button class="add">Add to Cart</button></div></div>
+<div class="product"><img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=700&q=80"><div><b>Street Style Dress</b><br><span class="price">$79</span><button class="add">Add to Cart</button></div></div>
+</div></section>
+
+<div class="banner"><div><h2 style="margin:0">Sale up to 40% off</h2><p>Ends Sunday. No code needed.</p></div><a class="btn" style="background:#fff;color:#111" href="#shop">Shop Sale</a></div>
+
+<section id="checkout"><h2 style="text-align:center">Quick Checkout</h2><div class="checkout">
+<p><b>Order summary:</b> Wool Coat $129 + Linen Shirt $59 = <b>$188</b> • Shipping FREE</p>
+<input placeholder="Full name" required><input placeholder="Delivery address" required><input placeholder="Phone / WhatsApp"><select><option>Payment method</option><option>Cash on Delivery</option><option>Card</option><option>Bank Transfer</option></select><button class="btn">Place Order • $188</button><p style="font-size:13px;color:#888;text-align:center">Demo checkout — connect your payment gateway to go live.</p>
+</div></section>
+<footer>© 2026 Velvet &amp; Co. • Free returns within 30 days</footer>
+</div></body></html>

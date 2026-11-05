@@ -1,0 +1,306 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Roamora Travel - Discover unforgettable tours, island escapes, and adventures around the world.">
+  <title>Roamora Travel | Explore Your World</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Kalam:wght@400;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="home">
+  <div class="container header-inner">
+    <a href="#home" class="logo">ROAM<span>ORA</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">HOME</a>
+      <a href="#destinations">DESTINATIONS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#tours">TOURS</a>
+      <a href="#blog">NEWS</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+    <div class="header-actions">
+      <button class="search-toggle" id="searchToggle" aria-label="Open search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <select aria-label="Currency"><option>USD</option><option>EUR</option><option>GBP</option></select>
+      <select aria-label="Language"><option>ENG</option><option>FR</option><option>ES</option></select>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-grip"></i></button>
+    </div>
+  </div>
+  <div class="header-search" id="headerSearch">
+    <div class="container"><input type="search" placeholder="Search destinations or tours..." aria-label="Search destinations"><button id="headerSearchButton">Search</button></div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="hero-kicker">E X P L O R E &nbsp; T H E &nbsp; W O R L D</span>
+        <h1>FIND YOUR PERFECT<br>TRIP WITH <em>ROAMORA!</em></h1>
+        <p>Discover remarkable places, create beautiful memories, and enjoy carefully planned adventures made for every kind of traveler.</p>
+        <div class="hero-actions">
+          <a href="#tours" class="btn btn-orange">Explore Tours</a>
+          <div class="hero-social">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="hero-blue-circle"></div>
+        <img class="hero-person" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=650&auto=format&fit=crop&q=85" alt="Happy traveler">
+        <div class="hero-floating-photo">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=350&auto=format&fit=crop&q=85" alt="Beach destination">
+          <span><i class="fa-solid fa-play"></i></span>
+          <div class="floating-lines"><i></i><i></i></div>
+        </div>
+        <div class="hero-rating"><div class="mini-avatars"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=70&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=70&auto=format&fit=crop" alt=""></div><span><strong>Happy Travelers</strong><small>★★★★★</small></span></div>
+      </div>
+      <span class="hero-doodle doodle-plane"><i class="fa-solid fa-plane"></i></span>
+      <span class="hero-doodle doodle-camera"><i class="fa-solid fa-camera"></i></span>
+      <span class="hero-doodle doodle-ticket"><i class="fa-solid fa-ticket"></i></span>
+    </div>
+  </section>
+
+  <!-- SEARCH -->
+  <section class="search-section" id="search">
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="eyebrow">FIND YOUR NEXT ADVENTURE</span>
+        <h2>Search Your Best Tour</h2>
+      </div>
+      <form class="tour-search" id="tourSearch">
+        <div class="search-field"><i class="fa-solid fa-magnifying-glass"></i><label>Search<input type="text" name="keyword" placeholder="Enter your keyword"></label></div>
+        <div class="search-field"><i class="fa-regular fa-calendar"></i><label>Date<input type="date" name="date"></label></div>
+        <div class="search-field"><i class="fa-solid fa-location-dot"></i><label>Location<select name="location"><option value="">All Destinations</option><option>Bali, Indonesia</option><option>Maldives</option><option>Thailand</option><option>Switzerland</option><option>Dubai, UAE</option></select></label></div>
+        <button type="submit" class="search-submit" aria-label="Search tours"><i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <p class="search-feedback" id="searchFeedback" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- CATEGORIES -->
+  <section class="categories section">
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="eyebrow">TRAVEL YOUR WAY</span>
+        <h2>Explore Popular Tour Types</h2>
+      </div>
+      <div class="category-grid">
+        <a href="#tours" class="category"><span><i class="fa-solid fa-city"></i></span><strong>City Tours</strong><small>12 Tours</small></a>
+        <a href="#tours" class="category"><span><i class="fa-solid fa-person-hiking"></i></span><strong>Adventure</strong><small>18 Tours</small></a>
+        <a href="#tours" class="category"><span><i class="fa-solid fa-umbrella-beach"></i></span><strong>Sea Tours</strong><small>20 Tours</small></a>
+        <a href="#tours" class="category"><span><i class="fa-solid fa-mountain-sun"></i></span><strong>Nature</strong><small>14 Tours</small></a>
+        <a href="#tours" class="category"><span><i class="fa-solid fa-sailboat"></i></span><strong>Wildlife</strong><small>9 Tours</small></a>
+        <a href="#tours" class="category"><span><i class="fa-solid fa-person-swimming"></i></span><strong>Water Sports</strong><small>16 Tours</small></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOUR CARDS -->
+  <section class="deals section" id="tours">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">SPECIAL TRAVEL DEALS</span>
+        <h2>Find Your Amazing Escape!</h2>
+      </div>
+      <div class="tour-grid" id="tourGrid">
+        <article class="tour-card" data-location="Bali, Indonesia" data-name="Bali Ocean Adventure">
+          <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4?w=600&auto=format&fit=crop&q=85" alt="Bali tropical escape">
+          <div class="tour-details"><div class="tour-meta"><span>★★★★★ (42 Reviews)</span><b>From $390.00</b></div><h3>Bali Ocean Adventure</h3><p><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</p></div>
+        </article>
+        <article class="tour-card" data-location="Maldives" data-name="Maldives Island Paradise">
+          <img src="https://images.unsplash.com/photo-1514282401047-d79a71a590e8?w=600&auto=format&fit=crop&q=85" alt="Maldives overwater resort">
+          <div class="tour-details"><div class="tour-meta"><span>★★★★★ (38 Reviews)</span><b>From $550.00</b></div><h3>Maldives Island Paradise</h3><p><i class="fa-solid fa-location-dot"></i> Maldives</p></div>
+        </article>
+        <article class="tour-card" data-location="Thailand" data-name="Tropical Sea Discovery">
+          <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=600&auto=format&fit=crop&q=85" alt="Tropical turquoise water">
+          <div class="tour-details"><div class="tour-meta"><span>★★★★★ (61 Reviews)</span><b>From $320.00</b></div><h3>Tropical Sea Discovery</h3><p><i class="fa-solid fa-location-dot"></i> Phuket, Thailand</p></div>
+        </article>
+        <article class="tour-card" data-location="Bali, Indonesia" data-name="Blue Lagoon Experience">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=85" alt="Blue lagoon beach">
+          <div class="tour-details"><div class="tour-meta"><span>★★★★★ (29 Reviews)</span><b>From $280.00</b></div><h3>Blue Lagoon Experience</h3><p><i class="fa-solid fa-location-dot"></i> Bali, Indonesia</p></div>
+        </article>
+        <article class="tour-card" data-location="Dubai, UAE" data-name="Desert Sky Adventure">
+          <img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=600&auto=format&fit=crop&q=85" alt="Desert dunes">
+          <div class="tour-details"><div class="tour-meta"><span>★★★★★ (34 Reviews)</span><b>From $210.00</b></div><h3>Desert Sky Adventure</h3><p><i class="fa-solid fa-location-dot"></i> Dubai, UAE</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO FEATURE -->
+  <section class="video-feature section" id="about">
+    <div class="container">
+      <div class="video-banner">
+        <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=1500&auto=format&fit=crop&q=90" alt="Beautiful tropical ocean">
+        <div class="video-trust"><span>Trusted by Travelers</span><h3>Over <em>5,000+</em><br>Happy Explorers</h3><small>★★★★★</small></div>
+        <button class="video-play" id="videoPlay" aria-label="Open travel video"><i class="fa-solid fa-play"></i></button>
+        <span class="video-caption">WATCH OUR STORY</span>
+      </div>
+      <div class="stats-grid">
+        <div><strong>19+</strong><span>Years of Travel Experience</span></div>
+        <div><strong>50k+</strong><span>Happy Customers</span></div>
+        <div><strong>25+</strong><span>Travel Specialists</span></div>
+        <div><strong>64+</strong><span>Countries Explored</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DESTINATION COLLAGE -->
+  <section class="destinations section" id="destinations">
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="eyebrow">POPULAR DESTINATIONS</span>
+        <h2>Where Will You Go Next?</h2>
+      </div>
+      <div class="destination-grid">
+        <a href="#tours" class="destination-card destination-large"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=900&auto=format&fit=crop&q=85" alt="Beautiful lake destination"><div><strong>Switzerland</strong><span>24 Tours</span></div></a>
+        <a href="#tours" class="destination-card"><img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=800&auto=format&fit=crop&q=85" alt="Scenic mountain destination"><div><strong>Norway</strong><span>18 Tours</span></div></a>
+        <a href="#tours" class="destination-card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=85" alt="Mountain adventure"><div><strong>Nepal</strong><span>16 Tours</span></div></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-section">
+    <div class="testimonial-visual">
+      <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1300&auto=format&fit=crop&q=85" alt="Travel memories around the world">
+    </div>
+    <div class="testimonial-content">
+      <span class="eyebrow">HAPPY TRAVELERS</span>
+      <h2>What Our Travelers Say</h2>
+      <p id="testimonialText">“Our trip was beautifully organized from beginning to end. Every destination was memorable, and the team made planning feel effortless.”</p>
+      <div class="testimonial-author"><img id="testimonialAvatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Traveler"><div><strong id="testimonialName">Emily Carter</strong><small>★★★★★</small></div></div>
+      <div class="testimonial-controls"><button id="prevTestimonial" aria-label="Previous testimonial"><i class="fa-solid fa-arrow-left"></i></button><button id="nextTestimonial" aria-label="Next testimonial"><i class="fa-solid fa-arrow-right"></i></button></div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter-section section">
+    <div class="container newsletter-grid">
+      <div>
+        <span class="eyebrow">TRAVEL INSPIRATION</span>
+        <h2>Sign Up for Our<br>Newsletter</h2>
+        <form class="newsletter-form" id="newsletterForm"><input type="email" placeholder="Email Address" required aria-label="Email Address"><button type="submit">Subscribe</button></form>
+        <p class="form-message" id="newsletterMessage" aria-live="polite"></p>
+        <div class="partner-logos"><span>Quora</span><span>airbnb</span><span>Expedia</span></div>
+      </div>
+      <div class="newsletter-art"><img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=800&auto=format&fit=crop&q=85" alt="Scenic travel destination"></div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <div class="section-heading centered"><span class="eyebrow">TRAVEL STORIES</span><h2>Latest From Our Journal</h2></div>
+      <div class="blog-grid">
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=650&auto=format&fit=crop&q=85" alt="Mountain hiking"><div><span class="blog-meta">ADVENTURE / OCTOBER 2026</span><h3>Explore Beautiful Mountain Trails Around the World</h3><p>Discover inspiring destinations for your next outdoor escape.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=650&auto=format&fit=crop&q=85" alt="Tropical beach"><div><span class="blog-meta">BEACHES / OCTOBER 2026</span><h3>How to Plan the Perfect Tropical Island Holiday</h3><p>Practical tips for a relaxed and memorable beach getaway.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1509316785289-025f5b846b35?w=650&auto=format&fit=crop&q=85" alt="Desert adventure"><div><span class="blog-meta">DESTINATIONS / OCTOBER 2026</span><h3>Unforgettable Desert Adventures Worth Experiencing</h3><p>Explore extraordinary scenery and exciting travel experiences.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-about"><a href="#home" class="logo">ROAM<span>ORA</span></a><p>Explore extraordinary places with carefully planned tours, friendly guidance and experiences worth remembering.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div>
+    <div class="footer-links"><h3>About Roamora</h3><a href="#about">Our Story</a><a href="#destinations">Destinations</a><a href="#tours">Tour Packages</a><a href="#blog">Travel Journal</a><a href="#contact">Contact Us</a></div>
+    <div class="footer-recent"><h3>Recent Posts</h3><div><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=120&auto=format&fit=crop" alt=""><span>How to Plan Your Next Beach Escape<small>October 2026</small></span></div><div><img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=120&auto=format&fit=crop" alt=""><span>Mountain Adventures for Nature Lovers<small>October 2026</small></span></div></div>
+    <div class="footer-map"><i class="fa-solid fa-earth-americas"></i><span><i class="fa-solid fa-location-dot"></i> Explore the World</span></div>
+  </div>
+  <div class="footer-bottom">© 2026 Roamora Travel. All rights reserved.</div>
+</footer>
+
+<script>
+  const menuToggle=document.getElementById('menuToggle');
+  const nav=document.getElementById('nav');
+  menuToggle.addEventListener('click',()=>{
+    const open=nav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded',String(open));
+  });
+  nav.querySelectorAll('a').forEach(link=>link.addEventListener('click',()=>{
+    nav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded','false');
+  }));
+
+  document.getElementById('searchToggle').addEventListener('click',()=>{
+    document.getElementById('headerSearch').classList.toggle('open');
+  });
+  document.getElementById('headerSearchButton').addEventListener('click',()=>{
+    const input=document.querySelector('#headerSearch input');
+    document.querySelector('[name="keyword"]').value=input.value;
+    document.getElementById('tourSearch').requestSubmit();
+    document.getElementById('tours').scrollIntoView({behavior:'smooth'});
+  });
+
+  document.getElementById('tourSearch').addEventListener('submit',e=>{
+    e.preventDefault();
+    const form=new FormData(e.currentTarget);
+    const keyword=(form.get('keyword')||'').toLowerCase().trim();
+    const location=form.get('location')||'';
+    let visible=0;
+    document.querySelectorAll('.tour-card').forEach(card=>{
+      const matchesKeyword=!keyword||(card.dataset.name+' '+card.dataset.location).toLowerCase().includes(keyword);
+      const matchesLocation=!location||card.dataset.location===location;
+      const show=matchesKeyword&&matchesLocation;
+      card.hidden=!show;
+      if(show)visible++;
+    });
+    document.getElementById('searchFeedback').textContent=visible?`${visible} matching tour${visible===1?'':'s'} found.`:'No matching tours in this demo.';
+    document.getElementById('tours').scrollIntoView({behavior:'smooth'});
+  });
+
+  const testimonials=[
+    {name:'Emily Carter',text:'Our trip was beautifully organized from beginning to end. Every destination was memorable, and the team made planning feel effortless.',avatar:'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop'},
+    {name:'Daniel Brooks',text:'A wonderful experience with thoughtful recommendations and friendly support throughout our holiday.',avatar:'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop'},
+    {name:'Sophie Williams',text:'We loved the destinations and the flexibility of our itinerary. It was exactly the kind of escape we needed.',avatar:'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop'}
+  ];
+  let currentTestimonial=0;
+  function updateTestimonial(){
+    const t=testimonials[currentTestimonial];
+    document.getElementById('testimonialText').textContent='“'+t.text+'”';
+    document.getElementById('testimonialName').textContent=t.name;
+    document.getElementById('testimonialAvatar').src=t.avatar;
+  }
+  document.getElementById('prevTestimonial').addEventListener('click',()=>{currentTestimonial=(currentTestimonial+testimonials.length-1)%testimonials.length;updateTestimonial()});
+  document.getElementById('nextTestimonial').addEventListener('click',()=>{currentTestimonial=(currentTestimonial+1)%testimonials.length;updateTestimonial()});
+
+  document.getElementById('newsletterForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    document.getElementById('newsletterMessage').textContent='Demo form. Connect your email service to activate subscriptions.';
+  });
+  document.getElementById('videoPlay').addEventListener('click',()=>{
+    alert('Connect this button to your own travel video.');
+  });
+</script>
+</body>
+</html>

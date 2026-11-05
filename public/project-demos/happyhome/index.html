@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HappyHome interior design and furniture studio. Beautiful spaces, timeless furniture, and thoughtful design.">
+  <title>HappyHome | Interior Design & Furniture</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    <div class="container announcement-inner">
+      <span>Elevate Your Everyday Living With Thoughtful Design</span>
+      <span>Free Design Consultation For New Projects <i class="fa-solid fa-arrow-right"></i></span>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="HappyHome Home">
+        <span class="logo-icon"><i class="fa-solid fa-house"></i></span>
+        <span>Happy<span class="logo-light">Home</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#collections">Shop</a>
+        <a href="#projects">Our Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn search-toggle" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        <a href="#contact" class="header-cta">Get Free Estimation <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Category navigation -->
+  <div class="category-bar">
+    <div class="container category-scroll">
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-couch"></i></span>
+        <span>Sofas & Seating</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-chair"></i></span>
+        <span>Dining Furniture</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-bed"></i></span>
+        <span>Bedroom</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-border-all"></i></span>
+        <span>Storage & Shelves</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-lightbulb"></i></span>
+        <span>Lighting</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-rug"></i></span>
+        <span>Decor & Rugs</span>
+      </a>
+      <a href="#collections" class="category-item">
+        <span class="category-icon"><i class="fa-solid fa-seedling"></i></span>
+        <span>Home Accessories</span>
+      </a>
+      <a href="#collections" class="category-item category-offer">
+        <span class="category-icon"><i class="fa-solid fa-tags"></i></span>
+        <span>View Offers</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero section-container" id="home">
+      <div class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-card">
+          <span class="eyebrow">01 / 04 &nbsp; • &nbsp; INTERIOR DESIGN STUDIO</span>
+          <h1>Spaces That Feel<br><em>Like Home.</em></h1>
+          <p>Discover beautifully considered interiors, timeless furniture and design that reflects the way you live.</p>
+          <a href="#services" class="text-link">Explore Our Services <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          <div class="hero-pagination">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+        <div class="hero-side-label">INTERIORS THAT INSPIRE</div>
+      </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="intro-section section-pad" id="about">
+      <div class="container">
+        <div class="intro-top">
+          <div>
+            <span class="section-kicker">/ WELCOME TO HAPPYHOME</span>
+            <h2>Get A Luxury <span class="pill-image"><img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8c?w=250&auto=format&fit=crop&q=80" alt=""></span> Designer<br>
+              <span class="muted-heading">Space You'll Love.</span>
+            </h2>
+          </div>
+          <p>We believe a beautiful home should feel effortless. Our team brings together modern aesthetics, natural materials and everyday comfort to create spaces that feel uniquely yours.</p>
+        </div>
+
+        <div class="feature-image">
+          <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?w=1600&auto=format&fit=crop&q=85" alt="Modern luxury living room">
+          <div class="feature-image-shade"></div>
+          <div class="feature-caption">
+            <span class="small-white-label">THE ART OF LIVING</span>
+            <h3>Luxury Interior Hall<br>Designs</h3>
+            <p>Beautiful spaces crafted with care, personality and purpose.</p>
+            <a href="#projects" class="round-arrow" aria-label="Explore projects"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+
+        <div class="feature-tabs">
+          <span class="tab-line"></span>
+          <a href="#services" class="feature-tab active"><i class="fa-solid fa-couch"></i> Residential Design</a>
+          <a href="#services" class="feature-tab"><i class="fa-solid fa-building"></i> Commercial Design</a>
+          <a href="#services" class="feature-tab"><i class="fa-solid fa-kitchen-set"></i> Kitchen Design</a>
+          <a href="#services" class="feature-tab"><i class="fa-solid fa-bed"></i> Living Room Design</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services-section section-pad" id="services">
+      <div class="container">
+        <div class="center-heading">
+          <span class="section-kicker">/ OUR EXPERT SERVICES</span>
+          <h2>We Provide Different Types <span>Of Services</span></h2>
+          <p>From the first idea to the final finishing touch, we create interiors designed around you.</p>
+        </div>
+
+        <div class="service-row">
+          <div class="service-content">
+            <span class="service-index">01 / RESIDENTIAL</span>
+            <h3>Residential Interior Design</h3>
+            <p>Transform your home into a personal sanctuary. We combine considered layouts, natural materials and a calm design approach to create beautiful, functional living spaces.</p>
+            <ul class="check-list">
+              <li><i class="fa-regular fa-circle-check"></i> Floor Planning & Space Optimization</li>
+              <li><i class="fa-regular fa-circle-check"></i> Custom Furniture Selection</li>
+              <li><i class="fa-regular fa-circle-check"></i> Material & Color Consultation</li>
+              <li><i class="fa-regular fa-circle-check"></i> Lighting & Decorative Details</li>
+              <li><i class="fa-regular fa-circle-check"></i> Complete Interior Styling</li>
+            </ul>
+            <a href="#contact" class="dark-btn">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1100&auto=format&fit=crop&q=85" alt="Neutral contemporary living room">
+          </div>
+        </div>
+
+        <div class="service-row reverse">
+          <div class="service-content">
+            <span class="service-index">02 / COMMERCIAL</span>
+            <h3>Commercial Interior Design</h3>
+            <p>Create a lasting impression with purposeful commercial interiors. From welcoming reception areas to refined offices, we design environments that support your business and reflect your identity.</p>
+            <ul class="check-list">
+              <li><i class="fa-regular fa-circle-check"></i> Office & Workspace Interiors</li>
+              <li><i class="fa-regular fa-circle-check"></i> Retail & Showroom Design</li>
+              <li><i class="fa-regular fa-circle-check"></i> Custom Joinery & Furniture</li>
+              <li><i class="fa-regular fa-circle-check"></i> Lighting & Layout Planning</li>
+            </ul>
+            <a href="#contact" class="dark-btn">Read More <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1100&auto=format&fit=crop&q=85" alt="Modern commercial office interior">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects-section section-pad" id="projects">
+      <div class="container">
+        <div class="project-heading">
+          <div>
+            <span class="section-kicker">/ OUR DESIGN PROJECTS</span>
+            <h2>Space Has Its Own<br><span>Adorable Magic.</span></h2>
+            <a href="#contact" class="dark-btn">Explore Our Projects <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+          <div class="project-heading-right">
+            <p>We create spaces with purpose, blending elegant materials, thoughtful proportions and personal details into designs that stand the test of time.</p>
+            <div class="project-stats">
+              <div><strong>01</strong><span>Creative Vision</span></div>
+              <div><strong>02</strong><span>Thoughtful Planning</span></div>
+              <div><strong>03</strong><span>Beautiful Results</span></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-showcase">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1600&auto=format&fit=crop&q=85" alt="Elegant contemporary interior">
+          <span class="floating-tag tag-one">Quality Materials</span>
+          <span class="floating-tag tag-two">Custom Furniture</span>
+          <span class="floating-tag tag-three">Timeless Details</span>
+          <span class="floating-tag tag-four">Warm Lighting</span>
+          <div class="project-showcase-bottom">
+            <span>RESIDENTIAL DESIGN / CONTEMPORARY LIVING</span>
+            <a href="#contact" class="round-arrow light-arrow" aria-label="Discuss your project"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Collections -->
+    <section class="collections-section section-pad" id="collections">
+      <div class="container">
+        <div class="collection-heading">
+          <div>
+            <span class="section-kicker">/ HANDPICKED FOR YOUR HOME</span>
+            <h2>Our Custom Products <span>For Sale!</span></h2>
+          </div>
+          <a href="#contact" class="outline-btn">View All Products <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1499933374294-4584851497cc?w=850&auto=format&fit=crop&q=85" alt="Contemporary home furniture">
+              <span class="product-badge">CURATED COLLECTION</span>
+            </div>
+            <div class="product-meta">
+              <div><span>01 / FURNITURE</span><h3>Contemporary Living</h3></div>
+              <a href="#contact" aria-label="Enquire about furniture"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=850&auto=format&fit=crop&q=85" alt="Elegant bedroom furniture">
+              <span class="product-badge">TIMELESS STYLE</span>
+            </div>
+            <div class="product-meta">
+              <div><span>02 / BEDROOM</span><h3>Restful Spaces</h3></div>
+              <a href="#contact" aria-label="Enquire about bedroom furniture"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image">
+              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?w=850&auto=format&fit=crop&q=85" alt="Modern home interior decor">
+              <span class="product-badge">DESIGNED TO INSPIRE</span>
+            </div>
+            <div class="product-meta">
+              <div><span>03 / HOME DECOR</span><h3>Everyday Elegance</h3></div>
+              <a href="#contact" aria-label="Enquire about home decor"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Consultation -->
+    <section class="consultation-section section-pad">
+      <div class="container">
+        <div class="center-heading">
+          <span class="section-kicker">/ PERSONALIZED DESIGN</span>
+          <h2>Expert Design Consultation And Custom<br><span>Furnishing For Every Room</span></h2>
+        </div>
+        <div class="consult-grid">
+          <div class="consult-item">
+            <div class="consult-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+            <h3>Design Consultation</h3>
+            <p>Discuss your vision and discover the right direction for your space.</p>
+          </div>
+          <div class="consult-item">
+            <div class="consult-icon"><i class="fa-solid fa-ruler-combined"></i></div>
+            <h3>Space Planning</h3>
+            <p>Make every square foot feel purposeful, balanced and comfortable.</p>
+          </div>
+          <div class="consult-item">
+            <div class="consult-icon"><i class="fa-solid fa-chair"></i></div>
+            <h3>Custom Furniture</h3>
+            <p>Furniture choices that fit your space, style and everyday needs.</p>
+          </div>
+          <div class="consult-item">
+            <div class="consult-icon"><i class="fa-solid fa-layer-group"></i></div>
+            <h3>Materials & Finishes</h3>
+            <p>Bring depth and character to your home with beautiful finishing details.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="contact">
+      <div class="container cta-inner">
+        <div>
+          <span class="section-kicker">/ LET'S CREATE SOMETHING BEAUTIFUL</span>
+          <h2>Your Dream Space<br>Starts With <em>A Conversation.</em></h2>
+          <p>Tell us about your ideas and we'll help you shape a space you'll love coming home to.</p>
+        </div>
+        <a href="mailto:hello@example.com?subject=Interior%20Design%20Enquiry" class="cta-white-btn">Start Your Project <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a href="#" class="logo footer-logo">
+            <span class="logo-icon"><i class="fa-solid fa-house"></i></span>
+            <span>Happy<span class="logo-light">Home</span></span>
+          </a>
+          <p>Beautiful interiors. Thoughtful furniture. Spaces made for living.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#projects">Our Projects</a>
+          <a href="#collections">Shop Collection</a>
+        </div>
+        <div class="footer-col">
+          <h4>Our Services</h4>
+          <a href="#services">Residential Design</a>
+          <a href="#services">Commercial Design</a>
+          <a href="#services">Space Planning</a>
+          <a href="#services">Custom Furniture</a>
+        </div>
+        <div class="footer-col">
+          <h4>Get In Touch</h4>
+          <p>Have a project in mind? We'd love to hear about it.</p>
+          <a href="mailto:hello@example.com">Email Our Team</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 HappyHome. All rights reserved.</span>
+        <span>Designed for beautiful living.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.querySelector('i').className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    });
+
+    document.querySelectorAll('.main-nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+      });
+    });
+  </script>
+
+</body>
+</html>

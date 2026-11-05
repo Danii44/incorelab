@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SunGrid | Solar Mobile App</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="showcase">
+  <div class="intro">
+    <div class="brand"><span class="brand-icon"><i class="fa-solid fa-solar-panel"></i></span> SunGrid</div>
+    <h1>Solar Planning<br>& Shopping</h1>
+    <p class="subtitle">Mobile App UI Concept</p>
+    <ul class="highlights">
+      <li><i class="fa-solid fa-check"></i> Easy to Use</li>
+      <li><i class="fa-solid fa-check"></i> Clean & Organized</li>
+      <li><i class="fa-solid fa-check"></i> Solar Cost Estimator</li>
+      <li><i class="fa-solid fa-check"></i> Smart Product Shopping</li>
+    </ul>
+    <div class="screens-label"><strong>03</strong><span>Interactive<br>App Screens</span></div>
+  </div>
+
+  <div class="phones">
+    <!-- SCREEN 1: HOME -->
+    <section class="phone phone-one">
+      <div class="phone-screen">
+        <div class="status"><span>8:24</span><div class="island"></div><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
+        <div class="screen-content">
+          <div class="greeting"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="User avatar"><div><small>Hello, Alex</small><strong>Good Morning</strong></div><button class="notification" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button></div>
+          <div class="estimate-banner"><div><h2>Calculate Your<br>Solar Needs</h2><button class="mini-green start-estimate">Start Estimate <i class="fa-solid fa-arrow-right"></i></button></div><img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=400&auto=format&fit=crop" alt="Solar panels"></div>
+          <div class="last-estimate"><div><small><i class="fa-solid fa-sun"></i> Your Last Estimate</small><strong><i class="fa-solid fa-gauge-high"></i> 5.4 kW</strong></div><button class="reestimate"><i class="fa-solid fa-rotate"></i> Re-Estimate</button></div>
+          <div class="shop-heading">Quick Shop</div>
+          <div class="category-tabs"><button class="active" data-category="all">All</button><button data-category="panels">Panels</button><button data-category="inverters">Inverters</button><button data-category="batteries">Batteries</button></div>
+          <div class="products" id="homeProducts"></div>
+        </div>
+        <div class="bottom-nav"><button class="active" aria-label="Home"><i class="fa-solid fa-house"></i></button><button class="go-estimator" aria-label="Estimator"><i class="fa-solid fa-sliders"></i></button><button class="cart-button" aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i></button><button aria-label="Profile"><i class="fa-regular fa-user"></i></button></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 2: SHOP -->
+    <section class="phone phone-two">
+      <div class="phone-screen">
+        <div class="status"><span>8:24</span><div class="island"></div><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
+        <div class="screen-content">
+          <div class="greeting"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="User avatar"><div><small>Hello, Alex</small><strong>Good Morning</strong></div><button class="notification" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button></div>
+          <div class="last-estimate shop-estimate"><div><small><i class="fa-solid fa-sun"></i> Your Last Estimate</small><strong>5.4 kW</strong></div><button class="reestimate"><i class="fa-solid fa-rotate"></i> Re-Estimate</button></div>
+          <div class="shop-heading">Quick Shop</div>
+          <div class="category-tabs"><button data-category="all">All</button><button data-category="panels">Panels</button><button class="active" data-category="inverters">Inverters</button><button data-category="batteries">Batteries</button></div>
+          <div class="products" id="shopProducts"></div>
+        </div>
+        <div class="bottom-nav"><button aria-label="Home"><i class="fa-solid fa-house"></i></button><button class="active go-estimator" aria-label="Estimator"><i class="fa-solid fa-sliders"></i></button><button class="cart-button" aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i></button><button aria-label="Profile"><i class="fa-regular fa-user"></i></button></div>
+      </div>
+    </section>
+
+    <!-- SCREEN 3: ESTIMATOR -->
+    <section class="phone phone-three" id="estimatorPhone">
+      <div class="phone-screen estimator-screen">
+        <div class="status status-white"><span>8:24</span><div class="island"></div><span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span></div>
+        <div class="estimator-content">
+          <button class="back-button" aria-label="Back"><i class="fa-solid fa-arrow-left"></i></button>
+          <h2>Let's calculate your<br>solar requirement.</h2>
+          <div class="goal-panel">
+            <h3>Choose Your Goal</h3>
+            <div class="goal-grid">
+              <button class="goal selected" data-goal="bill">Reduce<br>electricity bill</button>
+              <button class="goal" data-goal="solar">Go fully solar</button>
+              <button class="goal" data-goal="backup">Backup during<br>power cuts</button>
+              <button class="goal" data-goal="property">Install solar for a<br>new property</button>
+              <button class="goal" data-goal="unsure">Not sure yet</button>
+            </div>
+          </div>
+          <button class="estimate-action" id="calculateBtn">Start Estimation</button>
+          <div class="estimate-result" id="estimateResult" hidden></div>
+        </div>
+        <div class="bottom-nav estimator-nav"><button aria-label="Home"><i class="fa-solid fa-house"></i></button><button class="active" aria-label="Estimator"><i class="fa-solid fa-sliders"></i></button><button class="cart-button" aria-label="Shopping cart"><i class="fa-solid fa-bag-shopping"></i></button><button aria-label="Profile"><i class="fa-regular fa-user"></i></button></div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<script>
+const products=[
+  {name:"SunPeak Mono 550W",category:"panels",description:"Monocrystalline · 144 Cells",price:129,image:"https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=350&auto=format&fit=crop"},
+  {name:"Solar Control Box 510",category:"inverters",description:"Smart Controller · 12-Year Warranty",price:250,image:"https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=350&auto=format&fit=crop"},
+  {name:"SunGrid Hybrid 5kW",category:"inverters",description:"97.5% Max Efficiency · Dual MPPT",price:1090,image:"https://images.unsplash.com/photo-1624397640148-949b1732bb0a?w=350&auto=format&fit=crop"},
+  {name:"GridCore Hybrid 6kW",category:"inverters",description:"Dual MPPT · 98% Efficiency",price:1290,image:"https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=350&auto=format&fit=crop"},
+  {name:"VoltCell Storage 5kWh",category:"batteries",description:"Lithium Storage · 48V",price:790,image:"https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=350&auto=format&fit=crop"}
+];
+let cartCount=0;
+function renderProducts(containerId,category){
+  const container=document.getElementById(containerId);
+  const filtered=category==='all'?products:products.filter(p=>p.category===category);
+  container.innerHTML=filtered.map(p=>`
+    <article class="product-card">
+      <img src="${p.image}" alt="${p.name}">
+      <div class="product-info">
+        <strong>${p.name}</strong>
+        <span class="stock">In Stock</span>
+        <small>${p.description}</small>
+        <div class="product-bottom"><b>$${p.price.toLocaleString()}</b><button class="add-product">Add to System</button></div>
+      </div>
+    </article>
+  `).join('');
+}
+renderProducts('homeProducts','all');
+renderProducts('shopProducts','inverters');
+document.querySelectorAll('.category-tabs').forEach(group=>{
+  group.addEventListener('click',e=>{
+    const button=e.target.closest('button[data-category]');
+    if(!button)return;
+    group.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
+    button.classList.add('active');
+    renderProducts(group.parentElement.querySelector('.products').id,button.dataset.category);
+  });
+});
+document.addEventListener('click',e=>{
+  if(e.target.closest('.add-product')){
+    cartCount++;
+    e.target.closest('.add-product').textContent='Added ✓';
+    document.querySelectorAll('.cart-button').forEach(b=>b.setAttribute('aria-label',`Shopping cart, ${cartCount} items`));
+  }
+  if(e.target.closest('.start-estimate,.go-estimator,.reestimate')){
+    document.getElementById('estimatorPhone').scrollIntoView({behavior:'smooth',block:'center',inline:'center'});
+  }
+});
+document.querySelectorAll('.goal').forEach(button=>{
+  button.addEventListener('click',()=>{
+    document.querySelectorAll('.goal').forEach(b=>b.classList.remove('selected'));
+    button.classList.add('selected');
+    document.getElementById('estimateResult').hidden=true;
+  });
+});
+document.getElementById('calculateBtn').addEventListener('click',()=>{
+  const result=document.getElementById('estimateResult');
+  result.hidden=false;
+  result.textContent='Goal saved. Enter your electricity usage and location in the next step to calculate a suitable system size.';
+});
+</script>
+</body>
+</html>

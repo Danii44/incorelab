@@ -1,0 +1,254 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Brightora Dental - Modern dental care for confident smiles.">
+  <title>Brightora Dental | Your Smile, Our Priority</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP INFORMATION BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-left">
+        <span><i class="fa-solid fa-location-dot"></i> 25 Wellness Avenue, Your City</span>
+        <span><i class="fa-regular fa-clock"></i> Mon - Sat: 9:00 AM - 7:00 PM</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:hello@brightora.example"><i class="fa-regular fa-envelope"></i> hello@brightora.example</a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-icon"><i class="fa-solid fa-tooth"></i></span>
+        <span class="logo-text">Brightora<small>DENTAL CARE</small></span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#doctors">Our Doctors</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#appointment" class="nav-appointment">Appointment <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-container">
+
+        <div class="hero-copy">
+          <span class="hero-eyebrow"><span></span> WELCOME TO BRIGHTORA DENTAL</span>
+
+          <h1>
+            Your Best<br>
+            Smile Starts<br>
+            <span>Right Here</span>
+          </h1>
+
+          <div class="headline-underline"></div>
+
+          <p class="hero-description">
+            Gentle, personalized dental care designed to keep your smile healthy, beautiful and confident. Feel comfortable at every visit.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#appointment" class="primary-button">
+              Book Appointment <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#services" class="secondary-button">
+              <span><i class="fa-solid fa-play"></i></span>
+              Explore Services
+            </a>
+          </div>
+
+          <div class="patient-proof">
+            <div class="avatar-stack">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Patient">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Patient">
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Patient">
+              <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Patient">
+            </div>
+            <div class="proof-text">
+              <strong>Care That Makes You Smile</strong>
+              <span><i class="fa-solid fa-star"></i> 4.9 / 5 <small>Sample patient rating</small></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT SIDE VISUAL -->
+        <div class="hero-visual">
+          <div class="visual-glow"></div>
+          <div class="visual-circle"></div>
+
+          <img
+            class="doctor-image"
+            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?w=900&auto=format&fit=crop&q=90"
+            alt="Dental professional providing patient care"
+          >
+
+          <div class="floating-icon floating-tooth">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+
+          <div class="floating-icon floating-sparkle">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+          </div>
+
+          <div class="floating-profile">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=120&auto=format&fit=crop" alt="Dental specialist">
+            <span><strong>Expert Dentists</strong><small>Friendly, professional care</small></span>
+          </div>
+
+          <div class="appointment-card">
+            <div class="appointment-heading">
+              <span class="appointment-icon"><i class="fa-regular fa-calendar-check"></i></span>
+              <div>
+                <strong>Easy Appointments</strong>
+                <small>Find a time that works for you</small>
+              </div>
+            </div>
+            <div class="doctor-mini">
+              <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=100&auto=format&fit=crop" alt="Doctor">
+              <div><strong>Dr. Sophia Miller</strong><small>Dental Specialist</small></div>
+              <span class="available">Available</span>
+            </div>
+            <a href="#appointment">BOOK YOUR VISIT <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+
+          <div class="pink-floor"></div>
+        </div>
+
+        <div class="decoration decoration-one"><i class="fa-solid fa-tooth"></i></div>
+        <div class="decoration decoration-two"><i class="fa-solid fa-sparkles"></i></div>
+      </div>
+    </section>
+
+    <!-- SHORT SERVICES SECTION -->
+    <section class="services-preview" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <span>OUR DENTAL SERVICES</span>
+          <h2>Care for Every Smile</h2>
+          <p>From routine checkups to cosmetic treatments, explore the care options available at Brightora Dental.</p>
+        </div>
+
+        <div class="services-grid">
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+            <h3>General Dentistry</h3>
+            <p>Regular checkups, professional cleaning and preventive care.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+            <h3>Cosmetic Dentistry</h3>
+            <p>Personalized treatments to improve the appearance of your smile.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon"><i class="fa-solid fa-teeth"></i></div>
+            <h3>Teeth Alignment</h3>
+            <p>Consultations and solutions for straighter, healthier teeth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPOINTMENT -->
+    <section class="appointment-section" id="appointment">
+      <div class="container appointment-layout">
+        <div>
+          <span class="section-kicker">YOUR SMILE MATTERS</span>
+          <h2>Ready for a Healthier Smile?</h2>
+          <p>Request a consultation and take the first step toward comfortable, personalized dental care.</p>
+        </div>
+        <form id="appointmentForm" class="appointment-form">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <select name="service" required>
+            <option value="">Select a Service</option>
+            <option>General Dentistry</option>
+            <option>Cosmetic Dentistry</option>
+            <option>Teeth Alignment</option>
+          </select>
+          <button type="submit">Request Appointment <i class="fa-solid fa-arrow-right"></i></button>
+          <p id="formStatus" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="contact">
+    <div class="container footer-inner">
+      <a href="#home" class="footer-logo">Brightora <span>Dental Care</span></a>
+      <p>© 2026 Brightora Dental. All rights reserved.</p>
+      <div><a href="#home">Home</a><a href="#services">Services</a><a href="#appointment">Appointment</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('nav');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      toggle.querySelector('i').className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+    });
+
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('appointmentForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('formStatus').textContent =
+        'This is a demo form. Connect your booking system to receive appointments.';
+    });
+  </script>
+</body>
+</html>

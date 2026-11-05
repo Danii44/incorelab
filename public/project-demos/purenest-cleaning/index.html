@@ -1,0 +1,446 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PureNest Cleaning provides professional home, office, window and deep cleaning services.">
+  <title>PureNest Cleaning | Professional Cleaning Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-solid fa-shield-heart"></i> Your trusted cleaning partner</span>
+      <span><i class="fa-regular fa-clock"></i> Working Hours: Mon - Sat | 8:00 AM - 6:00 PM</span>
+    </div>
+  </div>
+
+  <!-- CONTACT HEADER -->
+  <div class="contact-header">
+    <div class="container contact-header-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark"><i class="fa-solid fa-droplet"></i></span>
+        Pure<span>Nest</span>
+      </a>
+      <div class="header-contacts">
+        <div class="header-contact">
+          <i class="fa-regular fa-envelope"></i>
+          <div><small>Mail Us</small><strong>hello@purenest.example</strong></div>
+        </div>
+        <div class="header-contact">
+          <i class="fa-solid fa-phone-volume"></i>
+          <div><small>Call For Help</small><strong>+1 (555) 010-2040</strong></div>
+        </div>
+        <div class="header-contact">
+          <i class="fa-solid fa-location-dot"></i>
+          <div><small>Address</small><strong>City Center, Your City</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION -->
+  <header class="navbar" id="home">
+    <div class="container nav-inner">
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#team">Our Team</a>
+        <a href="#blog">News</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+      <div class="nav-actions">
+        <a href="#services" aria-label="Explore services"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#contact" class="nav-cta">Get In Touch <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-background"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="hero-pill">Cleaning Services</span>
+        <h1>Best Cleaning<br>Service in Home</h1>
+        <p>Enjoy a cleaner, healthier and more comfortable space with our reliable professional cleaning team.</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-blue">Discover More <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#services" class="btn btn-blue secondary">Our Services</a>
+        </div>
+      </div>
+    </div>
+    <div class="cloud-divider">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <!-- SERVICE HIGHLIGHTS -->
+  <section class="highlights section">
+    <div class="container content-width highlights-grid">
+      <article class="highlight-card">
+        <div class="highlight-icon"><i class="fa-solid fa-house-chimney"></i></div>
+        <h3>Residential Cleaning</h3>
+        <p>Careful home cleaning that leaves your rooms fresh, comfortable and ready to enjoy.</p>
+      </article>
+      <article class="highlight-card">
+        <div class="highlight-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>Commercial Cleaning</h3>
+        <p>Dependable cleaning services for offices, shops and professional workplaces.</p>
+      </article>
+      <article class="highlight-card">
+        <div class="highlight-icon"><i class="fa-solid fa-spray-can-sparkles"></i></div>
+        <h3>Deep Cleaning</h3>
+        <p>Detailed cleaning for those hard-to-reach places and areas needing extra care.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container content-width about-grid">
+      <div class="about-visual">
+        <div class="about-circle">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&auto=format&fit=crop&q=85" alt="Professional cleaner at work">
+        </div>
+        <div class="about-small-circle">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=450&auto=format&fit=crop&q=85" alt="Fresh clean home">
+        </div>
+        <a href="#services" class="about-play" aria-label="Explore services"><i class="fa-solid fa-play"></i></a>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">Our Introduction</span>
+        <h2>Welcome to Best<br>Cleaning Company</h2>
+        <p class="lead">A cleaner space makes every day feel better.</p>
+        <p>At PureNest Cleaning, we bring professional care, dependable service and attention to detail to every property we visit. Whether you need a regular clean or a complete refresh, our team is ready to help.</p>
+        <div class="check-grid">
+          <span><i class="fa-solid fa-circle-check"></i> Experienced Cleaners</span>
+          <span><i class="fa-solid fa-circle-check"></i> Quality Cleaning</span>
+          <span><i class="fa-solid fa-circle-check"></i> Flexible Scheduling</span>
+          <span><i class="fa-solid fa-circle-check"></i> Trusted Professionals</span>
+          <span><i class="fa-solid fa-circle-check"></i> Detailed Service</span>
+          <span><i class="fa-solid fa-circle-check"></i> Customer Care</span>
+        </div>
+        <div class="about-bottom">
+          <a href="#contact" class="btn btn-blue">Discover More</a>
+          <a href="tel:+15550102040" class="phone-link"><i class="fa-solid fa-phone"></i> +1 (555) 010-2040</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="water-background"></div>
+    <div class="container content-width services-inner">
+      <div class="section-heading light">
+        <span class="eyebrow">What We're Offering</span>
+        <h2>Providing the Best Services<br>for Our Customers</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=650&auto=format&fit=crop&q=85" alt="Professional window cleaner">
+          <div class="service-icon"><i class="fa-solid fa-window-maximize"></i></div>
+          <div class="service-card-body">
+            <h3>Window Cleaning</h3>
+            <p>Clear, streak-free windows that let natural light shine through your home or office.</p>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=650&auto=format&fit=crop&q=85" alt="Clean bathroom">
+          <div class="service-icon"><i class="fa-solid fa-bath"></i></div>
+          <div class="service-card-body">
+            <h3>Bathroom Cleaning</h3>
+            <p>Careful attention to tiles, sinks, fixtures and surfaces for a fresh bathroom.</p>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=650&auto=format&fit=crop&q=85" alt="Home maintenance equipment">
+          <div class="service-icon"><i class="fa-solid fa-faucet-drip"></i></div>
+          <div class="service-card-body">
+            <h3>Kitchen Cleaning</h3>
+            <p>Thorough cleaning of countertops, appliances and busy kitchen surfaces.</p>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="service-card">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=650&auto=format&fit=crop&q=85" alt="Clean modern office">
+          <div class="service-icon"><i class="fa-solid fa-building-circle-check"></i></div>
+          <div class="service-card-body">
+            <h3>Office Cleaning</h3>
+            <p>Organized, clean workspaces that help your team feel comfortable every day.</p>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="slider-dots"><i></i><i></i><i></i><i class="active"></i></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section">
+    <div class="container content-width faq-grid">
+      <div>
+        <span class="eyebrow">Our Company FAQs</span>
+        <h2>Frequently Asked<br>Questions From Our Clients</h2>
+        <div class="faq-list">
+          <details open>
+            <summary>How do I book a cleaning service?</summary>
+            <p>Contact our team with your property type, preferred date and the cleaning service you need. We'll discuss the requirements and confirm the next steps.</p>
+          </details>
+          <details>
+            <summary>Do you bring your own cleaning supplies?</summary>
+            <p>Cleaning supplies and equipment can be arranged according to the service package. Please confirm when booking.</p>
+          </details>
+          <details>
+            <summary>Can I schedule regular cleaning visits?</summary>
+            <p>Yes, you can request recurring weekly, biweekly or monthly cleaning appointments.</p>
+          </details>
+          <details>
+            <summary>Do you clean offices and commercial spaces?</summary>
+            <p>Yes, our service options include residential and commercial properties.</p>
+          </details>
+        </div>
+      </div>
+      <div class="faq-photo">
+        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=900&auto=format&fit=crop&q=85" alt="Friendly cleaning professional">
+        <div class="faq-circle"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container content-width">
+      <div class="section-heading">
+        <span class="eyebrow">What People Say</span>
+        <h2>Providing the Best Services<br>for Our Customers</h2>
+      </div>
+      <div class="testimonial-grid">
+        <article class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p>“The team was professional, punctual and very careful with our home. Everything felt fresh and clean afterward.”</p>
+          <div class="reviewer"><span class="avatar">SJ</span><div><strong>Sarah James</strong><small>Homeowner</small></div></div>
+        </article>
+        <article class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p>“We booked a deep clean before moving in. The attention to detail made a big difference.”</p>
+          <div class="reviewer"><span class="avatar">DK</span><div><strong>Daniel Kim</strong><small>Residential Client</small></div></div>
+        </article>
+        <article class="testimonial-card">
+          <i class="fa-solid fa-quote-right quote-icon"></i>
+          <p>“Easy scheduling, clear communication and a tidy office every time. Exactly what our team needed.”</p>
+          <div class="reviewer"><span class="avatar">EM</span><div><strong>Emma Miller</strong><small>Office Manager</small></div></div>
+        </article>
+      </div>
+      <div class="slider-dots"><i></i><i class="active"></i><i></i></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects section" id="projects">
+    <div class="container content-width">
+      <div class="projects-heading">
+        <div><span class="eyebrow">Completed Projects</span><h2>Keep Eye on Our New<br>Projects</h2></div>
+        <div class="project-filters">
+          <button class="active" data-filter="all">All</button>
+          <button data-filter="house">House</button>
+          <button data-filter="office">Office</button>
+          <button data-filter="outdoor">Outdoor</button>
+          <button data-filter="laundry">Laundry Service</button>
+        </div>
+      </div>
+      <div class="project-grid">
+        <article class="project-featured" data-category="house">
+          <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=900&auto=format&fit=crop&q=85" alt="Freshly cleaned house">
+          <div><h3>Home Cleaning Services</h3><p>Fresh, comfortable spaces for everyday living.</p></div>
+        </article>
+        <article class="project-small" data-category="office">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=500&auto=format&fit=crop&q=85" alt="Clean office">
+          <div><h3>Office Cleaning Services</h3><p>Professional workplace cleaning.</p></div>
+        </article>
+        <article class="project-small" data-category="outdoor">
+          <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&auto=format&fit=crop&q=85" alt="Cleaning professional">
+          <div><h3>Outdoor Cleaning</h3><p>Care for outdoor living spaces.</p></div>
+        </article>
+        <article class="project-small" data-category="laundry">
+          <img src="https://images.unsplash.com/photo-1551761429-8232f9f5955c?w=500&auto=format&fit=crop&q=85" alt="Fresh laundry">
+          <div><h3>Laundry Care</h3><p>Clean, fresh and neatly handled fabrics.</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stats-shade"></div>
+    <div class="container content-width stats-grid">
+      <div><i class="fa-regular fa-lightbulb"></i><strong>82+</strong><span>Skilled Cleaners</span></div>
+      <div><i class="fa-solid fa-house-circle-check"></i><strong>810+</strong><span>Completed Projects</span></div>
+      <div><i class="fa-solid fa-trophy"></i><strong>88+</strong><span>Service Milestones</span></div>
+      <div><i class="fa-solid fa-users"></i><strong>88+</strong><span>Expert Team Members</span></div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog section" id="blog">
+    <div class="container content-width">
+      <div class="section-heading">
+        <span class="eyebrow">Latest News & Articles</span>
+        <h2>Learn More from Our<br>Blog Posts</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-photo"><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=850&auto=format&fit=crop&q=85" alt="Home cleaning"><span>Cleaning</span></div>
+          <div class="blog-body">
+            <div class="blog-meta"><i class="fa-regular fa-calendar"></i> June 12, 2026 <span>•</span> Cleaning Tips</div>
+            <h3>Simple Habits That Keep Your Home Cleaner for Longer</h3>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+        <article class="blog-card">
+          <div class="blog-photo"><img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=850&auto=format&fit=crop&q=85" alt="Bright clean bathroom"><span>Home Care</span></div>
+          <div class="blog-body">
+            <div class="blog-meta"><i class="fa-regular fa-calendar"></i> June 08, 2026 <span>•</span> Home Care</div>
+            <h3>How to Prepare Your Apartment for a Professional Deep Clean</h3>
+            <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
+        </article>
+      </div>
+      <div class="partner-logos">
+        <span>fresh<span>life</span></span>
+        <span>clean&co.</span>
+        <span>HOMECARE</span>
+        <span>pure<span>space</span></span>
+        <span>brightliving</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="container content-width">
+      <div class="footer-top">
+        <a href="#home" class="logo"><span class="logo-mark"><i class="fa-solid fa-droplet"></i></span> Pure<span>Nest</span></a>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <h3>Contact Us</h3>
+          <p>Professional cleaning for comfortable homes and productive workplaces.</p>
+          <a href="tel:+15550102040" class="footer-phone"><i class="fa-solid fa-phone"></i> +1 (555) 010-2040</a>
+          <p>hello@purenest.example</p>
+        </div>
+        <div>
+          <h3>Our Links</h3>
+          <a href="#about">About Us</a>
+          <a href="#services">Services</a>
+          <a href="#projects">Our Projects</a>
+          <a href="#blog">Latest News</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div>
+          <h3>Our Services</h3>
+          <a href="#services">Residential Cleaning</a>
+          <a href="#services">Office Cleaning</a>
+          <a href="#services">Window Cleaning</a>
+          <a href="#services">Bathroom Cleaning</a>
+          <a href="#services">Deep Cleaning</a>
+        </div>
+        <div>
+          <h3>Newsletter</h3>
+          <p>Get useful cleaning tips and service updates delivered to your inbox.</p>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email address" aria-label="Email address" required>
+            <button type="submit">Subscribe</button>
+          </form>
+          <p class="newsletter-message" id="newsletterMessage" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 PureNest Cleaning. All rights reserved.</span>
+        <span>Privacy Policy <i>•</i> Terms & Conditions</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script>
+    const toggle = document.getElementById('menuToggle');
+    const nav = document.getElementById('navLinks');
+
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    nav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.querySelectorAll('.project-filters button').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelector('.project-filters button.active')?.classList.remove('active');
+        button.classList.add('active');
+        const category = button.dataset.filter;
+        document.querySelectorAll('.project-grid > article').forEach(card => {
+          card.hidden = category !== 'all' && card.dataset.category !== category;
+        });
+      });
+    });
+
+    document.getElementById('newsletterForm').addEventListener('submit', e => {
+      e.preventDefault();
+      document.getElementById('newsletterMessage').textContent =
+        'Demo form only. Connect an email service to collect subscriptions.';
+    });
+
+    document.getElementById('backToTop').addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+
+</body>
+</html>

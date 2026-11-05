@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AegisCare Insurance - Protection for every stage of life.">
+  <title>AegisCare | Insurance for a Better Tomorrow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="home">
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span><i class="fa-regular fa-clock"></i> Mon - Sat: 9:00 AM - 6:00 PM</span>
+      <span><i class="fa-solid fa-envelope"></i> hello@aegiscare.example</span>
+      <span><i class="fa-solid fa-phone"></i> +1 (555) 010-2026</span>
+    </div>
+  </div>
+  <div class="container nav-wrap">
+    <a href="#home" class="logo"><span class="logo-icon"><i class="fa-solid fa-shield-heart"></i></span><span>AEGIS<span class="logo-blue">CARE</span><small>INSURANCE GROUP</small></span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#plans">Plans</a><a href="#team">Our Team</a><a href="#blog">Blog</a><a href="#contact">Contact</a>
+    </nav>
+    <a href="#quote" class="nav-cta"><i class="fa-solid fa-file-shield"></i> Get a Free Quote</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-pattern"></div>
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <span class="eyebrow light">PROTECTION YOU CAN COUNT ON</span>
+        <h1>Protect What<br>Matters <span>Most.</span></h1>
+        <p>Life changes quickly. Your peace of mind shouldn't. Explore flexible insurance solutions designed around you and the people you love.</p>
+        <div class="hero-actions"><a href="#quote" class="btn btn-blue">Explore Coverage <i class="fa-solid fa-arrow-right"></i></a><div class="hero-rating"><span class="stars">★★★★★</span><small>Trusted by families and businesses</small></div></div>
+      </div>
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=850&auto=format&fit=crop&q=85" alt="Professional insurance advisor">
+        <div class="hero-floating"><i class="fa-solid fa-shield-heart"></i><div><strong>Here for you</strong><span>Every step of the way</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="container feature-grid">
+      <article class="feature-card"><i class="fa-solid fa-shield-halved"></i><h3>Complete Protection</h3><p>Coverage options for your home, health, business and future.</p></article>
+      <article class="feature-card featured"><i class="fa-solid fa-headset"></i><h3>Claims Assistance</h3><p>Helpful guidance and personal support when you need it most.</p></article>
+      <article class="feature-card"><i class="fa-solid fa-handshake"></i><h3>Personal Guidance</h3><p>Clear advice to help you choose coverage that fits your needs.</p></article>
+    </div>
+  </section>
+
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-visual">
+        <div class="about-stat"><strong>56K</strong><span>People Protected</span><p>Helping individuals and families plan with greater confidence.</p><div class="mini-progress"><span></span></div></div>
+        <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=700&auto=format&fit=crop&q=85" alt="Happy family at home">
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">WELCOME TO AEGISCARE</span>
+        <h2>Helping You Feel Secure About Tomorrow</h2>
+        <p>Insurance should be simple to understand and easy to manage. We help people compare options, understand their benefits and prepare for the unexpected.</p>
+        <ul class="check-list"><li>Coverage built around your priorities</li><li>Clear explanations and practical advice</li><li>Support from experienced advisors</li><li>Flexible plans for different budgets</li></ul>
+        <a href="#contact" class="btn btn-blue">Discover Our Story <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="services section" id="services">
+    <div class="container">
+      <div class="section-top"><div><span class="eyebrow">OUR INSURANCE SERVICES</span><h2>Protection for Every<br>Part of Your Life</h2></div><div class="section-arrows"><button class="carousel-prev" aria-label="Previous services"><i class="fa-solid fa-arrow-left"></i></button><button class="carousel-next" aria-label="Next services"><i class="fa-solid fa-arrow-right"></i></button></div></div>
+      <div class="service-grid" id="serviceGrid">
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=650&auto=format&fit=crop&q=85" alt="Modern home"><div class="service-body"><span class="service-icon"><i class="fa-solid fa-house"></i></span><h3>Home Insurance</h3><p>Protect your property and belongings against unexpected events.</p><a href="#quote">Explore Coverage <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=650&auto=format&fit=crop&q=85" alt="Friends spending time together"><div class="service-body"><span class="service-icon"><i class="fa-solid fa-heart-pulse"></i></span><h3>Life Insurance</h3><p>Help protect your loved ones and their financial future.</p><a href="#quote">Explore Coverage <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=650&auto=format&fit=crop&q=85" alt="Family together"><div class="service-body"><span class="service-icon"><i class="fa-solid fa-people-roof"></i></span><h3>Family Protection</h3><p>Find plans designed for the needs of your growing family.</p><a href="#quote">Explore Coverage <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        <article class="service-card"><img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=650&auto=format&fit=crop&q=85" alt="Business office"><div class="service-body"><span class="service-icon"><i class="fa-solid fa-briefcase"></i></span><h3>Business Insurance</h3><p>Keep your company prepared for operational risks.</p><a href="#quote">Explore Coverage <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote-section" id="quote">
+    <div class="quote-overlay"></div>
+    <div class="container quote-container">
+      <div class="quote-heading"><span class="eyebrow light">GET COVERED TODAY</span><h2>Find the Right Protection<br>for Your Future</h2><p>Tell us what you're looking for and our team can help you explore your options.</p></div>
+      <div class="quote-grid">
+        <img class="quote-image" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=850&auto=format&fit=crop&q=85" alt="Healthcare professional meeting a patient">
+        <div class="quote-form-card">
+          <div class="quote-tabs"><button class="active" type="button" data-type="health"><i class="fa-solid fa-heart-pulse"></i> Health</button><button type="button" data-type="home"><i class="fa-solid fa-house"></i> Home</button><button type="button" data-type="life"><i class="fa-solid fa-user-shield"></i> Life</button></div>
+          <h3>Request Your Free Quote</h3>
+          <form id="quoteForm">
+            <input type="hidden" id="insuranceType" name="insuranceType" value="health">
+            <div class="form-row"><label>Full Name<input type="text" name="name" placeholder="Your full name" required></label><label>Email Address<input type="email" name="email" placeholder="you@example.com" required></label></div>
+            <label>Phone Number<input type="tel" name="phone" placeholder="Your phone number" required></label>
+            <label>Coverage Amount<select name="coverage" required><option value="">Select coverage range</option><option>$25,000 - $50,000</option><option>$50,000 - $100,000</option><option>$100,000 - $250,000</option><option>$250,000+</option></select></label>
+            <label>Preferred Monthly Budget <strong id="budgetValue">$150</strong><input type="range" id="budget" min="25" max="500" step="25" value="150"></label>
+            <button class="btn btn-blue form-submit" type="submit">Request a Quote <i class="fa-solid fa-arrow-right"></i></button>
+            <p class="form-note" id="quoteMessage" aria-live="polite">No payment or commitment required.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="partners section">
+    <div class="container partner-grid"><div><span class="eyebrow">OUR PARTNERS</span><h2>Working with Trusted<br>Industry Partners</h2><a href="#contact" class="btn btn-blue">Work With Us <i class="fa-solid fa-arrow-right"></i></a></div><div class="partner-logos"><span><i class="fa-solid fa-shield"></i> ShieldPoint</span><span><i class="fa-solid fa-heart"></i> WellSure</span><span><i class="fa-solid fa-building"></i> PrimeCover</span><span><i class="fa-solid fa-handshake"></i> TrustBridge</span><span><i class="fa-solid fa-leaf"></i> EverCare</span><span><i class="fa-solid fa-globe"></i> GlobalGuard</span></div></div>
+  </section>
+
+  <section class="why-section">
+    <div class="container why-grid">
+      <div class="why-images"><img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=650&auto=format&fit=crop&q=85" alt="Happy family"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=650&auto=format&fit=crop&q=85" alt="Friends outdoors"></div>
+      <div class="why-copy"><span class="eyebrow light">WHY CHOOSE US</span><h2>Real Support. Real Peace of Mind.</h2><p>We focus on helping you understand your options and make confident decisions.</p><div class="why-box"><i class="fa-solid fa-user-shield"></i><div><h3>Advice That Puts You First</h3><p>We explain coverage clearly so you can make informed choices.</p></div></div><div class="why-box"><i class="fa-solid fa-piggy-bank"></i><div><h3>Options for Your Budget</h3><p>Explore different levels of protection to suit your circumstances.</p></div></div></div>
+    </div>
+  </section>
+
+  <section class="team-section section" id="team">
+    <div class="container"><div class="section-top"><div><span class="eyebrow">MEET OUR PEOPLE</span><h2>Experienced Advisors,<br>Personal Support</h2><p>Get to know the people behind AegisCare.</p></div><a href="#contact" class="btn btn-blue">Meet Our Team <i class="fa-solid fa-arrow-right"></i></a></div>
+      <div class="team-grid">
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=650&auto=format&fit=crop&q=85" alt="Alexander Brown"><h3>Alexander Brown</h3><p>Senior Insurance Advisor</p></article>
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=650&auto=format&fit=crop&q=85" alt="Sophia Bennett"><h3>Sophia Bennett</h3><p>Client Relations Manager</p></article>
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=650&auto=format&fit=crop&q=85" alt="David Mitchell"><h3>David Mitchell</h3><p>Coverage Specialist</p></article>
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=650&auto=format&fit=crop&q=85" alt="James Wilson"><h3>James Wilson</h3><p>Business Protection Advisor</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="plans-section section" id="plans">
+    <div class="container"><div class="section-heading center"><span class="eyebrow">FLEXIBLE OPTIONS</span><h2>Protection Plans for<br>Different Needs</h2><p>Illustrative plans to help you explore your options.</p></div>
+      <div class="plans-grid"><article class="plan-card"><div><span class="plan-type">ESSENTIAL COVER</span><h3>Personal Protection</h3><p>For individuals exploring essential coverage.</p><ul class="check-list"><li>Personal consultation</li><li>Coverage options review</li><li>Policy guidance</li><li>Claims assistance information</li></ul><a href="#quote" class="btn btn-blue">Request Pricing <i class="fa-solid fa-arrow-right"></i></a></div><i class="fa-solid fa-user-shield plan-art"></i></article><article class="plan-card"><div><span class="plan-type">FAMILY COVER</span><h3>Family Protection</h3><p>For households planning ahead together.</p><ul class="check-list"><li>Family needs assessment</li><li>Multiple coverage options</li><li>Policy comparison</li><li>Personal advisor support</li></ul><a href="#quote" class="btn btn-dark">Request Pricing <i class="fa-solid fa-arrow-right"></i></a></div><i class="fa-solid fa-people-roof plan-art"></i></article></div>
+    </div>
+  </section>
+
+  <section class="testimonial-section section">
+    <div class="container testimonial-grid"><div><span class="eyebrow">CLIENT EXPERIENCE</span><h2>What Matters Most<br>Is Your Confidence</h2><div class="rating-card"><strong>4.8</strong><span class="stars">★★★★★</span><small>Illustrative customer rating</small></div></div><div class="testimonial-card"><i class="fa-solid fa-quote-right"></i><p>“Our advisor explained the different coverage options in a way that was easy to understand. We felt more confident choosing a plan that suited our family's needs.”</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=85" alt="Client portrait"><div><strong>Michelle Parker</strong><span>Sample Client Story</span></div></div></div></div>
+  </section>
+
+  <section class="blog-section section" id="blog">
+    <div class="container"><div class="section-heading center"><span class="eyebrow">INSIGHTS & ADVICE</span><h2>Helpful Reads for<br>Every Stage of Life</h2></div><div class="blog-grid"><article class="blog-card"><img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=750&auto=format&fit=crop&q=85" alt="Family at home"><div><span class="blog-tag">FAMILY PROTECTION</span><h3>Five Things to Consider When Choosing Family Insurance</h3><a href="#contact">Learn More <i class="fa-solid fa-arrow-right"></i></a></div></article><article class="blog-card"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=750&auto=format&fit=crop&q=85" alt="Modern family home"><div><span class="blog-tag">HOME COVERAGE</span><h3>Understanding What Your Home Insurance May Cover</h3><a href="#contact">Learn More <i class="fa-solid fa-arrow-right"></i></a></div></article></div></div>
+  </section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer-top"><div class="container footer-top-inner"><a href="#home" class="logo footer-logo"><span class="logo-icon"><i class="fa-solid fa-shield-heart"></i></span><span>AEGIS<span class="logo-blue">CARE</span><small>INSURANCE GROUP</small></span></a><strong><i class="fa-solid fa-phone-volume"></i> Let's Talk About Your Coverage</strong><span>+1 (555) 010-2026</span></div></div>
+  <div class="container footer-grid"><div class="footer-about"><p>Thoughtful insurance guidance for individuals, families and businesses. We help you prepare for what matters most.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a></div></div><div class="footer-links"><h3>Explore</h3><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#team">Our Team</a></div><div class="footer-links"><h3>Insurance</h3><a href="#services">Home Insurance</a><a href="#services">Life Insurance</a><a href="#services">Family Protection</a><a href="#services">Business Insurance</a></div><div class="footer-links"><h3>Get in Touch</h3><p><i class="fa-solid fa-envelope"></i> hello@aegiscare.example</p><p><i class="fa-solid fa-phone"></i> +1 (555) 010-2026</p><p><i class="fa-solid fa-clock"></i> Mon - Sat, 9 AM - 6 PM</p></div></div>
+  <div class="container footer-bottom"><span>© 2026 AegisCare Insurance. All rights reserved.</span><span>Privacy Policy | Terms of Service</span></div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  });
+  document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  document.querySelectorAll('.quote-tabs button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.quote-tabs button').forEach(b => b.classList.remove('active'));
+      button.classList.add('active');
+      document.getElementById('insuranceType').value = button.dataset.type;
+    });
+  });
+
+  const budget = document.getElementById('budget');
+  budget.addEventListener('input', () => {
+    document.getElementById('budgetValue').textContent = '$' + budget.value;
+  });
+
+  document.getElementById('quoteForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('quoteMessage').textContent = 'Demo form only. Connect your backend or email service to receive quote requests.';
+  });
+
+  const serviceGrid = document.getElementById('serviceGrid');
+  document.querySelector('.carousel-next').addEventListener('click', () => serviceGrid.scrollBy({left:300,behavior:'smooth'}));
+  document.querySelector('.carousel-prev').addEventListener('click', () => serviceGrid.scrollBy({left:-300,behavior:'smooth'}));
+</script>
+</body>
+</html>

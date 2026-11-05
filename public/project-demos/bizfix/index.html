@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bizfix - Business consulting, marketing and creative solutions.">
+  <title>Bizfix | Business & Creative Agency</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-inner">
+    <a href="#home" class="logo">
+      <span class="logo-symbol"><i></i><i></i><i></i></span>
+      bizfix
+    </a>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#portfolio">PORTFOLIO</a>
+      <a href="#blog">BLOG</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="nav-actions">
+      <a href="#contact" class="nav-quote">LET'S TALK <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      <button class="nav-search" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-left"></div>
+  <div class="hero-right"></div>
+  <div class="hero-pattern"></div>
+
+  <div class="container hero-content">
+    <div class="hero-copy">
+      <div class="red-star">✳</div>
+      <span class="hero-kicker">CREATIVE BUSINESS SOLUTIONS</span>
+      <h1>LEADING THE WAY IN<br><span>BIZFIX</span> EXCELLENCE</h1>
+      <p>We create powerful strategies and memorable brands that help ambitious businesses move forward.</p>
+      <a href="#about" class="red-btn">GET STARTED <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <img class="hero-person" src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=850&auto=format&fit=crop&q=90" alt="Business professional">
+  </div>
+  <div class="skyline">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services section" id="services">
+  <div class="container">
+    <div class="service-grid">
+      <article class="service-item">
+        <div class="service-icon"><i class="fa-solid fa-laptop-code"></i></div>
+        <h3>Website Development</h3>
+        <p>Build a strong online presence with fast, functional and modern websites.</p>
+      </article>
+      <article class="service-item">
+        <div class="service-icon"><i class="fa-solid fa-display"></i></div>
+        <h3>Digital Marketing</h3>
+        <p>Reach the right audience through creative campaigns and digital strategy.</p>
+      </article>
+      <article class="service-item">
+        <div class="service-icon"><i class="fa-solid fa-list-check"></i></div>
+        <h3>Technical Management</h3>
+        <p>Keep your business systems organized, reliable and ready to grow.</p>
+      </article>
+      <article class="service-item">
+        <div class="service-icon"><i class="fa-regular fa-calendar-check"></i></div>
+        <h3>Business Consulting</h3>
+        <p>Turn challenges into opportunities with practical business advice.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT LIST -->
+<section class="portfolio section" id="portfolio">
+  <div class="container narrow">
+    <div class="section-heading">
+      <span class="eyebrow">LATEST PROJECTS</span>
+      <h2>Explore our best recently<br>completed project</h2>
+      <span class="decor-marks">✳</span>
+    </div>
+
+    <div class="project-list">
+      <a href="#contact" class="project-row">
+        <span class="project-number">01<span>/</span></span>
+        <h3>Marketing & Design</h3>
+        <p>Creative solutions designed to build stronger brands and lasting impressions.</p>
+        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a href="#contact" class="project-row">
+        <span class="project-number">02<span>/</span></span>
+        <h3>Business Consulting</h3>
+        <p>Thoughtful strategies that help companies improve and grow.</p>
+        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+      <a href="#contact" class="project-row">
+        <span class="project-number">03<span>/</span></span>
+        <h3>Social Media Management</h3>
+        <p>Engaging content and campaigns that connect businesses with their customers.</p>
+        <span class="arrow-circle"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SPLIT -->
+<section class="split-section" id="about">
+  <div class="split-image">
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=1200&auto=format&fit=crop&q=85" alt="Business team working together">
+  </div>
+  <div class="split-content">
+    <div class="split-content-inner">
+      <span class="eyebrow">COMPANY INTRODUCTION</span>
+      <h2>Connecting businesses, people & ideas for the future.</h2>
+      <p>We believe successful businesses are built on meaningful relationships, creative thinking and a clear vision. Our team helps companies transform ideas into practical results.</p>
+      <div class="progress-group">
+        <div class="progress-title"><span>BUSINESS CONSULTING</span><strong>90%</strong></div>
+        <div class="progress-track"><span style="width:90%"></span></div>
+      </div>
+      <div class="progress-group">
+        <div class="progress-title"><span>MARKETING STRATEGY</span><strong>85%</strong></div>
+        <div class="progress-track"><span style="width:85%"></span></div>
+      </div>
+      <div class="progress-group">
+        <div class="progress-title"><span>CREATIVE DESIGN</span><strong>95%</strong></div>
+        <div class="progress-track"><span style="width:95%"></span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STORY -->
+<section class="split-section story">
+  <div class="split-content">
+    <div class="split-content-inner">
+      <span class="eyebrow">OUR MISSION</span>
+      <h2>Crafting Lasting Brand Identities: Partner with Us for a Fresh Image</h2>
+      <p>Your brand is more than a logo. It's how customers remember you, how your team communicates and what sets your business apart.</p>
+      <p>We combine design, technology and business thinking to create identities and experiences that people recognize and trust.</p>
+      <div class="story-chart">
+        <div class="pie"></div>
+        <div class="chart-labels"><span><b class="red-dot"></b> Strategy</span><span><b class="black-dot"></b> Design</span><span><b class="gray-dot"></b> Development</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="split-image">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&auto=format&fit=crop&q=85" alt="Business performance analytics">
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing section" id="pricing">
+  <div class="container narrow">
+    <div class="section-heading">
+      <span class="eyebrow">OUR PRICING</span>
+      <h2>Special offer worth investing in,<br>choose your pack today!</h2>
+      <span class="decor-marks">✳</span>
+    </div>
+    <div class="pricing-grid">
+      <article class="pricing-card">
+        <span class="plan-label">BASIC PLAN</span>
+        <div class="price"><sup>$</sup>120</div>
+        <p>For individuals and small businesses starting their digital presence.</p>
+        <ul><li>Business consultation</li><li>Basic marketing strategy</li><li>Website planning</li><li>Email support</li></ul>
+        <a href="#contact" class="outline-btn">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="pricing-card">
+        <span class="plan-label">STANDARD PLAN</span>
+        <div class="price"><sup>$</sup>220</div>
+        <p>For growing businesses that need stronger branding and marketing.</p>
+        <ul><li>Everything in Basic</li><li>Brand strategy</li><li>Social media planning</li><li>Priority consultation</li></ul>
+        <a href="#contact" class="outline-btn">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+      <article class="pricing-card">
+        <span class="plan-label">PREMIUM PLAN</span>
+        <div class="price"><sup>$</sup>350</div>
+        <p>For businesses ready to invest in their next stage of growth.</p>
+        <ul><li>Everything in Standard</li><li>Full campaign strategy</li><li>Creative direction</li><li>Dedicated support</li></ul>
+        <a href="#contact" class="outline-btn">Get Started <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<section class="marquee" aria-label="Our expertise">
+  <div class="marquee-track">
+    <span># BUSINESS CONSULTING</span><span># MARKETING</span><span># BUSINESS</span><span># PAYROLL SUPPORT</span><span># BRANDING</span>
+    <span># BUSINESS CONSULTING</span><span># MARKETING</span><span># BUSINESS</span><span># PAYROLL SUPPORT</span><span># BRANDING</span>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="testimonial section">
+  <div class="container testimonial-inner">
+    <div class="quote-symbol">”</div>
+    <blockquote>Transforming ideas into user-friendly and visually appealing websites. Accounting and Bookkeeping Services related to <span>financial record-keeping</span>, bookkeeping, tax preparation, and financial reporting...</blockquote>
+    <span class="quote-author">HAPPY CLIENT</span>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team section">
+  <div class="container narrow">
+    <div class="section-heading">
+      <span class="eyebrow">OUR TEAM</span>
+      <h2>The amazing team behind<br>our company</h2>
+      <span class="decor-marks">✳</span>
+    </div>
+    <div class="team-grid">
+      <article class="team-card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=650&auto=format&fit=crop&q=85" alt="Business consultant"><div class="team-info"><h3>James Miller</h3><span>Business Consultant</span></div></article>
+      <article class="team-card"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=650&auto=format&fit=crop&q=85" alt="Marketing director"><div class="team-info"><h3>Michael Carter</h3><span>Marketing Director</span></div></article>
+      <article class="team-card"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=650&auto=format&fit=crop&q=85" alt="Creative strategist"><div class="team-info"><h3>Daniel Brooks</h3><span>Creative Strategist</span></div></article>
+    </div>
+    <div class="slider-dots"><span class="active"></span><span></span><span></span></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-split" id="contact">
+  <div class="contact-photo"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=1200&auto=format&fit=crop&q=85" alt="Professional business consultation"></div>
+  <div class="contact-right">
+    <div class="map-placeholder">
+      <div class="map-lines"></div>
+      <div class="map-pin"><i class="fa-solid fa-location-dot"></i></div>
+      <span>YOUR OFFICE LOCATION</span>
+    </div>
+    <div class="contact-info">
+      <div><span class="contact-kicker">LET'S CONNECT</span><h3>Get in touch</h3><p>Tell us about your project and let's build something meaningful.</p></div>
+      <div><span class="contact-kicker">EMAIL ADDRESS</span><a href="mailto:hello@example.com">hello@example.com</a><span class="contact-kicker second">OFFICE HOURS</span><p>Mon - Fri, 9:00 AM - 6:00 PM</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- BLOG -->
+<section class="blog section" id="blog">
+  <div class="container narrow">
+    <div class="section-heading">
+      <span class="eyebrow">OUR LATEST BLOG</span>
+      <h2>Everything about the<br>business</h2>
+      <span class="decor-marks">✳</span>
+    </div>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=750&auto=format&fit=crop&q=85" alt="Business strategy">
+        <div class="blog-content"><span class="blog-meta">BUSINESS / CONSULTING</span><h3>Unlocking the Right Business Strategies to Build Confidence</h3><p>Practical ideas for improving your company's direction and long-term performance.</p><a href="#contact" class="red-btn">READ MORE <i class="fa-solid fa-arrow-right"></i></a></div>
+      </article>
+      <article class="blog-card">
+        <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=750&auto=format&fit=crop&q=85" alt="Creative professional">
+        <div class="blog-content"><span class="blog-meta">MARKETING / GROWTH</span><h3>Unlocking the Right Marketing Strategy to Take Your Brand Further</h3><p>Discover how clear messaging and good design can help your business stand out.</p><a href="#contact" class="red-btn">READ MORE <i class="fa-solid fa-arrow-right"></i></a></div>
+      </article>
+    </div>
+
+    <div class="subscribe">
+      <h3>Subscribe and receive latest insights & news.</h3>
+      <form id="subscribeForm"><input type="email" placeholder="Enter your email address" required aria-label="Email address"><button type="submit">SUBSCRIBE <i class="fa-solid fa-arrow-right"></i></button></form>
+    </div>
+    <p class="form-message" id="formMessage" aria-live="polite"></p>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container narrow">
+    <div class="footer-grid">
+      <div class="footer-brand"><h3>Get in Touch</h3><p>Let's create a better future for your business.</p><a href="#home" class="logo"><span class="logo-symbol"><i></i><i></i><i></i></span> bizfix</a></div>
+      <div class="footer-col"><h3>Explore</h3><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a></div>
+      <div class="footer-col"><h3>Company</h3><a href="#pricing">Pricing</a><a href="#blog">Our Blog</a><a href="#contact">Contact</a><a href="#contact">Get a Quote</a></div>
+      <div class="footer-col"><h3>Contact</h3><a href="mailto:hello@example.com">hello@example.com</a><p>Business Consulting<br>Creative & Digital Services</p></div>
+    </div>
+    <div class="footer-bottom">© 2026 Bizfix. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const mainNav = document.getElementById('mainNav');
+
+menuToggle.addEventListener('click', () => {
+  const open = mainNav.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(open));
+  menuToggle.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+});
+
+document.querySelectorAll('.main-nav a').forEach(link => {
+  link.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.querySelector('i').className = 'fa-solid fa-bars';
+  });
+});
+
+document.getElementById('subscribeForm').addEventListener('submit', e => {
+  e.preventDefault();
+  document.getElementById('formMessage').textContent = 'Connect an email service to activate newsletter subscriptions.';
+});
+</script>
+
+</body>
+</html>

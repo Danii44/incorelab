@@ -1,0 +1,1002 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reboost Studio is an independent creative agency specializing in branding, digital design, content creation and marketing.">
+    <title>Reboost Studio | Creative Digital Agency</title>
+
+    <link rel="icon" href="images/icon.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/animation_utility.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header" class="fixed-top">
+        <div class="r-container">
+            <div class="navbar d-xl-flex flex-xl-nowrap">
+                <div class="container-fluid navbar-expand-xl">
+
+                    <div class="logo-container">
+                        <a href="index.html" class="navbar-brand">
+                            <img
+                                src="images/site%20logo.png"
+                                class="img-fluid w-100"
+                                alt="Reboost Studio Logo">
+                        </a>
+                    </div>
+
+                    <button
+                        class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarNav"
+                        aria-controls="navbarNav"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-4">
+                            <li class="nav-item">
+                                <a href="#home" class="nav-link active">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link">Studio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#services" class="nav-link">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#portfolio" class="nav-link">Work</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#approach" class="nav-link">Approach</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#pricing" class="nav-link">Pricing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contact" class="nav-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="d-none d-xl-flex flex-row gap-3 align-items-center">
+                        <a class="btn btn-accent d-flex flex-row gap-3" href="#contact">
+                            <span>Start a Project</span>
+                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main>
+
+        <!-- Hero -->
+        <section id="home" class="section bg-image pb-0 px-xl-0">
+            <div class="r-container d-flex justify-content-center align-items-center"
+                 style="min-height:80vh;">
+
+                <div class="row row-xl-cols-2 row-cols-1 mt-5 justify-content-between">
+
+                    <div class="col col-xl-10 mb-3">
+
+                        <div class="row row-cols-xl-2 row-cols-1">
+                            <div class="col col-xl-10 mb-3">
+                                <h1 class="text-end fst-italic fw-bold me-xl-5 me-0">
+                                    -INDEPENDENT CREATIVE STUDIO//
+                                </h1>
+                            </div>
+
+                            <div class="col col-xl-2 mb-3">
+                                <div class="d-flex align-items-end justify-content-end pt-4 float-icon">
+                                    <img src="images/icon%202.png" class="img-fluid" alt="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row row-cols-xl-3 row-cols-1 align-items-center">
+
+                            <div class="col col-xl-2 mb-3">
+                                <a href="#about" class="btn-play">
+                                    <span class="btn-play__circle bg-accent-color">
+                                        <i class="rtmicon rtmicon-arrow-down-right btn-play__icon"></i>
+                                    </span>
+                                </a>
+                            </div>
+
+                            <div class="col col-xl-10 mb-3">
+                                <div class="d-flex flex-column">
+
+                                    <h1 class="text-lg-end">
+                                        Create Something
+                                    </h1>
+
+                                    <div class="d-flex flex-lg-row flex-column-reverse align-items-lg-end justify-content-end gap-xl-5 gap-3 w-100">
+                                        <p>
+                                            Creative thinking, distinctive design<br>
+                                            and digital experiences for ambitious brands.
+                                        </p>
+
+                                        <h1 class="text-lg-end">
+                                            *Remarkable
+                                        </h1>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col col-xl-1 mb-3">
+                        <div class="social-wrapper">
+                            <p class="follow-text">FOLLOW US</p>
+                            <i class="rtmicon rtmicon-arrow-down text-color-2"></i>
+
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                                <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Creative Brand Strip -->
+            <div class="d-flex flex-column gap-3 text-center align-items-center justify-content-center mx-auto mt-xl-5 position-relative accent-primary">
+
+                <div class="marquee-container first bg-accent-color"
+                     style="transform:rotate(6deg);position:absolute;margin-block:10rem;z-index:1;">
+                    <div class="marquee-content">
+                        <div class="marquee-item py-2">CREATIVE DIRECTION</div>
+                        <div class="marquee-item py-2">BRAND IDENTITY</div>
+                        <div class="marquee-item py-2">DIGITAL DESIGN</div>
+                        <div class="marquee-item py-2">CONTENT STUDIO</div>
+                    </div>
+                </div>
+
+                <div class="marquee-container reverse bg-accent-color-3"
+                     style="margin-block:10rem;">
+                    <div class="marquee-content">
+                        <div class="marquee-item py-2">DESIGN WITH PURPOSE</div>
+                        <div class="marquee-item py-2">THINK DIFFERENTLY</div>
+                        <div class="marquee-item py-2">MAKE AN IMPACT</div>
+                    </div>
+                </div>
+
+                <div class="marquee-container third reverse bg-accent-color-4 m-5"
+                     style="transform:rotate(-6deg);position:absolute;margin-block:6rem;z-index:1;">
+                    <div class="marquee-content">
+                        <div class="marquee-item py-2">IDEAS THAT MATTER</div>
+                        <div class="marquee-item py-2">VISUAL STORIES</div>
+                        <div class="marquee-item py-2">CREATIVE EXPERIENCES</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- End Hero -->
+
+        <!-- About -->
+        <section id="about" class="section position-relative">
+            <div class="r-container">
+
+                <div class="sub-heading position-absolute text-accent second"
+                     style="z-index:-1;right:15%;top:-4%;">
+                    ABOUT STUDIO
+                </div>
+
+                <div class="d-flex flex-column gap-5">
+
+                    <div class="d-flex flex-row align-items-center gap-2">
+                        <div class="border-bottom border-4 border-accent mb-5"
+                             style="width:100px;"></div>
+                        <h3>
+                            Independent Thinking.<br>
+                            Extraordinary Creative Work.
+                        </h3>
+                    </div>
+
+                    <div class="row row-cols-xl-2 row-cols-1 gap-5">
+
+                        <div class="col col-xl-4 mb-3">
+                            <img
+                                src="images/img%202.webp"
+                                class="img-fluid rounded-3"
+                                alt="Creative studio workspace"
+                                style="aspect-ratio:1/1;object-fit:cover;">
+                        </div>
+
+                        <div class="col col-xl-7 mb-3">
+                            <div class="d-flex flex-column gap-5">
+
+                                <div class="d-flex flex-column gap-3">
+                                    <p style="max-width:75%;">
+                                        Reboost Studio is a creative agency built around
+                                        a simple belief: good ideas deserve great design.
+                                        We help businesses find their voice, build a
+                                        distinctive identity and create digital experiences
+                                        that connect with people.
+                                    </p>
+
+                                    <p style="max-width:75%;">
+                                        Our work combines strategy, visual storytelling
+                                        and thoughtful execution. Every project starts
+                                        with understanding what makes a brand different.
+                                    </p>
+
+                                    <div class="d-flex flex-row align-items-center gap-3">
+                                        <a href="#services" class="btn btn-accent d-flex flex-row gap-3">
+                                            <span>Explore Our Services</span>
+                                            <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                        </a>
+                                        <a href="#portfolio" class="accent-color text-decoration-underline">
+                                            Discover Our Work
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row align-items-center justify-content-end gap-5">
+                                    <div class="d-flex flex-column rounded-3 bg-accent-color py-3 px-5">
+                                        <h6 class="background-color m-0">Creative First</h6>
+                                        <span class="small-text background-color">Design-led approach</span>
+                                    </div>
+
+                                    <img
+                                        src="images/img%203.webp"
+                                        class="img-fluid rounded-3"
+                                        alt="Creative team collaboration"
+                                        width="384"
+                                        style="aspect-ratio:16/9;object-fit:cover;">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Services -->
+        <section id="services" class="section position-relative">
+            <div class="r-container">
+
+                <div class="sub-heading position-absolute text-accent second"
+                     style="z-index:-1;left:12%;top:-2%;">
+                    WHAT WE DO
+                </div>
+
+                <div class="d-flex flex-column gap-3">
+
+                    <div class="d-flex flex-row align-items-center justify-content-end text-xl-end gap-2">
+                        <div class="border-bottom border-4 border-accent mb-5"
+                             style="width:100px;"></div>
+                        <h3>
+                            Creative Services Built<br>
+                            Around Your Ambitions.
+                        </h3>
+                    </div>
+
+                    <div class="row row-cols-xl-2 row-cols-1 align-items-center">
+                        <div class="col col-lg-8 mb-3">
+                            <img src="images/img%204.webp"
+                                 class="img-fluid rounded-3"
+                                 alt="Design and branding work"
+                                 width="282">
+                        </div>
+
+                        <div class="col col-lg-4 mb-3">
+                            <p class="text-lg-end">
+                                From the first sketch to the final launch,
+                                we build creative solutions that give
+                                brands a stronger presence.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column flex-wrap gap-2 my-4">
+                        <span class="w-max-content small-text btn-accent-2 active">Creative Direction</span>
+                        <span class="w-max-content small-text btn-accent-2">Brand Identity</span>
+                        <span class="w-max-content small-text btn-accent-2">Web Design</span>
+                        <span class="w-max-content small-text btn-accent-2">Social Media</span>
+                        <span class="w-max-content small-text btn-accent-2">Content Creation</span>
+                        <span class="w-max-content small-text btn-accent-2">Digital Marketing</span>
+                    </div>
+
+                    <div class="d-flex flex-column mt-3">
+
+                        <div class="navigation">
+                            <h4>Brand Identity & Visual Design</h4>
+                            <img src="images/img%205.webp" class="img-fluid" alt="">
+                            <a href="#contact" aria-label="Discuss branding">
+                                <i class="rtmicon rtmicon-arrow-up-right fw-bold"></i>
+                            </a>
+                        </div>
+                        <hr>
+
+                        <div class="navigation">
+                            <h4>Social Media & Content Creation</h4>
+                            <img src="images/img%205.webp" class="img-fluid" alt="">
+                            <a href="#contact" aria-label="Discuss content creation">
+                                <i class="rtmicon rtmicon-arrow-up-right fw-bold"></i>
+                            </a>
+                        </div>
+                        <hr>
+
+                        <div class="navigation">
+                            <h4>Website & Digital Experiences</h4>
+                            <img src="images/img%205.webp" class="img-fluid" alt="">
+                            <a href="#contact" aria-label="Discuss web design">
+                                <i class="rtmicon rtmicon-arrow-up-right fw-bold"></i>
+                            </a>
+                        </div>
+                        <hr>
+
+                        <div class="navigation">
+                            <h4>Creative Advertising Campaigns</h4>
+                            <img src="images/img%205.webp" class="img-fluid" alt="">
+                            <a href="#contact" aria-label="Discuss advertising">
+                                <i class="rtmicon rtmicon-arrow-up-right fw-bold"></i>
+                            </a>
+                        </div>
+                        <hr>
+
+                        <div class="navigation">
+                            <h4>Digital Strategy & Brand Growth</h4>
+                            <img src="images/img%205.webp" class="img-fluid" alt="">
+                            <a href="#contact" aria-label="Discuss strategy">
+                                <i class="rtmicon rtmicon-arrow-up-right fw-bold"></i>
+                            </a>
+                        </div>
+                        <hr>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Services -->
+
+        <!-- Creative Statement -->
+        <section class="section">
+            <div class="r-container">
+                <div class="d-flex flex-column align-items-center gap-3">
+
+                    <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
+                        <div class="textual-showcase">“GOOD DESIGN</div>
+                        <img src="images/img%206.webp"
+                             class="img-fluid rounded-pill"
+                             alt=""
+                             style="aspect-ratio:9/3;height:60px;">
+                        <div class="textual-showcase">GETS NOTICED*</div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
+                        <div class="textual-showcase text-decoration-underline">
+                            GREAT IDEAS
+                        </div>
+                        <div class="bg-accent-color-3 rounded-pill d-flex align-items-center justify-content-center"
+                             style="width:150px;height:70px;">
+                            <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"
+                               style="font-size:40px;"></i>
+                        </div>
+                        <div class="textual-showcase fw-bold">GET REMEMBERED</div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
+                        <div class="textual-showcase">-WE CREATE</div>
+                        <img src="images/img%207.png"
+                             class="img-fluid rounded-pill"
+                             alt=""
+                             style="width:400px;height:70px;object-fit:cover;">
+                        <div class="textual-showcase border border-4 p-2">BOTH.</div>
+                    </div>
+
+                    <div class="d-flex flex-lg-row flex-column align-items-center justify-content-center gap-3">
+                        <div class="textual-showcase">
+                            <span class="fst-italic fw-bold">‘MAKE’</span> IT
+                        </div>
+                        <img src="images/img%208.webp"
+                             class="img-fluid rounded-pill"
+                             alt=""
+                             style="width:270px;height:60px;object-fit:cover;">
+                        <div class="textual-showcase fst-italic">MATTER.”</div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Creative Statement -->
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="section position-relative">
+            <div class="r-container">
+
+                <div class="sub-heading position-absolute text-accent second"
+                     style="z-index:-1;right:10%;top:-2%;">
+                    SELECTED WORK
+                </div>
+
+                <div class="d-flex flex-column gap-5">
+
+                    <div class="row row-lg-cols-2 row-cols-1">
+                        <div class="col col-lg-7 mb-3">
+                            <div class="d-flex flex-column gap-5">
+                                <div class="d-flex flex-row align-items-center gap-2">
+                                    <div class="border-bottom border-4 border-accent mb-5"
+                                         style="width:100px;"></div>
+                                    <h3>
+                                        Selected Work.<br>
+                                        Designed to Make an Impact.
+                                    </h3>
+                                </div>
+
+                                <p class="ms-xl-5 ps-xl-5" style="max-width:73%;">
+                                    Explore a selection of visual identities,
+                                    digital concepts and creative projects
+                                    developed with attention to every detail.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col col-lg-5 mb-3">
+                            <div class="d-flex flex-xl-row flex-column justify-content-lg-end gap-2 mb-2">
+                                <span class="w-max-content small-text btn-accent-2 active">Brand Identity</span>
+                                <span class="w-max-content small-text btn-accent-2">Digital Design</span>
+                            </div>
+                            <div class="d-flex flex-xl-row flex-column justify-content-lg-end gap-2 mb-2">
+                                <span class="w-max-content small-text btn-accent-2">Creative Direction</span>
+                                <span class="w-max-content small-text btn-accent-2">Packaging</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-lg-3 row-cols-1">
+
+                        <!-- Column 1 -->
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3">
+
+                                <div class="card">
+                                    <img src="images/LANYARD-A.jpg"
+                                         alt="Forma Studio branding"
+                                         style="object-fit:cover;aspect-ratio:1/1;">
+                                    <div class="image-overlay active">
+                                        <div class="d-flex flex-column gap-5">
+                                            <div class="d-flex flex-row gap-5">
+                                                <span class="p-0 text-color">2026</span>
+                                                <span class="p-0 text-color">Brand Identity</span>
+                                            </div>
+                                            <h4>Forma Studio</h4>
+                                        </div>
+                                        <div class="d-flex flex-row gap-3 align-items-end justify-content-between">
+                                            <p>A contemporary identity built around simplicity and clarity.</p>
+                                            <a href="#contact" class="icon-box-4" aria-label="Discuss similar project">
+                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img src="images/Business_Card_Mockup.jpg"
+                                         alt="Northline brand stationery"
+                                         style="object-fit:cover;aspect-ratio:4/3;">
+                                    <div class="image-overlay">
+                                        <div class="d-flex flex-column gap-5">
+                                            <div class="d-flex flex-row gap-5">
+                                                <span class="p-0 text-color">2026</span>
+                                                <span class="p-0 text-color">Corporate Identity</span>
+                                            </div>
+                                            <h4>Northline Creative</h4>
+                                        </div>
+                                        <div class="d-flex flex-row gap-3 align-items-end justify-content-between">
+                                            <p>A confident visual system for a modern business.</p>
+                                            <a href="#contact" class="icon-box-4" aria-label="Discuss similar project">
+                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Column 2 -->
+                        <div class="col mb-3">
+                            <div class="card h-100">
+                                <img src="images/ID-Card-Mockup-Potrait.jpg"
+                                     class="img-fluid h-100"
+                                     alt="The Modern Edit identity"
+                                     style="object-fit:cover;">
+                                <div class="image-overlay">
+                                    <div class="d-flex flex-column gap-5">
+                                        <div class="d-flex flex-row gap-5">
+                                            <span class="p-0 text-color">2026</span>
+                                            <span class="p-0 text-color">Editorial Design</span>
+                                        </div>
+                                        <h4>The Modern Edit</h4>
+                                    </div>
+                                    <div class="d-flex flex-row gap-3 align-items-end justify-content-between">
+                                        <p>Expressive typography and a carefully balanced visual direction.</p>
+                                        <a href="#contact" class="icon-box-4" aria-label="Discuss similar project">
+                                            <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Column 3 -->
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-3">
+
+                                <div class="card">
+                                    <img src="images/Shoe-Box-Mock-Up-Potrait.jpg"
+                                         alt="Kinetic product packaging"
+                                         style="object-fit:cover;aspect-ratio:4/3;">
+                                    <div class="image-overlay">
+                                        <div class="d-flex flex-column gap-5">
+                                            <div class="d-flex flex-row gap-5">
+                                                <span class="p-0 text-color">2026</span>
+                                                <span class="p-0 text-color">Packaging</span>
+                                            </div>
+                                            <h4>Kinetic Athletics</h4>
+                                        </div>
+                                        <div class="d-flex flex-row gap-3 align-items-end justify-content-between">
+                                            <p>Bold packaging designed for a dynamic lifestyle brand.</p>
+                                            <a href="#contact" class="icon-box-4" aria-label="Discuss similar project">
+                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img src="images/Psd-2.jpg"
+                                         alt="Atelier Objects design"
+                                         style="object-fit:cover;aspect-ratio:1/1;">
+                                    <div class="image-overlay">
+                                        <div class="d-flex flex-column gap-5">
+                                            <div class="d-flex flex-row gap-5">
+                                                <span class="p-0 text-color">2026</span>
+                                                <span class="p-0 text-color">Visual Identity</span>
+                                            </div>
+                                            <h4>Atelier Objects</h4>
+                                        </div>
+                                        <div class="d-flex flex-row gap-3 align-items-end justify-content-between">
+                                            <p>A minimal identity inspired by form, texture and detail.</p>
+                                            <a href="#contact" class="icon-box-4" aria-label="Discuss similar project">
+                                                <i class="rtmicon rtmicon-arrow-up-right fw-bold background-color"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Portfolio -->
+
+        <!-- Our Approach -->
+        <section id="approach" class="section">
+            <div class="mx-auto align-items-center position-relative bg-color-2 p-xl-5 p-3 rounded-5"
+                 style="max-width:1770px;">
+
+                <div class="sub-heading position-absolute text-accent"
+                     style="z-index:1;left:2%;top:-1%;">
+                    OUR APPROACH
+                </div>
+
+                <div class="d-flex flex-column gap-5">
+
+                    <div class="d-flex flex-row align-items-center justify-content-end gap-2 position-relative"
+                         style="z-index:2;">
+                        <div class="border-bottom border-4 border-accent mb-5"
+                             style="width:100px;"></div>
+                        <h3>
+                            Small Details.<br>
+                            Big Creative Thinking.
+                        </h3>
+                    </div>
+
+                    <p class="fw-bold">
+                        Every great project starts with a question.<br>
+                        We listen, explore, create and refine until<br>
+                        the idea feels right.
+                    </p>
+
+                    <div class="row row-cols-xl-2 row-cols-1">
+
+                        <div class="col position-relative mb-3" style="min-height:500px;">
+                            <img
+                                src="images/img%2014.webp"
+                                class="img-fluid ms-xl-5"
+                                alt="Creative planning"
+                                style="aspect-ratio:2/3;width:384px;border-radius:10px;object-fit:cover;">
+
+                            <img
+                                src="images/img%2015.webp"
+                                class="img-fluid float-img"
+                                alt="Design collaboration"
+                                style="aspect-ratio:3/2;width:384px;border-radius:10px;object-fit:cover;">
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="d-flex flex-column gap-5">
+
+                                <div class="d-flex flex-column gap-4">
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="font-1 fw-semibold">01 / Discover</span>
+                                        <p>We learn about your business, audience, challenges and goals.</p>
+                                        <hr>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="font-1 fw-semibold">02 / Define</span>
+                                        <p>We shape the creative direction and establish a clear visual concept.</p>
+                                        <hr>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="font-1 fw-semibold">03 / Design</span>
+                                        <p>We develop thoughtful, consistent and engaging design solutions.</p>
+                                        <hr>
+                                    </div>
+
+                                    <div class="d-flex flex-column gap-2">
+                                        <span class="font-1 fw-semibold">04 / Deliver</span>
+                                        <p>We refine every detail and prepare the finished work for launch.</p>
+                                        <hr>
+                                    </div>
+
+                                </div>
+
+                                <a href="#contact" class="btn btn-accent d-flex flex-row gap-3 w-max-content">
+                                    <span>Work With Us</span>
+                                    <i class="rtmicon rtmicon-arrow-up-right"></i>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row row-cols-xl-3 row-cols-1">
+                        <div class="col mb-3 text-center">
+                            <h3>01</h3>
+                            <hr class="hr-custom">
+                            <h5>Ideas First</h5>
+                        </div>
+                        <div class="col mb-3 text-center">
+                            <h3>02</h3>
+                            <hr class="hr-custom">
+                            <h5>Design With Purpose</h5>
+                        </div>
+                        <div class="col mb-3 text-center">
+                            <h3>03</h3>
+                            <hr class="hr-custom">
+                            <h5>Attention to Detail</h5>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Approach -->
+
+        <!-- Pricing -->
+        <section id="pricing" class="section position-relative">
+            <div class="r-container">
+
+                <div class="d-flex flex-column align-items-center gap-5">
+
+                    <div class="d-flex flex-column align-items-center gap-3">
+                        <div class="border-bottom border-4 border-accent"
+                             style="width:100px;"></div>
+
+                        <h3 class="text-center" style="max-width:650px;">
+                            Creative Solutions for Every Stage of Your Brand
+                        </h3>
+
+                        <p class="text-center">
+                            Explore sample project packages designed for different creative needs.
+                        </p>
+
+                        <div class="sub-heading text-accent second position-absolute"
+                             style="z-index:-1;top:-3%;">
+                            OUR PACKAGES
+                        </div>
+                    </div>
+
+                    <div class="row row-cols-xl-3 row-cols-1 align-items-stretch w-100">
+
+                        <div class="col mb-3">
+                            <div class="card-pricing h-100">
+                                <div class="d-flex flex-column gap-3">
+                                    <h4>Essential Identity</h4>
+                                    <div class="price-text">Starter</div>
+                                    <p>For new businesses creating their first brand identity.</p>
+                                </div>
+
+                                <div class="w-100">
+                                    <a href="#contact" class="btn btn-accent-3">
+                                        Request a Quote
+                                    </a>
+                                </div>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <h6>INCLUDES</h6>
+
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Creative consultation</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Logo design concept</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Color and typography selection</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Basic brand assets</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card-pricing bg-accent-color-4 h-100">
+                                <div class="d-flex flex-column gap-3">
+                                    <div class="ribbon">
+                                        <span>Featured</span>
+                                    </div>
+                                    <h4>Creative Growth</h4>
+                                    <div class="price-text">Growth</div>
+                                    <p>For established brands ready to develop a stronger identity.</p>
+                                </div>
+
+                                <div class="w-100">
+                                    <a href="#contact" class="btn btn-accent-3">
+                                        Request a Quote
+                                    </a>
+                                </div>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <h6>INCLUDES</h6>
+
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Brand direction</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Extended visual identity</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Social media design templates</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Marketing collateral</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Brand guidelines</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col mb-3">
+                            <div class="card-pricing h-100">
+                                <div class="d-flex flex-column gap-3">
+                                    <h4>Complete Brand Experience</h4>
+                                    <div class="price-text">Custom</div>
+                                    <p>For businesses looking for a complete creative partnership.</p>
+                                </div>
+
+                                <div class="w-100">
+                                    <a href="#contact" class="btn btn-accent-3">
+                                        Request a Quote
+                                    </a>
+                                </div>
+
+                                <div class="d-flex flex-column gap-3">
+                                    <h6>INCLUDES</h6>
+
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Brand strategy</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Complete visual identity</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Website design concept</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Creative campaign assets</p>
+                                    </div>
+                                    <div class="card-pricing-detail">
+                                        <i class="rtmicon rtmicon-check"></i>
+                                        <p class="m-0">Custom design deliverables</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p class="small-text text-center">
+                        Sample packages shown for portfolio demonstration purposes.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Pricing -->
+
+        <!-- Contact CTA -->
+        <section id="contact" class="section position-relative">
+            <div class="r-container">
+                <div class="d-flex flex-column align-items-center text-center gap-4">
+
+                    <div class="border-bottom border-4 border-accent"
+                         style="width:100px;"></div>
+
+                    <span class="small-text">HAVE SOMETHING IN MIND?</span>
+
+                    <h2>
+                        Let's Make Something<br>
+                        Worth Remembering.
+                    </h2>
+
+                    <p style="max-width:560px;">
+                        Have a new idea, an existing brand that needs a fresh direction,
+                        or a project worth discussing? We'd love to hear about it.
+                    </p>
+
+                    <a href="mailto:hello@example.com"
+                       class="btn btn-accent d-flex flex-row gap-3">
+                        <span>Let's Talk</span>
+                        <i class="rtmicon rtmicon-arrow-up-right"></i>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!-- End Contact CTA -->
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="section bg-color-2">
+        <div class="r-container">
+
+            <div class="row row-cols-xl-4 row-cols-1 gap-xl-0 gap-4">
+
+                <div class="col col-xl-4">
+                    <div class="d-flex flex-column gap-4">
+                        <a href="#home">
+                            <img src="images/site%20logo.png"
+                                 class="img-fluid"
+                                 alt="Reboost Studio"
+                                 width="180">
+                        </a>
+
+                        <p style="max-width:320px;">
+                            Reboost Studio is an independent creative agency
+                            creating distinctive identities and thoughtful
+                            digital experiences.
+                        </p>
+
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col col-xl-2">
+                    <div class="d-flex flex-column gap-3">
+                        <h5>Explore</h5>
+                        <a href="#home">Home</a>
+                        <a href="#about">Our Studio</a>
+                        <a href="#services">Services</a>
+                        <a href="#portfolio">Selected Work</a>
+                        <a href="#approach">Our Approach</a>
+                    </div>
+                </div>
+
+                <div class="col col-xl-3">
+                    <div class="d-flex flex-column gap-3">
+                        <h5>Expertise</h5>
+                        <a href="#services">Brand Identity</a>
+                        <a href="#services">Creative Direction</a>
+                        <a href="#services">Web Design</a>
+                        <a href="#services">Content Creation</a>
+                        <a href="#services">Digital Campaigns</a>
+                    </div>
+                </div>
+
+                <div class="col col-xl-3">
+                    <div class="d-flex flex-column gap-3">
+                        <h5>Start a Conversation</h5>
+                        <p>
+                            Tell us what you're working on.
+                            We're always interested in fresh ideas.
+                        </p>
+                        <a href="mailto:hello@example.com">
+                            hello@example.com
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-5">
+
+            <div class="d-flex flex-xl-row flex-column justify-content-between align-items-center gap-3">
+                <p class="small-text m-0">
+                    © 2026 Reboost Studio. Portfolio concept.
+                </p>
+                <p class="small-text m-0">
+                    Designed for creative minds.
+                </p>
+            </div>
+
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+</body>
+</html>

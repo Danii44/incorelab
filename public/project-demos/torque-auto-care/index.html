@@ -1,0 +1,53 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Torque Auto Care | Repair & Detailing</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#e5e7eb;background:#0f1115;line-height:1.6}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:24px;font-weight:900}.logo span{color:#f97316}
+nav a{margin-left:20px;font-size:15px}.btn{background:#f97316;color:#fff;padding:12px 22px;border-radius:10px;font-weight:800;display:inline-block;border:0;cursor:pointer}
+.hero{background:linear-gradient(90deg,rgba(0,0,0,.92) 40%,rgba(0,0,0,.2)),url('https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=1600&q=80') center/cover;border-radius:22px;padding:70px 45px;display:grid;grid-template-columns:1fr 340px;gap:30px;margin-top:10px}
+.hero h1{font-size:52px;line-height:1.05;color:#fff}.hero h1 span{color:#f97316}.hero p{color:#d1d5db;margin:16px 0 25px;max-width:520px}
+.book{background:#fff;color:#111;border-radius:16px;padding:24px}.book h3{margin-bottom:14px}.book input,.book select{width:100%;padding:11px;border-radius:8px;border:1px solid #ddd;font:inherit;margin-bottom:10px}
+section{padding:65px 0}h2{font-size:34px;text-align:center;color:#fff}.sub{text-align:center;color:#9ca3af;max-width:600px;margin:10px auto 35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#1a1d23;border:1px solid #262a32;border-radius:16px;padding:26px}.card h3{color:#fff;margin:10px 0}
+.price{font-size:32px;font-weight:900;color:#f97316}.card ul{list-style:none;color:#9ca3af;margin:14px 0}.card li{padding:5px 0}
+img.car{width:100%;height:200px;object-fit:cover;border-radius:14px;margin-bottom:12px}
+footer{text-align:center;padding:30px;color:#6b7280}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:35px 22px}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}nav a{display:none}}
+</style></head><body><div class="wrap">
+<header><div class="logo">TORQUE<span> AUTO CARE</span></div><nav><a href="#services">Services</a><a href="#packages">Packages</a><a href="#book">Book Now</a><a class="btn" href="#book">Book Appointment</a></nav></header>
+
+<div class="hero"><div><p style="color:#f97316;letter-spacing:2px;font-weight:800">★ 4.9 RATED • OPEN 7 DAYS</p><h1>Your car, <span>fixed right</span> the first time.</h1><p>Expert mechanics, genuine parts and honest pricing. From oil changes to full detailing — we treat your car like our own.</p><p>📞 Call: +92 300 1234567 &nbsp;•&nbsp; 🕒 9 AM – 9 PM</p></div>
+<form class="book" id="book"><h3>Book in 30 seconds</h3><input placeholder="Your name" required><input placeholder="Car model (e.g. Toyota Corolla 2022)"><select><option>Select service</option><option>General Service</option><option>Full Detailing</option><option>Brake / Engine Repair</option><option>AC Service</option></select><input type="date"><button class="btn" style="width:100%">Confirm Appointment</button></form></div>
+
+<section id="services"><h2>Our Services</h2><p class="sub">Everything your car needs, under one roof.</p><div class="grid">
+<div class="card"><img class="car" src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=800&q=80"><h3>🔧 Engine &amp; Mechanical</h3><p>Diagnostics, brakes, suspension, engine repair and more.</p></div>
+<div class="card"><img class="car" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=800&q=80"><h3>✨ Detailing &amp; Polish</h3><p>Interior deep clean, ceramic coating, paint correction.</p></div>
+<div class="card"><img class="car" src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80"><h3>🛢️ Oil &amp; Fluids</h3><p>Oil change, filters, coolant, transmission service.</p></div>
+</div></section>
+
+<section id="packages"><h2>Service Packages</h2><p class="sub">Transparent prices. No surprise charges.</p><div class="grid">
+<div class="card"><h3>Basic Service</h3><div class="price">$49</div><ul><li>Oil + filter change</li><li>21-point inspection</li><li>Tyre pressure &amp; top-up</li></ul><a class="btn" href="#book">Book Basic</a></div>
+<div class="card" style="border-color:#f97316"><h3>Full Service ★</h3><div class="price">$99</div><ul><li>Everything in Basic</li><li>Brake + AC check</li><li>Car wash included</li></ul><a class="btn" href="#book">Book Full</a></div>
+<div class="card"><h3>Premium Detailing</h3><div class="price">$149</div><ul><li>Full interior + exterior detail</li><li>Polish &amp; wax</li><li>Ceramic spray protection</li></ul><a class="btn" href="#book">Book Premium</a></div>
+</div></section>
+<footer>© 2026 Torque Auto Care • Genuine parts • 6-month service warranty</footer>
+</div></body></html>

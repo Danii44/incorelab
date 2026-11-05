@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>403 Forbidden</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="page">
+  <div class="main">
+    <h1>Server Error</h1>
+    <div class="error-code">403</div>
+    <h2>Forbidden</h2>
+    <p class="lead">You do not have permission to access this document.</p>
+    <hr>
+    <p>That's what you can do</p>
+    <div class="help-actions">
+      <a href="javascript:location.reload();">Reload Page</a>
+      <a href="javascript:history.back();">Back to Previous Page</a>
+      <a href="/">Home Page</a>
+    </div>
+  </div>
+</div>
+
+</body></html>

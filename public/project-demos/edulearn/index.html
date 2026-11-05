@@ -1,0 +1,319 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EduLearn - Learn new skills with expert-led online courses.">
+  <title>EduLearn | Skills for a Better Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container nav-wrap">
+    <a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> Edu<span>Learn</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#courses">Courses</a>
+      <a href="#instructors">Instructors</a>
+      <a href="#blog">Blog</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="search-icon" aria-label="Search courses" onclick="document.getElementById('courseSearch').focus()"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <a href="#pricing" class="login">Log in</a>
+      <a href="#pricing" class="btn btn-primary btn-small">Sign up</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">LEARN • GROW • BUILD YOUR FUTURE</span>
+        <h1>Skills for a Better <span>Future</span></h1>
+        <p>Access high-quality online courses from industry experts and start learning today.</p>
+
+        <form class="hero-search" id="searchForm">
+          <input id="courseSearch" type="search" placeholder="What do you want to learn?" aria-label="Search courses">
+          <button type="submit" aria-label="Submit search"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+        <div class="popular">
+          <strong>Popular:</strong>
+          <button data-search="Design">Design</button>
+          <button data-search="Development">Development</button>
+          <button data-search="Business">Business</button>
+          <button data-search="Marketing">Marketing</button>
+        </div>
+
+        <div class="hero-students">
+          <div class="avatar-stack">
+            <img src="https://i.pravatar.cc/80?img=47" alt="">
+            <img src="https://i.pravatar.cc/80?img=12" alt="">
+            <img src="https://i.pravatar.cc/80?img=44" alt="">
+            <img src="https://i.pravatar.cc/80?img=33" alt="">
+          </div>
+          <div><strong>50K+</strong><span>Students are learning</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="person person-one">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=550&auto=format&fit=crop&q=85" alt="Female student">
+        </div>
+        <div class="person person-two">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=550&auto=format&fit=crop&q=85" alt="Male instructor">
+        </div>
+        <div class="person person-three">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=550&auto=format&fit=crop&q=85" alt="Online learner">
+        </div>
+        <div class="person person-four">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=550&auto=format&fit=crop&q=85" alt="Female instructor">
+        </div>
+        <div class="floating-note note-one"><i class="fa-solid fa-certificate"></i><span>Expert<br>Instructors</span></div>
+        <div class="floating-note note-two"><i class="fa-solid fa-award"></i><span>Online<br>Certifications</span></div>
+        <div class="floating-note note-three"><i class="fa-solid fa-book-open"></i><span>Flexible<br>Learning</span></div>
+        <span class="deco deco-one">✦</span><span class="deco deco-two">✦</span>
+      </div>
+    </div>
+
+    <div class="stats">
+      <div><i class="fa-solid fa-graduation-cap"></i><div><strong>50K+</strong><span>Students are learning</span></div></div>
+      <div><i class="fa-solid fa-book"></i><div><strong>1,200+</strong><span>Online Courses</span></div></div>
+      <div><i class="fa-solid fa-users"></i><div><strong>300+</strong><span>Expert Instructors</span></div></div>
+      <div><i class="fa-solid fa-trophy trophy"></i><div><strong>95%</strong><span>Student Satisfaction</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="categories section" id="categories">
+  <div class="container">
+    <div class="section-heading center">
+      <span class="label">CATEGORIES</span>
+      <h2>Explore Top Categories</h2>
+      <p>Find the right course from a wide range of subjects</p>
+    </div>
+    <div class="category-grid">
+      <a href="#courses" class="category-card"><div class="cat-icon blue"><i class="fa-solid fa-code"></i></div><h3>Development</h3><span>120+ Courses</span></a>
+      <a href="#courses" class="category-card"><div class="cat-icon orange"><i class="fa-solid fa-chart-column"></i></div><h3>Business</h3><span>80+ Courses</span></a>
+      <a href="#courses" class="category-card"><div class="cat-icon pink"><i class="fa-solid fa-palette"></i></div><h3>Design</h3><span>90+ Courses</span></a>
+      <a href="#courses" class="category-card"><div class="cat-icon purple"><i class="fa-solid fa-bullhorn"></i></div><h3>Marketing</h3><span>70+ Courses</span></a>
+      <a href="#courses" class="category-card"><div class="cat-icon green"><i class="fa-solid fa-camera"></i></div><h3>Photography</h3><span>60+ Courses</span></a>
+      <a href="#courses" class="category-card"><div class="cat-icon yellow"><i class="fa-solid fa-sun"></i></div><h3>Lifestyle</h3><span>50+ Courses</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="courses-section section" id="courses">
+  <div class="container">
+    <div class="courses-panel">
+      <div class="section-heading heading-flex">
+        <div><span class="label">FEATURED COURSES</span><h2>Most Popular Courses</h2><p>Learn from expert instructors and upgrade your skills</p></div>
+        <a href="#courses" class="btn btn-white">View All Courses <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="course-grid">
+        <article class="course-card" data-title="Complete Web Development Bootcamp" data-category="Development">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=750&auto=format&fit=crop&q=85" alt="Web development workspace">
+          <div class="course-body"><span class="tag tag-blue">Development</span><h3>Complete Web Development Bootcamp 2026</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=12" alt=""> Sarah Johnson</div><div class="rating"><span>★★★★★</span> 4.9 (2,450 students)</div><div class="course-bottom"><strong>$49.00</strong><del>$99.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+        <article class="course-card" data-title="Digital Marketing Strategy for Beginners" data-category="Business Marketing">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=750&auto=format&fit=crop&q=85" alt="Marketing analytics">
+          <div class="course-body"><span class="tag tag-orange">Business</span><h3>Digital Marketing Strategy for Beginners</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=14" alt=""> Michael Chen</div><div class="rating"><span>★★★★★</span> 4.8 (1,890 students)</div><div class="course-bottom"><strong>$39.00</strong><del>$89.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+        <article class="course-card" data-title="UI UX Design Masterclass" data-category="Design">
+          <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=750&auto=format&fit=crop&q=85" alt="UI UX design workspace">
+          <div class="course-body"><span class="tag tag-pink">Design</span><h3>UI/UX Design Masterclass</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=45" alt=""> Olivia Martinez</div><div class="rating"><span>★★★★★</span> 4.9 (1,750 students)</div><div class="course-bottom"><strong>$59.00</strong><del>$119.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+        <article class="course-card" data-title="Social Media Marketing" data-category="Marketing">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=750&auto=format&fit=crop&q=85" alt="Social media strategy">
+          <div class="course-body"><span class="tag tag-purple">Marketing</span><h3>Social Media Marketing 2026</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=47" alt=""> Daniel Kim</div><div class="rating"><span>★★★★★</span> 4.7 (1,620 students)</div><div class="course-bottom"><strong>$29.00</strong><del>$69.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+        <article class="course-card" data-title="Professional Photography Basics" data-category="Photography">
+          <img src="https://images.unsplash.com/photo-1452587925148-ce544e77e70d?w=750&auto=format&fit=crop&q=85" alt="Professional camera">
+          <div class="course-body"><span class="tag tag-green">Photography</span><h3>Professional Photography Basics</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=13" alt=""> Emma Wilson</div><div class="rating"><span>★★★★★</span> 4.8 (980 students)</div><div class="course-bottom"><strong>$19.00</strong><del>$49.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+        <article class="course-card" data-title="Personal Development for Success" data-category="Lifestyle">
+          <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=750&auto=format&fit=crop&q=85" alt="Person studying">
+          <div class="course-body"><span class="tag tag-yellow">Lifestyle</span><h3>Personal Development for Success</h3><div class="teacher"><img src="https://i.pravatar.cc/80?img=15" alt=""> Ryan Taylor</div><div class="rating"><span>★★★★★</span> 4.9 (1,230 students)</div><div class="course-bottom"><strong>$29.00</strong><del>$69.00</del><button class="bookmark" aria-label="Save course"><i class="fa-regular fa-bookmark"></i></button></div></div>
+        </article>
+      </div>
+      <p id="noResults" class="no-results" hidden>No courses match your search.</p>
+    </div>
+  </div>
+</section>
+
+<section class="learning-banner">
+  <div class="container learning-inner">
+    <div class="learning-photo"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=750&auto=format&fit=crop&q=85" alt="Students learning together"><span class="photo-icon"><i class="fa-solid fa-chart-line"></i></span></div>
+    <div class="learning-copy"><span class="eyebrow">LEARN ANYWHERE, ANYTIME</span><h2>Start Your Learning<br>Journey Today</h2><p>Join thousands of students and get unlimited access to our premium courses.</p><a href="#pricing" class="btn btn-primary">Get Started Now <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="learning-decoration"><i class="fa-solid fa-graduation-cap"></i><i class="fa-solid fa-book-open"></i><i class="fa-solid fa-star"></i></div>
+  </div>
+</section>
+
+<section class="benefits section" id="about">
+  <div class="container">
+    <div class="section-heading center"><span class="label">WHY CHOOSE US</span><h2>Your Success is Our Priority</h2></div>
+    <div class="benefits-grid">
+      <div class="benefit-card"><div class="cat-icon blue"><i class="fa-solid fa-graduation-cap"></i></div><h3>Expert Instructors</h3><p>Learn from industry professionals</p></div>
+      <div class="benefit-card"><div class="cat-icon orange"><i class="fa-solid fa-circle-play"></i></div><h3>Lifetime Access</h3><p>Learn at your own pace anytime, anywhere</p></div>
+      <div class="benefit-card"><div class="cat-icon purple"><i class="fa-solid fa-certificate"></i></div><h3>Certificate</h3><p>Get certified upon completion</p></div>
+      <div class="benefit-card"><div class="cat-icon green"><i class="fa-solid fa-headset"></i></div><h3>24/7 Support</h3><p>We're here to help you always</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing-section section" id="pricing">
+  <div class="container">
+    <div class="heading-flex section-heading">
+      <div><span class="label">PRICING PLANS</span><h2>Choose Your Learning Plan</h2><p>Flexible plans for everyone. Start free and upgrade anytime.</p></div>
+      <div class="billing-toggle"><button class="active" data-billing="monthly">Monthly</button><button data-billing="yearly">Yearly</button></div>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card"><h3>Basic</h3><p>Perfect for getting started</p><div class="price"><strong>$0</strong><span>/month</span></div><ul><li>Limited access to courses</li><li>Standard quality videos</li><li>Community support</li></ul><a href="#contact" class="plan-btn">Get Started</a></div>
+      <div class="price-card featured"><span class="popular-badge">Most Popular</span><h3>Pro</h3><p>Best for serious learners</p><div class="price"><strong data-month="19" data-year="15">$19</strong><span>/month</span></div><ul><li>Unlimited access to all courses</li><li>High quality videos</li><li>Download resources</li><li>Certificate of completion</li></ul><a href="#contact" class="plan-btn filled">Start Free Trial</a></div>
+      <div class="price-card"><h3>Team</h3><p>For teams and organizations</p><div class="price"><strong data-month="49" data-year="39">$49</strong><span>/month</span></div><ul><li>Everything in Pro</li><li>Team management</li><li>Priority support</li><li>Custom certificates</li></ul><a href="#contact" class="plan-btn">Contact Sales</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="instructors section" id="instructors">
+  <div class="container">
+    <div class="section-heading heading-flex"><div><span class="label">OUR INSTRUCTORS</span><h2>Learn from the Best</h2><p>Our expert instructors bring real-world experience to help you succeed.</p></div><a href="#instructors" class="btn btn-white">View All Instructors <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="instructor-grid">
+      <div class="instructor-card"><img src="https://i.pravatar.cc/400?img=47" alt="Sarah Johnson"><div><h3>Sarah Johnson</h3><p>Web Developer</p><span class="socials">● ● ●</span></div></div>
+      <div class="instructor-card"><img src="https://i.pravatar.cc/400?img=12" alt="Michael Chen"><div><h3>Michael Chen</h3><p>Digital Marketing Expert</p><span class="socials">● ● ●</span></div></div>
+      <div class="instructor-card"><img src="https://i.pravatar.cc/400?img=44" alt="Olivia Martinez"><div><h3>Olivia Martinez</h3><p>UI/UX Designer</p><span class="socials">● ● ●</span></div></div>
+      <div class="instructor-card"><img src="https://i.pravatar.cc/400?img=13" alt="Daniel Kim"><div><h3>Daniel Kim</h3><p>Photographer</p><span class="socials">● ● ●</span></div></div>
+      <div class="instructor-card"><img src="https://i.pravatar.cc/400?img=45" alt="Emma Wilson"><div><h3>Emma Wilson</h3><p>Business Coach</p><span class="socials">● ● ●</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-heading"><span class="label">TESTIMONIALS</span><h2>What Our Students Say</h2></div>
+    <div class="testimonial-grid">
+      <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Amazing platform! The courses are well-structured and easy to follow.”</p><div class="reviewer"><img src="https://i.pravatar.cc/80?img=11" alt=""><div><strong>Ahmed Reza</strong><span>Web Developer</span></div></div></div>
+      <div class="testimonial-card"><div class="stars">★★★★★</div><p>“I learned so much and it really helped my career. Highly recommended!”</p><div class="reviewer"><img src="https://i.pravatar.cc/80?img=48" alt=""><div><strong>Sarah Khan</strong><span>Marketing Specialist</span></div></div></div>
+      <div class="testimonial-card"><div class="stars">★★★★★</div><p>“Great instructors and practical content. Best learning experience!”</p><div class="reviewer"><img src="https://i.pravatar.cc/80?img=15" alt=""><div><strong>Ali Hassan</strong><span>UI/UX Designer</span></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blog section" id="blog">
+  <div class="container">
+    <div class="section-heading heading-flex"><div><span class="label">LATEST FROM BLOG</span><h2>Tips, Guides & Stories</h2></div><a href="#blog" class="btn btn-white">View All Posts <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="blog-grid">
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&auto=format&fit=crop&q=85" alt="Online learning"><div><span>20 OCT 2026</span><h3>10 Tips to Stay Productive While Learning Online</h3><a href="#blog">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&auto=format&fit=crop&q=85" alt="Studying"><div><span>18 OCT 2026</span><h3>How to Choose the Right Course for Your Career</h3><a href="#blog">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=85" alt="Collaborative learning"><div><span>15 OCT 2026</span><h3>The Future of Online Education in 2026</h3><a href="#blog">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter" id="contact">
+  <div class="container">
+    <div class="newsletter-inner">
+      <div class="newsletter-copy"><div class="newsletter-icon"><i class="fa-solid fa-envelope-open-text"></i></div><div><span>STAY UPDATED</span><h2>Join Our Newsletter</h2><p>Get the latest courses, tips and exclusive offers directly in your inbox.</p></div></div>
+      <form id="newsletterForm"><input type="email" placeholder="Enter your email address" required aria-label="Newsletter email"><button type="submit">Subscribe <i class="fa-solid fa-arrow-right"></i></button></form>
+      <p class="newsletter-message" id="newsletterMessage" aria-live="polite"></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-about"><a href="#home" class="logo"><i class="fa-solid fa-graduation-cap"></i> Edu<span>Learn</span></a><p>Your gateway to a better future through online learning. Learn. Grow. Succeed.</p><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+      <div class="footer-links"><h3>Quick Links</h3><a href="#home">Home</a><a href="#courses">Courses</a><a href="#instructors">Instructors</a><a href="#blog">Blog</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+      <div class="footer-links"><h3>Popular Categories</h3><a href="#categories">Development</a><a href="#categories">Business</a><a href="#categories">Design</a><a href="#categories">Marketing</a><a href="#categories">Photography</a><a href="#categories">Lifestyle</a></div>
+      <div class="footer-links"><h3>Support</h3><a href="#contact">Help Center</a><a href="#contact">Privacy Policy</a><a href="#contact">Terms & Conditions</a><a href="#contact">Refund Policy</a><a href="#contact">Contact Us</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 EduLearn. All rights reserved.</span><span>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</span></div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const nav = document.getElementById('nav');
+  menuBtn.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    menuBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.querySelectorAll('.nav a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    menuBtn.setAttribute('aria-expanded', 'false');
+  }));
+
+  function filterCourses(term) {
+    const query = term.trim().toLowerCase();
+    let visible = 0;
+    document.querySelectorAll('.course-card').forEach(card => {
+      const match = (card.dataset.title + ' ' + card.dataset.category).toLowerCase().includes(query);
+      card.hidden = !match;
+      if (match) visible++;
+    });
+    document.getElementById('noResults').hidden = visible > 0;
+    document.getElementById('courses').scrollIntoView({behavior:'smooth'});
+  }
+  document.getElementById('searchForm').addEventListener('submit', e => {
+    e.preventDefault();
+    filterCourses(document.getElementById('courseSearch').value);
+  });
+  document.querySelectorAll('[data-search]').forEach(btn => btn.addEventListener('click', () => {
+    document.getElementById('courseSearch').value = btn.dataset.search;
+    filterCourses(btn.dataset.search);
+  }));
+
+  document.querySelectorAll('.bookmark').forEach(btn => btn.addEventListener('click', () => {
+    const saved = btn.classList.toggle('saved');
+    btn.querySelector('i').className = saved ? 'fa-solid fa-bookmark' : 'fa-regular fa-bookmark';
+    btn.setAttribute('aria-label', saved ? 'Unsave course' : 'Save course');
+  }));
+
+  document.querySelectorAll('[data-billing]').forEach(btn => btn.addEventListener('click', () => {
+    document.querySelectorAll('[data-billing]').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const yearly = btn.dataset.billing === 'yearly';
+    document.querySelectorAll('[data-month]').forEach(el => {
+      el.textContent = '$' + (yearly ? el.dataset.year : el.dataset.month);
+    });
+  }));
+
+  document.getElementById('newsletterForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('newsletterMessage').textContent = 'Newsletter signup requires an email service connection.';
+  });
+</script>
+</body>
+</html>

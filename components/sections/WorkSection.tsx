@@ -28,7 +28,7 @@ function ProjectCard({ project }: { project: ProjectItem }) {
         </div>
 
         {/* Media Container with Clip-Path Reveal and Zoom */}
-        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl bg-border/40 my-auto">
+        <div className={`relative ${project.projectType === "demo" ? "aspect-[4/3]" : "aspect-[16/10]"} w-full overflow-hidden rounded-xl bg-border/40 my-auto`}>
           <Image
             src={project.heroImage}
             alt={project.name}
@@ -48,6 +48,10 @@ function ProjectCard({ project }: { project: ProjectItem }) {
           )}
         </div>
 
+        {project.projectType === "demo" && (
+          <span className="mt-4 font-mono-custom text-xs text-accent">Original project · Demo</span>
+        )}
+
         {/* Bottom Headline & Name */}
         <div className="pt-6">
           <div className="flex items-center justify-between">
@@ -63,6 +67,11 @@ function ProjectCard({ project }: { project: ProjectItem }) {
           </p>
         </div>
       </Link>
+      {project.projectType === "demo" && project.liveUrl && (
+        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex min-h-11 items-center gap-2 self-start font-mono-custom text-xs text-accent hover:underline focus-visible:outline-2 focus-visible:outline-accent">
+          Open demo <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+        </a>
+      )}
     </div>
   );
 }
@@ -171,7 +180,7 @@ export function WorkSection() {
                 </h2>
               </div>
               <div className="font-mono-custom text-xs text-muted">
-                [ {projectsData.length} CASE STUDIES ]
+                [ {projectsData.length} PROJECTS ]
               </div>
             </div>
           </Container>
@@ -201,11 +210,11 @@ export function WorkSection() {
                       View All {projectsData.length} Projects
                     </h3>
                     <p className="font-body text-xs text-muted max-w-xs mx-auto leading-relaxed">
-                      Rental car apps, enterprise ERP dashboards, n8n AI workflows, real estate, and healthcare platforms.
+                      Original website demos, app concepts, and client case studies.
                     </p>
                   </div>
                   <div className="font-mono-custom text-xs text-muted text-center group-hover:text-accent transition-colors">
-                    EXPLORE 16 CASE STUDIES →
+                    EXPLORE 16 PROJECTS →
                   </div>
                 </Link>
               </div>
@@ -256,7 +265,7 @@ export function WorkSection() {
               href="/work"
               className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-8 py-4 font-mono-custom text-xs font-bold uppercase text-[#0E0E10] transition-transform hover:scale-105"
             >
-              <span>Explore All {projectsData.length} Case Studies</span>
+              <span>Explore All {projectsData.length} Projects</span>
               <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>

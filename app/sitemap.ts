@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   }));
 
-  // Dynamic Case Studies (16 client projects)
+  // Portfolio project pages
   const caseStudyRoutes = projectsData.map((project) => ({
     url: `${baseUrl}/work/${project.slug}`,
     lastModified: now,

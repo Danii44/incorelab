@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCTO SMM — We Turn Subscribers Into Clients</title>
+<meta name="description" content="Demo social media marketing studio site in the style of the Octo SMM screenshots: black, vibrant pink #F70670, Onest and Manrope type. Sample content only.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;700;900&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--black:#000000;--panel:#0e0e0e;--paper:#f1f9f4;--pink:#f70670;--pink2:#ff2e88;--grey:#9a9a9a;--line:#222}
+  body{font-family:'Manrope',Arial,sans-serif;background:var(--black);color:var(--paper);line-height:1.55;overflow-x:hidden}
+  h1,h2,h3,.display{font-family:'Onest',Arial,sans-serif}
+  a{color:inherit;text-decoration:none}
+  img{display:block;width:100%;object-fit:cover}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 22px}
+  header{position:sticky;top:0;z-index:40;background:rgba(0,0,0,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .topbar{display:flex;justify-content:space-between;align-items:center;padding:16px 0;gap:16px;flex-wrap:wrap}
+  .logo{font-family:'Onest';font-weight:900;font-size:22px;letter-spacing:-.02em}
+  .logo span{color:var(--pink)}
+  nav{display:flex;gap:24px;font-size:13px;font-weight:700;letter-spacing:.05em;flex-wrap:wrap}
+  nav a:hover{color:var(--pink)}
+  .btn{display:inline-block;border:0;padding:13px 22px;font-weight:800;font-size:13px;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;border-radius:999px;background:var(--pink);color:#fff}
+  .btn:hover{transform:translateY(-1px);background:var(--pink2)}
+  .btn-ghost{background:transparent;border:1px solid #444;color:#fff}
+  .btn-ghost:hover{border-color:var(--pink);color:var(--pink);background:transparent}
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:56px 0 40px;position:relative}
+  .hero:before{content:"";position:absolute;right:-80px;top:0;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(247,6,112,.35),transparent 65%);pointer-events:none}
+  .hero h1{font-size:clamp(56px,8vw,104px);line-height:.92;letter-spacing:-.04em;font-weight:900}
+  .hero h1 span{color:var(--pink)}
+  .hero p{color:#c9c9c9;max-width:480px;margin:18px 0 24px}
+  .hero-media{position:relative}
+  .hero-media img{border-radius:24px;max-height:620px;object-position:center}
+  .stat-card{position:absolute;background:#fff;color:#111;border-radius:14px;padding:13px 16px;font-weight:800;box-shadow:0 14px 34px rgba(0,0,0,.5)}
+  .stat-card small{display:block;color:#666;font-size:11px;font-weight:600}
+  .stat-1{top:26px;left:-14px}
+  .stat-2{bottom:34px;right:-6px}
+  .stat-2 b{color:var(--pink)}
+  .arrow-btn{width:46px;height:46px;border-radius:50%;background:var(--pink);color:#fff;display:grid;place-items:center;font-size:20px;border:0;cursor:pointer}
+  /* Sections */
+  section{padding:64px 0}
+  .kicker{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--pink)}
+  h2{font-size:clamp(34px,5.5vw,62px);line-height:.98;letter-spacing:-.03em;font-weight:900}
+  h2 span{color:var(--pink)}
+  .lead{color:#bbb;max-width:560px;margin-top:14px}
+  .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+  .chip{border:1px solid #333;border-radius:999px;padding:9px 15px;font-size:13px;font-weight:700}
+  .chip.pink{background:var(--pink);border-color:var(--pink);color:#fff}
+  /* Impact stats */
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  .stat{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:24px}
+  .stat b{font-family:'Onest';font-size:38px;color:#fff;display:block}
+  .stat b span{color:var(--pink)}
+  .stat p{color:var(--grey);font-size:14px}
+  /* Services */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  .svc{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;position:relative;overflow:hidden}
+  .svc:nth-child(2),.svc:nth-child(5){background:linear-gradient(160deg,#3d001d,#0e0e0e)}
+  .svc .num{font-family:'Onest';font-size:14px;color:var(--pink);font-weight:900}
+  .svc h3{font-size:22px;margin:18px 0 8px}
+  .svc p{color:#aaa;font-size:14px}
+  .svc .go{margin-top:18px;width:42px;height:42px;border-radius:50%;background:var(--pink);display:grid;place-items:center}
+  /* Creatives / work */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  .gallery img{height:300px;border-radius:18px}
+  .gallery img.tall{grid-row:span 1}
+  .work{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+  .work-card{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--panel)}
+  .work-card img{height:220px}
+  .work-body{padding:18px}
+  .work-body h3{font-size:18px}
+  .work-body p{color:var(--grey);font-size:14px}
+  .result{color:var(--pink);font-weight:800;font-size:14px;margin-top:8px}
+  /* Team */
+  .team{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px}
+  .member img{height:280px;border-radius:18px}
+  .member h3{font-size:17px;margin-top:12px}
+  .member p{color:var(--grey);font-size:13px}
+  /* Brand / typography */
+  .brand{display:grid;grid-template-columns:1.3fr .7fr;gap:30px;align-items:start}
+  .type-panel{background:linear-gradient(135deg,#ff2e88,#f70670 45%,#7a0030);border-radius:24px;padding:30px;position:relative;overflow:hidden}
+  .type-panel .big{font-family:'Onest';font-size:clamp(120px,20vw,220px);line-height:.9;font-weight:900}
+  .type-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+  .type-card{background:rgba(0,0,0,.32);backdrop-filter:blur(6px);border-radius:16px;padding:18px}
+  .type-card b{font-size:28px}
+  .type-card p{font-size:12px;color:#ffd7e8}
+  .swatches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+  .sw{border-radius:18px;padding:16px;height:130px;display:flex;align-items:flex-end;font-size:13px;font-weight:700}
+  .sw-black{background:#000;border:1px solid #333}
+  .sw-white{background:#f1f9f4;color:#111}
+  .sw-pink{background:#f70670}
+  /* Contact */
+  .contact{background:linear-gradient(180deg,#1a0010, #000);border:1px solid #2a0a1a;border-radius:24px;padding:42px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center;overflow:hidden;position:relative}
+  .contact img{border-radius:18px;max-height:340px}
+  .contact form{display:grid;gap:12px;margin-top:20px}
+  .contact input,.contact textarea{width:100%;padding:14px;background:#0e0e0e;border:1px solid #333;color:#fff;border-radius:10px;font-family:inherit}
+  footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--grey);font-size:13px}
+  .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  #toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#fff;color:#111;padding:13px 18px;font-weight:800;z-index:100;opacity:0;pointer-events:none;transition:.25s;max-width:90vw;text-align:center;border-radius:10px}
+  #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+  @media(max-width:900px){
+    .hero,.brand,.contact{grid-template-columns:1fr}
+    .stats,.services,.gallery,.work,.team{grid-template-columns:repeat(2,1fr)}
+    .stat-1{left:8px}
+  }
+  @media(max-width:520px){.stats,.services,.gallery,.work,.team{grid-template-columns:1fr}nav{gap:12px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap topbar">
+    <a class="logo" href="#">octo<span>smm</span></a>
+    <nav>
+      <a href="#about">Main</a>
+      <a href="#about">About us</a>
+      <a href="#services">Services</a>
+      <a href="#work">Cases</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="btn" href="#contact">Consultation →</a>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <div class="wrap hero" id="about">
+    <div>
+      <span class="kicker">Social Media Marketing Studio</span>
+      <h1>octo<br><span>smm</span><br>studio</h1>
+      <p>We are a team of SMM experts helping businesses grow. Bold content, smart strategy, and numbers that actually move — not just pretty posts.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn" href="#contact">Consultation →</a>
+        <a class="btn btn-ghost" href="#work">See our work</a>
+      </div>
+      <div class="chips">
+        <span class="chip pink">Instagram</span>
+        <span class="chip">TikTok</span>
+        <span class="chip">YouTube</span>
+        <span class="chip">Paid Ads</span>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="images/hero-octopus.png" alt="Pink octopus mascot for Octo SMM on a black background">
+      <div class="stat-card stat-1"><b>$60k+</b><small>Ad budget managed<br>for clients, sample figure</small></div>
+      <div class="stat-card stat-2"><b>1.3k+</b><small>New followers<br>per month, sample</small></div>
+    </div>
+  </div>
+
+  <!-- ABOUT / NEXT-GEN -->
+  <section style="padding-top:20px">
+    <div class="wrap">
+      <span class="kicker">About the project</span>
+      <h2 style="margin-top:12px">Octo SMM is a social media marketing studio <span>helping brands turn subscribers into loyal clients.</span></h2>
+      <p class="lead">Our task was to craft a bold, conversion-focused website that reflects their energy, speaks to modern businesses, and makes their numbers shine.</p>
+      <h2 style="margin-top:48px;font-size:clamp(28px,4vw,44px)">We are <span>next-gen</span><br>smm company</h2>
+      <div class="chips">
+        <span class="chip">Content Creation</span>
+        <span class="chip pink">SMM Strategy</span>
+        <span class="chip">Paid Advertising</span>
+        <span class="chip">Community</span>
+        <span class="chip">Analytics</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>Data that<br><span>proves our impact</span></h2>
+      <div class="stats">
+        <div class="stat"><b>$613<span>k</span></b><p>Client ad budget managed in 2025 — sample figure</p></div>
+        <div class="stat"><b>3<span>x</span></b><p>Average follower growth for active clients</p></div>
+        <div class="stat"><b>+85<span>%</span></b><p>Average engagement lift in the first 90 days</p></div>
+        <div class="stat"><b>40<span>+</span></b><p>Brands growing with Octo right now</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" style="padding-top:0">
+    <div class="wrap">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap">
+        <h2>Who our<br><span>services</span></h2>
+        <p class="lead" style="margin:0">…are the perfect choice for? Ambitious brands that want growth they can measure — not just likes.</p>
+      </div>
+      <div class="services">
+        <div class="svc"><span class="num">01</span><h3>Content Creation</h3><p>Reels, carousels and posts designed to stop the scroll and sound like your brand.</p><div class="go">→</div></div>
+        <div class="svc"><span class="num">02</span><h3>SMM Strategy</h3><p>A clear monthly plan: what to post, where, why — and what success looks like.</p><div class="go">→</div></div>
+        <div class="svc"><span class="num">03</span><h3>Paid Advertising</h3><p>Targeted Meta and TikTok ads that turn attention into leads and sales.</p><div class="go">→</div></div>
+        <div class="svc"><span class="num">04</span><h3>Community Management</h3><p>Replies, comments and DMs handled daily, so followers become fans.</p><div class="go">→</div></div>
+        <div class="svc"><span class="num">05</span><h3>Influencer Outreach</h3><p>Creators who actually fit your brand, briefed and managed end to end.</p><div class="go">→</div></div>
+        <div class="svc"><span class="num">06</span><h3>Analytics &amp; Reporting</h3><p>Simple monthly reports: what worked, what didn't, and what we do next.</p><div class="go">→</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATIVES -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>Creatives that<br><span>work for you</span></h2>
+      <p class="lead">Bold, pink, unmistakable. Every creative is made to be recognised in a crowded feed.</p>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1611162617213-7b204e76a0a1?q=80&w=900&auto=format&fit=crop" alt="Social media on a phone">
+        <img src="images/octopus-tentacles.png" alt="Pink octopus tentacles creative" style="object-position:center">
+        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=900&auto=format&fit=crop" alt="Marketing team working">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=900&auto=format&fit=crop" alt="Analytics on a laptop">
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section id="work" style="padding-top:0">
+    <div class="wrap">
+      <h2>Our work<br><span>speaks for us</span></h2>
+      <div class="work">
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=900&auto=format&fit=crop" alt="Retail brand store">
+          <div class="work-body"><h3>Fashion Retail — Instagram Growth</h3><p>Reels system + paid ads for a local fashion brand.</p><p class="result">+212% followers in 4 months (sample)</p></div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=900&auto=format&fit=crop" alt="Checkout and sales">
+          <div class="work-body"><h3>E-commerce — Paid Social</h3><p>Full-funnel TikTok and Meta campaigns.</p><p class="result">3.4x return on ad spend (sample)</p></div>
+        </article>
+        <article class="work-card">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop" alt="Team planning content">
+          <div class="work-body"><h3>Food Brand — Content Engine</h3><p>Daily content, community and creator collabs.</p><p class="result">1.8M reel views in 90 days (sample)</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <h2>The team behind<br><span>your success</span></h2>
+      <div class="team">
+        <div class="member"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=800&auto=format&fit=crop" alt="Team member portrait"><h3>Ayesha Khan</h3><p>Head of Strategy</p></div>
+        <div class="member"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Team member portrait"><h3>Danish Ahmed</h3><p>Creative Director</p></div>
+        <div class="member"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=800&auto=format&fit=crop" alt="Team member portrait"><h3>Sara Malik</h3><p>Paid Ads Lead</p></div>
+        <div class="member"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop" alt="Team member portrait"><h3>Omar Farooq</h3><p>Content Lead</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPOGRAPHY & COLORS -->
+  <section style="padding-top:0">
+    <div class="wrap brand">
+      <div>
+        <div class="type-panel">
+          <div style="font-weight:900">OCTO <span style="font-weight:400">SMM</span></div>
+          <div class="big">Aa</div>
+          <div class="type-cards">
+            <div class="type-card"><b style="font-family:'Onest'">Onest</b><p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p></div>
+            <div class="type-card"><b style="font-family:'Manrope'">Manrope</b><p>Aa Bb Cc Dd Ee Ff Gg Hh Ii Jj Kk Ll Mm Nn Oo Pp Qq Rr Ss Tt Uu Vv Ww Xx Yy Zz</p></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2>Typography<br><span>&amp; Colors</span></h2>
+        <p class="lead">Modern Grotesk + vibrant pink to reflect boldness, youth, and confidence. Black background + white body for contrast and clarity in UI.</p>
+        <div class="swatches">
+          <div class="sw sw-black">000000</div>
+          <div class="sw sw-white">F1F9F4</div>
+          <div class="sw sw-pink">F70670</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" style="padding-top:0">
+    <div class="wrap contact">
+      <div>
+        <span class="kicker">Contact us</span>
+        <h2 style="margin-top:12px">We'll be happy<br><span>to assist you</span></h2>
+        <p class="lead">Tell us about your brand and your goal. We'll reply with honest next steps — no pushy sales call.</p>
+        <form onsubmit="event.preventDefault();showToast('Thanks! Your message was sent (demo). We will reply soon.');this.reset();">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Your email" required>
+          <input type="text" placeholder="Your brand / Instagram handle">
+          <textarea rows="3" placeholder="What do you want to grow?"></textarea>
+          <button class="btn" type="submit">Send message →</button>
+        </form>
+      </div>
+      <img src="images/octopus-tentacles.png" alt="Pink octopus tentacles">
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span><b style="color:#fff">OCTO SMM</b> — Demo site in the style of the screenshots you sent. Octopus images are original AI images made for this demo, not the original artwork. All stats, cases and team members are samples.</span>
+    <span>© 2026 Octo SMM (demo). Edit index.html to make it yours.</span>
+  </div>
+</footer>
+
+<div id="toast"></div>
+<script>
+  let toastTimer;
+  function showToast(msg){
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(()=>t.classList.remove('show'), 3500);
+  }
+</script>
+</body>
+</html>

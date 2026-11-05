@@ -1,3 +1,5 @@
+import { demoProjectsData } from "./demo-projects";
+
 export interface ProjectMetric {
   value: string;
   label: string;
@@ -22,9 +24,10 @@ export interface ProjectItem {
   nextSlug: string;
   nextName: string;
   liveUrl?: string;
+  projectType?: "demo";
 }
 
-export const projectsData: ProjectItem[] = [
+const clientProjectsData: ProjectItem[] = [
   {
     slug: "paynex-terminal",
     aliases: ["kronos-terminal"],
@@ -471,3 +474,5 @@ export const projectsData: ProjectItem[] = [
     liveUrl: "https://voltfleet.incorelab.demo",
   },
 ];
+
+export const projectsData: ProjectItem[] = [...demoProjectsData, ...clientProjectsData];

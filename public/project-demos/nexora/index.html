@@ -1,0 +1,458 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nexora Software - Business management software for modern teams.">
+  <title>Nexora | Business Management Software</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header" id="home">
+  <div class="container nav-inner">
+    <a href="#home" class="logo"><span class="logo-mark"><i class="fa-solid fa-layer-group"></i></span>Nexora</a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home" class="active">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#team">Team</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#news">News</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#pricing" class="nav-button">Free Trial</a>
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-shape shape-left"></div>
+    <div class="hero-shape shape-right"></div>
+    <div class="container hero-content">
+      <span class="hero-eyebrow">SMARTER BUSINESS STARTS HERE</span>
+      <h1>We're Building Software<br>To Manage Business</h1>
+      <p>Organize your work, manage your team, and make better decisions with one simple platform built for growing businesses.</p>
+      <button class="play-button" id="playDemo" aria-label="Watch software demo"><i class="fa-solid fa-play"></i></button>
+
+      <div class="laptop">
+        <div class="laptop-screen">
+          <div class="dashboard">
+            <aside class="dash-sidebar">
+              <div class="dash-logo"><i class="fa-solid fa-layer-group"></i> Nexora</div>
+              <div class="dash-menu active"><i class="fa-solid fa-chart-pie"></i> Dashboard</div>
+              <div class="dash-menu"><i class="fa-solid fa-users"></i> Customers</div>
+              <div class="dash-menu"><i class="fa-solid fa-box"></i> Products</div>
+              <div class="dash-menu"><i class="fa-solid fa-file-invoice"></i> Invoices</div>
+              <div class="dash-menu"><i class="fa-solid fa-chart-line"></i> Analytics</div>
+              <div class="dash-menu"><i class="fa-solid fa-gear"></i> Settings</div>
+            </aside>
+            <div class="dash-main">
+              <div class="dash-top"><strong>Dashboard Overview</strong><span><i class="fa-regular fa-bell"></i> Admin</span></div>
+              <div class="dash-stats">
+                <div><small>Total Revenue</small><strong>$48,920</strong><span>+12.8%</span></div>
+                <div><small>Active Clients</small><strong>1,284</strong><span>+8.2%</span></div>
+                <div><small>Projects</small><strong>86</strong><span>+15.4%</span></div>
+                <div><small>Conversion</small><strong>24.6%</strong><span>+4.1%</span></div>
+              </div>
+              <div class="dash-panels">
+                <div class="dash-chart">
+                  <strong>Revenue Analytics</strong>
+                  <svg viewBox="0 0 420 150" preserveAspectRatio="none" aria-label="Sample revenue chart">
+                    <defs><linearGradient id="chartFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#3665ef" stop-opacity=".25"/><stop offset="100%" stop-color="#3665ef" stop-opacity="0"/></linearGradient></defs>
+                    <path d="M0 130 L45 110 L85 118 L130 62 L170 90 L220 42 L260 65 L300 28 L345 49 L390 10 L420 25 L420 150 L0 150Z" fill="url(#chartFill)"/>
+                    <polyline points="0,130 45,110 85,118 130,62 170,90 220,42 260,65 300,28 345,49 390,10 420,25" fill="none" stroke="#3665ef" stroke-width="3"/>
+                  </svg>
+                  <div class="chart-labels"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+                </div>
+                <div class="dash-progress">
+                  <strong>Sales Overview</strong>
+                  <div class="donut"></div>
+                  <small>Monthly Target</small>
+                  <b>76% Completed</b>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="laptop-base"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Features</h2>
+        <span class="heading-line"></span>
+        <p>Everything you need to manage daily operations, improve productivity and grow your business in one place.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+          <h3>Fully Customizable</h3>
+          <p>Adapt your workspace, reports and settings to fit the way your business works.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+          <h3>App Integration</h3>
+          <p>Connect your favorite tools and keep essential business data organized.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Color Schemes</h3>
+          <p>Personalize your dashboard with clean layouts and flexible appearance options.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><i class="fa-solid fa-display"></i></div>
+          <h3>High Resolution</h3>
+          <p>Enjoy clear interfaces designed for desktop, laptop, tablet and mobile screens.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-illustration">
+        <div class="illustration-blob"></div>
+        <div class="illustration-window">
+          <div class="window-dots"><span></span><span></span><span></span></div>
+          <div class="illustration-row"><i class="fa-solid fa-image"></i><span></span></div>
+          <div class="illustration-row"><i class="fa-solid fa-chart-simple"></i><span></span></div>
+          <div class="illustration-row"><i class="fa-solid fa-cloud-arrow-up"></i><span></span></div>
+        </div>
+        <div class="illustration-person"><i class="fa-solid fa-person"></i></div>
+        <div class="illustration-float float-one"><i class="fa-solid fa-paper-plane"></i></div>
+        <div class="illustration-float float-two"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+      </div>
+      <div class="about-content">
+        <span class="section-label">WHY CHOOSE NEXORA</span>
+        <h2>We're Building Modern<br>and High Quality Software</h2>
+        <p>Give your team the tools they need to stay focused. Nexora brings important workflows together so you can spend less time on administration and more time building your business.</p>
+        <ul class="check-list">
+          <li><i class="fa-solid fa-circle-check"></i> Simple and intuitive dashboard</li>
+          <li><i class="fa-solid fa-circle-check"></i> Organized project and client management</li>
+          <li><i class="fa-solid fa-circle-check"></i> Reports that help you make informed decisions</li>
+          <li><i class="fa-solid fa-circle-check"></i> Flexible tools for growing teams</li>
+        </ul>
+        <div class="about-numbers">
+          <div><strong>450</strong><span>Projects Delivered</span></div>
+          <div><strong>1200</strong><span>Active Users</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="team section" id="team">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Innovative Team</h2>
+        <span class="heading-line"></span>
+        <p>Meet the creative minds behind our product and the people focused on building useful software.</p>
+      </div>
+      <div class="team-grid">
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&auto=format&fit=crop&q=85" alt="Team member">
+          <h3>Olivia Parker</h3><p>Product Designer</p>
+        </article>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=500&auto=format&fit=crop&q=85" alt="Team member">
+          <h3>Daniel Brooks</h3><p>Software Engineer</p>
+        </article>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=500&auto=format&fit=crop&q=85" alt="Team member">
+          <h3>Grace Bennett</h3><p>Marketing Manager</p>
+        </article>
+        <article class="team-card">
+          <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=500&auto=format&fit=crop&q=85" alt="Team member">
+          <h3>Michael Evans</h3><p>Product Manager</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="overview section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Quick Software Overview</h2>
+        <span class="heading-line"></span>
+        <p>Take a closer look at how Nexora helps you track important metrics and manage daily work.</p>
+      </div>
+      <div class="overview-grid">
+        <div class="overview-copy">
+          <span class="overview-number">01</span>
+          <h3>App Integration</h3>
+          <p>Bring your business information together and manage it through a clear, organized dashboard.</p>
+          <ul class="check-list">
+            <li><i class="fa-solid fa-check"></i> Centralized workspace</li>
+            <li><i class="fa-solid fa-check"></i> Simple reporting tools</li>
+            <li><i class="fa-solid fa-check"></i> Team collaboration</li>
+            <li><i class="fa-solid fa-check"></i> Flexible workflows</li>
+          </ul>
+          <a href="#pricing" class="text-link">EXPLORE FEATURES <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="overview-dashboard">
+          <div class="overview-top"><span><i class="fa-solid fa-layer-group"></i> Nexora</span><small>Overview / Analytics</small></div>
+          <div class="overview-metrics">
+            <div><small>Sales</small><strong>$8,540</strong></div>
+            <div><small>Visitors</small><strong>12,650</strong></div>
+            <div><small>Orders</small><strong>2,410</strong></div>
+            <div><small>Growth</small><strong>18.5%</strong></div>
+          </div>
+          <div class="overview-chart">
+            <div class="overview-chart-title">Performance Report <span>Last 6 Months</span></div>
+            <svg viewBox="0 0 600 220" preserveAspectRatio="none" aria-label="Sample performance chart">
+              <g stroke="#e8edf8" stroke-width="1"><line x1="0" y1="40" x2="600" y2="40"/><line x1="0" y1="90" x2="600" y2="90"/><line x1="0" y1="140" x2="600" y2="140"/><line x1="0" y1="190" x2="600" y2="190"/></g>
+              <polyline points="0,160 65,110 125,140 180,65 235,100 295,40 360,115 425,75 480,130 540,60 600,85" fill="none" stroke="#ff608f" stroke-width="4"/>
+              <polyline points="0,185 65,155 125,170 180,130 235,145 295,110 360,135 425,95 480,115 540,85 600,100" fill="none" stroke="#3976ef" stroke-width="3" stroke-dasharray="7 5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq section" id="faq">
+    <div class="container faq-grid">
+      <div class="faq-art">
+        <div class="faq-art-window">
+          <div class="faq-bars"><span></span><span></span><span></span><span></span><span></span></div>
+          <div class="faq-graph"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="faq-mini-card"><i class="fa-solid fa-chart-pie"></i></div>
+        </div>
+        <span class="faq-person"><i class="fa-solid fa-person"></i></span>
+      </div>
+      <div class="faq-content">
+        <span class="section-label">FREQUENTLY ASKED QUESTIONS</span>
+        <h2>Answer &amp; Question</h2>
+        <p>Find answers to common questions about our software, pricing and support.</p>
+        <div class="faq-list">
+          <details open><summary>What is Nexora Software?</summary><p>Nexora is a business management software concept designed to bring projects, clients, analytics and daily workflows into one platform.</p></details>
+          <details><summary>Can I use Nexora on mobile devices?</summary><p>The interface is designed to adapt to desktop, tablet and mobile screens.</p></details>
+          <details><summary>Can I change my subscription plan?</summary><p>Subscription changes would depend on the billing system connected to the live product.</p></details>
+          <details><summary>Does the software include support?</summary><p>Support packages can be configured for different customer needs.</p></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-heading light">
+        <h2>Our Packages</h2>
+        <span class="heading-line"></span>
+        <p>Choose the plan that matches your team size and business requirements.</p>
+      </div>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div class="plan-symbol"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Starter</h3>
+          <div class="price">$0<small>/Mo</small></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Basic Dashboard</li>
+            <li><i class="fa-solid fa-check"></i> 1 User Account</li>
+            <li><i class="fa-solid fa-check"></i> Project Tracking</li>
+            <li><i class="fa-solid fa-check"></i> Basic Reports</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Advanced Analytics</li>
+            <li class="disabled"><i class="fa-solid fa-xmark"></i> Priority Support</li>
+          </ul>
+          <a href="#contact" class="outline-button">Choose Plan</a>
+        </article>
+        <article class="price-card featured">
+          <div class="plan-symbol"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Professional</h3>
+          <div class="price">$29<small>/Mo</small></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Advanced Dashboard</li>
+            <li><i class="fa-solid fa-check"></i> 10 User Accounts</li>
+            <li><i class="fa-solid fa-check"></i> Project Management</li>
+            <li><i class="fa-solid fa-check"></i> Detailed Reports</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Analytics</li>
+            <li><i class="fa-solid fa-check"></i> Email Support</li>
+          </ul>
+          <a href="#contact" class="solid-button">Choose Plan</a>
+        </article>
+        <article class="price-card">
+          <div class="plan-symbol"><i class="fa-solid fa-gem"></i></div>
+          <h3>Enterprise</h3>
+          <div class="price">$59<small>/Mo</small></div>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+            <li><i class="fa-solid fa-check"></i> Unlimited Users</li>
+            <li><i class="fa-solid fa-check"></i> Custom Workflows</li>
+            <li><i class="fa-solid fa-check"></i> Advanced Reporting</li>
+            <li><i class="fa-solid fa-check"></i> Team Management</li>
+            <li><i class="fa-solid fa-check"></i> Priority Support</li>
+          </ul>
+          <a href="#contact" class="outline-button">Choose Plan</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Customers Review</h2>
+        <span class="heading-line"></span>
+      </div>
+      <div class="review-card">
+        <i class="fa-solid fa-quote-left"></i>
+        <p id="reviewText">“A clean and intuitive platform concept. The dashboard makes it easy to understand how a business is performing at a glance.”</p>
+        <strong id="reviewName">Alex Morgan</strong>
+        <small id="reviewRole">Business Owner</small>
+      </div>
+      <div class="review-avatars">
+        <button class="selected" data-review="0" aria-label="Review one"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Reviewer"></button>
+        <button data-review="1" aria-label="Review two"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Reviewer"></button>
+        <button data-review="2" aria-label="Review three"><img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&auto=format&fit=crop" alt="Reviewer"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS -->
+  <section class="news section" id="news">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Latest News</h2>
+        <span class="heading-line"></span>
+        <p>Explore practical ideas for productivity, software and business growth.</p>
+      </div>
+      <div class="news-grid">
+        <article class="news-main news-card">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=850&auto=format&fit=crop&q=85" alt="Team discussing business software">
+          <div class="news-body"><span class="news-date">31 OCT 2026</span><h3>How Better Business Software Helps Teams Stay Organized</h3><p>Learn how a well-designed dashboard can improve visibility across your projects and operations.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div>
+        </article>
+        <div class="news-side">
+          <article class="news-card"><div class="news-body"><span class="news-date">24 OCT 2026</span><h3>5 Ways to Improve Your Business Workflow</h3><p>Small improvements that can help your team manage everyday work more effectively.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+          <article class="news-card"><div class="news-body"><span class="news-date">18 OCT 2026</span><h3>Why Clear Reporting Matters for Growing Companies</h3><p>Make more informed decisions with organized business information and useful reports.</p><a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div class="contact-icon"><i class="fa-solid fa-headset"></i></div>
+        <h2>Let's Talk About Your Business</h2>
+        <p>Tell us what you're building and what kind of software solution you need.</p>
+        <div class="contact-detail"><i class="fa-regular fa-envelope"></i> hello@nexora.example</div>
+        <div class="contact-detail"><i class="fa-regular fa-clock"></i> Monday - Friday, 9 AM - 6 PM</div>
+        <a href="mailto:hello@nexora.example" class="contact-cta">Send an Email <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <form class="contact-form" id="contactForm">
+        <h2>If you have any questions<br>contact with us</h2>
+        <div class="form-row">
+          <label><i class="fa-regular fa-user"></i><input type="text" name="name" placeholder="Your Name" required></label>
+          <label><i class="fa-regular fa-envelope"></i><input type="email" name="email" placeholder="Your Email" required></label>
+        </div>
+        <label><i class="fa-solid fa-pen"></i><input type="text" name="subject" placeholder="Subject" required></label>
+        <label><textarea name="message" rows="5" placeholder="Your Message" required></textarea></label>
+        <button type="submit">Send Message <i class="fa-solid fa-arrow-right"></i></button>
+        <p id="formStatus" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <a href="#home" class="logo"><span class="logo-mark"><i class="fa-solid fa-layer-group"></i></span>Nexora</a>
+      <p>Business software designed to make everyday work simpler, clearer and more organized.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="footer-links"><h3>Quick Links</h3><a href="#home">Home</a><a href="#features">Features</a><a href="#about">About Us</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a></div>
+    <div class="footer-links"><h3>Company</h3><a href="#team">Our Team</a><a href="#news">Latest News</a><a href="#faq">FAQs</a><a href="#contact">Support</a></div>
+    <div class="footer-contact"><h3>Contact Info</h3><p><i class="fa-regular fa-envelope"></i> hello@nexora.example</p><p><i class="fa-regular fa-clock"></i> Mon - Fri: 9 AM - 6 PM</p><p><i class="fa-solid fa-globe"></i> Online Software Services</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 Nexora Software. All rights reserved.</span><span><a href="#contact">Privacy Policy</a> &nbsp; | &nbsp; <a href="#contact">Terms of Service</a></span></div>
+</footer>
+
+<script>
+  const mobileToggle = document.getElementById('mobileToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  mobileToggle.addEventListener('click', () => {
+    const opened = mainNav.classList.toggle('open');
+    mobileToggle.setAttribute('aria-expanded', String(opened));
+    mobileToggle.querySelector('i').className = opened ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  });
+
+  mainNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    mainNav.classList.remove('open');
+    mobileToggle.setAttribute('aria-expanded', 'false');
+  }));
+
+  const reviews = [
+    {name:'Alex Morgan', role:'Business Owner', text:'A clean and intuitive platform concept. The dashboard makes it easy to understand how a business is performing at a glance.'},
+    {name:'Sarah Collins', role:'Operations Manager', text:'The organized interface makes project tracking and team collaboration feel much easier.'},
+    {name:'James Carter', role:'Startup Founder', text:'A thoughtful software design with useful reports and a clear approach to managing business tasks.'}
+  ];
+
+  document.querySelectorAll('[data-review]').forEach(button => {
+    button.addEventListener('click', () => {
+      const review = reviews[Number(button.dataset.review)];
+      document.getElementById('reviewText').textContent = '“' + review.text + '”';
+      document.getElementById('reviewName').textContent = review.name;
+      document.getElementById('reviewRole').textContent = review.role;
+      document.querySelectorAll('[data-review]').forEach(b => b.classList.remove('selected'));
+      button.classList.add('selected');
+    });
+  });
+
+  document.getElementById('contactForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('formStatus').textContent =
+      'Demo form only. Connect your backend or email service to receive messages.';
+  });
+
+  document.getElementById('playDemo').addEventListener('click', () => {
+    alert('Demo video placeholder. Add your own software walkthrough video here.');
+  });
+</script>
+
+</body>
+</html>

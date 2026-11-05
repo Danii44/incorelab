@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/demos/", "/project-demos/"],
       },
       {
         userAgent: [
@@ -19,7 +19,7 @@ export default function robots(): MetadataRoute.Robots {
           "Baiduspider",
         ],
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/demos/", "/project-demos/"],
       },
       // AI Answer Engines & Generative Search Crawlers (AEO / GEO)
       {
@@ -33,7 +33,7 @@ export default function robots(): MetadataRoute.Robots {
           "cohere-ai",
         ],
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/demos/", "/project-demos/"],
       },
     ],
     sitemap: "https://incorelab.com/sitemap.xml",

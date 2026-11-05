@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sterling & Associates | Law Firm</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#1e2a3a;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{max-width:1150px;margin:auto;padding:0 22px}
+header{background:#0f2340;color:#fff;position:sticky;top:0;z-index:10}.nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:Georgia,serif;font-size:24px;letter-spacing:.5px}.logo span{color:#c5a880}
+.nav a{margin-left:22px;font-size:14px;opacity:.9}.btn{background:#c5a880;color:#0f2340!important;padding:11px 20px;border-radius:6px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;min-height:540px}.hero-text{background:#0f2340;color:#fff;padding:70px 50px 50px}
+.hero-text small{color:#c5a880;letter-spacing:2px;text-transform:uppercase}.hero-text h1{font-family:Georgia,serif;font-size:52px;line-height:1.05;margin:18px 0}
+.hero-text p{opacity:.85;max-width:480px}.hero-img{background:url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=1200&q=80') center/cover}
+.stats{display:flex;gap:30px;margin-top:35px}.stats b{font-size:28px;color:#c5a880;display:block}
+section{padding:70px 0}h2{font-family:Georgia,serif;font-size:36px;margin-bottom:10px;text-align:center}.sub{text-align:center;color:#667085;max-width:600px;margin:0 auto 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid #e6e1d8;border-radius:14px;padding:28px;background:#fff}.card h3{margin:10px 0 8px}.card i{font-size:30px}
+.dark{background:#f6f3ee}.team img{width:100%;height:260px;object-fit:cover;border-radius:14px}.team .card{padding:0;overflow:hidden}.team .card div{padding:20px}
+form{max-width:620px;margin:auto;background:#0f2340;color:#fff;padding:35px;border-radius:16px;display:grid;gap:14px}
+input,select,textarea{width:100%;padding:13px;border-radius:8px;border:1px solid #ddd;font:inherit}footer{background:#0b1a2e;color:#cbd5e1;text-align:center;padding:28px}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero-text{padding:40px 22px}.hero-text h1{font-size:38px}.nav a{display:none}}
+</style></head><body>
+<header><div class="wrap nav"><div class="logo">STERLING <span>&amp; Associates</span></div><nav><a href="#practice">Practice Areas</a><a href="#team">Attorneys</a><a href="#contact">Consultation</a><a class="btn" href="#contact">Free Consultation</a></nav></div></header>
+
+<div class="hero"><div class="hero-text"><small>Trusted Since 1998</small><h1>Legal strength.<br>Human understanding.</h1><p>We protect your business, your family and your future with clear advice, strong representation and no confusing legal jargon.</p><div style="margin-top:25px"><a class="btn" href="#contact">Book a Consultation →</a></div><div class="stats"><div><b>25+</b>Years</div><div><b>4,800+</b>Cases Won</div><div><b>98%</b>Client Satisfaction</div></div></div><div class="hero-img"></div></div>
+
+<section id="practice"><div class="wrap"><h2>Practice Areas</h2><p class="sub">Focused expertise, so you get the right lawyer for your exact problem.</p><div class="grid">
+<div class="card"><i>🏢</i><h3>Corporate Law</h3><p>Contracts, company formation, compliance and business disputes.</p></div>
+<div class="card"><i>👨‍👩‍👧</i><h3>Family Law</h3><p>Divorce, custody, inheritance and sensitive family matters handled with care.</p></div>
+<div class="card"><i>🏠</i><h3>Property Law</h3><p>Buying, selling, tenancy disputes and property documentation.</p></div>
+<div class="card"><i>⚖️</i><h3>Criminal Defence</h3><p>Strong, confidential defence at every stage of the case.</p></div>
+<div class="card"><i>💼</i><h3>Employment Law</h3><p>Workplace disputes, wrongful termination and employee rights.</p></div>
+<div class="card"><i>✈️</i><h3>Immigration</h3><p>Visas, residency, work permits and citizenship applications.</p></div>
+</div></div></section>
+
+<section class="dark" id="team"><div class="wrap"><h2>Meet Our Attorneys</h2><p class="sub">Experienced, approachable and on your side.</p><div class="grid team">
+<div class="card"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=800&q=80"><div><h3>James Sterling</h3><p>Senior Partner — Corporate Law<br>20+ years experience</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"><div><h3>Sarah Mitchell</h3><p>Partner — Family &amp; Property Law<br>15+ years experience</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=800&q=80"><div><h3>David Khan</h3><p>Associate — Criminal Defence<br>12+ years experience</p></div></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><h2>Request a Free Consultation</h2><p class="sub">Tell us briefly about your case. We reply within 24 hours.</p>
+<form><input placeholder="Your full name" required><input type="email" placeholder="Email address" required><select><option>Select practice area</option><option>Corporate</option><option>Family</option><option>Property</option><option>Criminal</option></select><textarea rows="4" placeholder="Briefly describe your legal matter"></textarea><button class="btn">Request Consultation</button><p style="font-size:13px;opacity:.7;text-align:center">100% confidential. No obligation.</p></form></div></section>
+<footer>© 2026 Sterling &amp; Associates • Dubai • London • Karachi • All rights reserved</footer>
+</body></html>

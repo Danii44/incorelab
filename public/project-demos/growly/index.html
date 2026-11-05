@@ -1,0 +1,61 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Growly | Digital Marketing Agency</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#1f2937;line-height:1.6}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:26px;font-weight:900}.logo span{color:#7c3aed}
+nav a{margin-left:22px;font-size:15px}.btn{background:#7c3aed;color:#fff;padding:12px 22px;border-radius:30px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.hero{background:linear-gradient(120deg,#7c3aed,#ec4899 55%,#f97316);color:#fff;border-radius:28px;padding:60px 45px;display:grid;grid-template-columns:1.1fr .9fr;gap:30px;overflow:hidden;margin-top:10px}
+.hero h1{font-size:52px;line-height:1.05}.hero p{opacity:.92;margin:18px 0 25px}.pill{background:rgba(255,255,255,.2);padding:7px 14px;border-radius:20px;font-size:13px;display:inline-block}
+.hero-card{background:#fff;color:#111827;border-radius:20px;padding:24px;box-shadow:0 20px 40px rgba(0,0,0,.2)}.hero-card img{width:100%;height:180px;object-fit:cover;border-radius:14px}
+.hero-card .row{display:flex;justify-content:space-between;margin-top:16px}.hero-card b{font-size:26px;color:#7c3aed}
+section{padding:70px 0}h2{font-size:36px;text-align:center}.sub{text-align:center;color:#6b7280;max-width:620px;margin:10px auto 40px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{border:1px solid #eee;border-radius:18px;padding:26px}.card h3{margin:10px 0}
+.case img{width:100%;height:190px;object-fit:cover;border-radius:14px}.case .card{padding:0;overflow:hidden}.case .card div{padding:22px}
+.tag{color:#7c3aed;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:1px}
+form{max-width:640px;margin:auto;background:#111827;color:#fff;padding:35px;border-radius:20px;display:grid;gap:14px}
+input,select{width:100%;padding:13px;border-radius:10px;border:0;font:inherit}footer{text-align:center;padding:30px;color:#6b7280}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding:35px 22px}.hero h1{font-size:36px}.grid{grid-template-columns:1fr}nav a{display:none}}
+</style></head><body><div class="wrap">
+<header><div class="logo">Grow<span>ly.</span></div><nav><a href="#services">Services</a><a href="#work">Case Studies</a><a href="#lead">Get Leads</a><a class="btn" href="#lead">Free Audit</a></nav></header>
+
+<div class="hero"><div><span class="pill">★ Rated 4.9/5 by 300+ clients</span><h1>We turn clicks into customers.</h1><p>SEO, ads, social media and content — one growth team focused on real sales, not just likes and impressions.</p><a class="btn" style="background:#fff;color:#7c3aed" href="#lead">Get My Free Growth Plan →</a><p style="font-size:14px;margin-top:18px">No contracts • Results in 30–90 days • Transparent reporting</p></div>
+<div class="hero-card"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1000&q=80"><div class="row"><div><b>+212%</b><br><small>Average traffic growth</small></div><div><b>3.8x</b><br><small>Return on ad spend</small></div><div><b>480+</b><br><small>Leads / month</small></div></div></div></div>
+
+<section id="services"><h2>Services that grow your business</h2><p class="sub">Pick one service, or let us run your full growth engine.</p><div class="grid">
+<div class="card"><h3>🔍 SEO &amp; Google Ranking</h3><p>Rank higher, get found first, and win customers searching for you right now.</p></div>
+<div class="card"><h3>🎯 Paid Ads (Google &amp; Meta)</h3><p>High-converting campaigns with clear budgets, tracking and weekly optimisation.</p></div>
+<div class="card"><h3>📱 Social Media Management</h3><p>Content, reels and community that build trust and keep your brand top of mind.</p></div>
+<div class="card"><h3>✍️ Content &amp; Video</h3><p>AI + human-crafted ads, posts and landing pages that actually sell.</p></div>
+<div class="card"><h3>🌐 Websites &amp; Funnels</h3><p>Fast, modern websites built to turn visitors into enquiries and orders.</p></div>
+<div class="card"><h3>📧 Email &amp; WhatsApp Marketing</h3><p>Automated follow-ups that recover lost leads and bring repeat buyers back.</p></div>
+</div></section>
+
+<section id="work"><h2>Recent results</h2><p class="sub">Real clients, real numbers.</p><div class="grid case">
+<div class="card"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"><div><span class="tag">E-commerce • +312% Sales</span><h3>Fashion brand, UAE</h3><p>Meta ads + new landing page in 60 days.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=800&q=80"><div><span class="tag">Real Estate • 940 Leads</span><h3>Property developer</h3><p>Google ads + WhatsApp funnel, 4 months.</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?auto=format&fit=crop&w=800&q=80"><div><span class="tag">Restaurant • 2.4x Bookings</span><h3>Cafe chain</h3><p>Local SEO + Instagram reels strategy.</p></div></div>
+</div></section>
+
+<section id="lead"><h2>Get more leads this month</h2><p class="sub">Free audit + custom growth plan. No spam, no pressure.</p>
+<form><input placeholder="Your name" required><input placeholder="Business / website" required><input type="email" placeholder="Email" required><select><option>Monthly marketing budget</option><option>Under $500</option><option>$500 – $2,000</option><option>$2,000+</option></select><button class="btn">Claim My Free Audit</button></form></section>
+<footer>© 2026 Growly Digital • hello@growly.agency</footer>
+</div></body></html>

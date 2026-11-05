@@ -1,0 +1,2099 @@
+
+/* Normal desktop :1700px. */
+@media only screen and (max-width: 1700px){
+.hotelio-header-area.resort-classic .header-wrap {
+    padding: 0px 20px 0px 20px;
+}
+.header-sidebar {
+    margin-left: 0;
+}
+.header-call-info p {
+    letter-spacing:0px;
+}
+.our-facilities-section-one .facilities-thumb {
+    position: inherit;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 32px 40px 22px;
+}
+
+}
+
+@media only screen and (max-width: 1600px){
+    .our-facilities-section-one .facilities-thumb {
+        position: inherit;
+    }
+    .video__content a::before {
+        left: 44.6%;
+    }
+    .header-btn a {
+        padding: 10px 25px;
+    }
+    .header-sidebar {
+        margin-left: 0;
+    }
+    .hotelio-header-area.resort-classic .header-wrap {
+        padding: 0px 0px 0px 0px;
+    }
+    .facilities-section-three .facilities-single-box .facilitie-icon a {
+        right: 15px;
+        top: 6px;
+    }
+    .rooms-section-two .room-content {
+        padding: 380px 20px 0px;
+    }
+    .restaurant-thumb {
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+    .row.header-wrap {
+        padding: 0px 0px 0px 0px;
+    }
+    .booking-section-one .add-bg {
+        padding: 50px 0px 50px 0px;
+    }
+    .about-section-one .section-title {
+        padding-left: 400px;
+    }
+    .video__content a::before {
+        left: 44%;
+    }
+    .ativities-luxury-section-one .section-title {
+        padding-left: 350px;
+    }
+    .testimonial-section-one .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-one .testimonial-arrow-box .slider-prev {
+        left: 150px;
+    }
+    .testimonial-section-one .testimonial-arrow-box .slider-next {
+        left: 210px;
+    }
+    .blog-section-one .section-title {
+        padding-left: 600px;
+    }
+    .about-section-one-classic .about-counter-box {
+        width: 255px;
+    }
+    .hero-section-two .hero-main-title h1 {
+        font-size: 150px;
+    }
+    .about-section-two .section-title {
+        padding-left: 400px;
+    }
+    .about-section-two .autor-img-box {
+        padding: 54px 0 32px;
+    }
+    .premium-facilities-section-one .add-border::after {
+        left: 712px;
+    }
+    .ativities-luxury-section-one .ativities-thumb::after {
+        width: 90.9%;
+    }
+    .header-right-wrapper {
+        text-align: left;
+    }
+    .header-call-info p {
+        letter-spacing: 0;
+    }
+    .header-btn a {
+        padding: 10px 23px;
+    }
+    .about-section-two-classic .about-counter-box {
+        top: -36px;
+    }
+    .premium-facilities-section-two .add-border::after {
+        left: 310px;
+    }
+    .testimonial-section-two-classic .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .booking-section-one .booking-button button {
+        padding: 12px 30px;
+    }
+    .about-section-three .section-title {
+        padding-left: 400px;
+    }
+    .facilities-section-three .single-facilities-box {
+        padding: 40px 20px 130px;
+    }
+    .facilities-section-three .facilities-single-box .facilitie-icon a {
+        right: 0;
+        top: 6px;
+    }
+    .rooms-section-two .room-info {
+        gap: 10px;
+        padding: 45px 10px 56px;
+    }
+    .rooms-section-two .room-title {
+        font-size: 22px;
+    }
+    .testimonial-section-three .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-section-three-classic .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .rooms-suites-grid-section .rooms-suites-grid-box {
+        padding: 20px 10px 38px;
+    }
+    .rooms-suites-grid-section .rooms-suites-content {
+        margin: 18px 10px 0px;
+    }
+    .rooms-suites-grid-section .room-details::after {
+        left: 160px;
+    }
+}
+@media only screen and (max-width: 1365px){
+    .booking-section-one .booking-button button {
+        padding: 12px 25px;
+    }
+    .about-section-one .section-title {
+        padding-left:250px;
+    }
+    .about-section-one .about-content {
+        padding-left: 0;
+    }
+    .our-room-suites-section-one .room-content {
+        padding: 0;
+    }
+    .video__content a::before {
+        left: 43%;
+    }
+    .our-facilities-section-one .facilities-wrap {
+        margin-left: 0;
+    }
+    .our-facilities-section-one .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .our-facilities-section-one .section-title h1 span {
+         font-size: 30px;
+        line-height: 40px;
+    }
+    .our-facilities-section-one  .section-title h1 .title-gold {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .ativities-luxury-section-one .section-title {
+        padding-left: 200px;
+    }
+    .ativities-luxury-section-one .ativities-thumb::after {
+        width: 89.5%;
+    }
+    .testimonial-section-one .testi-content-wrap {
+        padding: 40px 10px 30px;
+    }
+    .testimonial-section-one .testi-desc p {
+        font-size: 15px;
+    }
+    .blog-section-one .section-title {
+        padding-left: 440px;
+    }
+    .about-section-one-classic .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-section-one-classic .section-title h1 span {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .about-section-one-classic .section-title h1 .title-gold {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-section-one-classic .section-desc p {
+        width: 100%;
+    }
+    .hotel-work-section-one .work-bg {
+        padding: 20px;
+    }
+    .testimonial-section-one-bg .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-one-classic .testi-bg {
+        padding: 20px;
+    }
+    .hero-section-two .hero-main-title h1 {
+        font-size: 120px;
+    }
+    .about-section-two .section-title {
+        padding-left: 250px;
+    }
+    .about-section-two .about-title h2 {
+        padding-left: 0;
+    }
+    .about-section-two .about-single-box.three .about-desc p {
+        padding-left: 0;
+    }
+    .about-section-two .about-desc p {
+        padding-left: 0;
+    }
+    .about-section-two .about-btn a {
+        padding: 0px 0px 28px 0px;
+    }
+    .premium-facilities-section-one .add-border::after {
+        display: none;
+    }
+    .premium-facilities-section-one .row.left-space {
+        margin-left: 0;
+    }
+    .premium-facilities-section-one .premium-facilitie-thumb.img-up {
+        margin-top: -74px;
+    }
+    .testimonial-section-two .single-testi-box {
+        padding: 52px 20px 40px;
+    }
+    .testimonial-section-two .testi-desc p {
+        font-size: 20px;
+    }
+    .testimonial-section-two .testi-thumb {
+        right: -35px;
+    }
+    .header-menu ul li a {
+        padding: 36px 10px 36px 10px;
+    }
+    .header-call-info p {
+        letter-spacing: 0;
+        font-size: 14px;
+    }
+    .header-btn a {
+        padding: 10px 20px;
+        font-size: 15px;
+        text-transform: lowercase;
+    }
+    .header-btn a svg {
+        margin-left: 5px;
+    }
+    .about-section-two-classic .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-section-two-classic .section-title h1 span{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .about-section-two-classic .section-title h1 .title-gold{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .premium-facilities-section-two .premium-facilitie-box {
+        padding: 0;
+    }
+    .premium-facilities-section-two .add-border::after {
+        left: 270px;
+    }
+    .testimonial-section-two-classic .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-two-classic .section-title h1 span{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-two-classic .section-title h1 .title-gold{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-two-classic .testi-content-count {
+        padding: 35px 10px 45px;
+    }
+    .hero-section-three .hero_content .hero-title {
+        font-size: 150px;
+    }
+    .hero-section-three .hero_content .hero-sub-title {
+        letter-spacing: 10px;
+    }
+    .about-section-three .section-title {
+        padding-left: 250px;
+    }
+    .about-section-three .about-wrapper-right {
+        margin-left: 0;
+    }
+    .facilities-section-three .single-facilities-box .facilities-content h2 {
+        font-size: 26px;
+        line-height:36px;
+    }
+    .facilities-section-three .facilities-arrow-box {
+        left: 190px;
+    }
+    .rooms-section-two .room-info {
+        display: block;
+    }
+    .rooms-section-two .room-content {
+        padding: 200px 10px 0px;
+    }
+    .testimonial-section-three .section-title h1 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-three .section-title h1 span{
+        font-size: 30px;
+        line-height: 40px;
+    }
+    .testimonial-section-three .section-title h1 .title-gold{
+        font-size: 30px;
+        line-height: 40px;
+    }
+.testimonial-section-three .testi-content-wrap {
+    padding: 45px 20px 50px 20px;
+}
+.testimonial-section-three .testi-content-count {
+    padding: 35px 10px 45px;
+}
+.room-suites-section-three-classic .room-content {
+    margin: -10px 0px 0;
+    padding: 30px 10px 30px 10px;
+}
+.about-section-three-classic .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height: 40px;
+}
+.hotel-season-offer-section .offer-thumb {
+    right: -22px;
+}
+.hotel-season-offer-section .single-offer-box {
+    padding: 30px 10px 30px;
+}
+.hotel-season-offer-section .single-companies-box {
+    padding: 30px 10px 30px;
+}
+.testimonial-section-two-classic .testi-content-wrap {
+    padding: 45px 20px 50px 20px;
+}
+.booking-section-one .booking-button button {
+    padding: 12px 22px;
+}
+
+/* inner page */
+.about-section-inner .section-title h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-inner .section-title h1 .title-gold {
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-inner-dine .section-title h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-inner-dine .section-title h1 span{
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-inner-dine .section-title h1 .title-gold {
+    font-size: 30px;
+    line-height: 40px;
+}
+.restaurant-section .section-title h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.restaurant-section .section-title h1 span{
+    font-size: 30px;
+    line-height: 40px;
+}
+.restaurant-section .section-title h1 .title-gold {
+    font-size: 30px;
+    line-height: 40px;
+}
+.restaurant-item {
+    gap: 10px;
+}
+.dine-content {
+    padding-left: 20px;
+}
+.counter-single-box.box2 {
+    width: 265px;
+    padding: 22px 10px 24px;
+    gap: 10px;
+}                        
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 70px 40px 22px;
+}
+.hotelio-category-box {
+    padding: 40px 20px 30px;
+}
+.booking-container {
+    padding: 43px 10px 40px;
+}
+.details_rcnt .hotelio-category-items {
+    padding: 30px 0px 30px;
+}
+
+}
+
+@media only screen and (max-width: 1200px){
+.hotelio-header-area.resort-classic .header-wrap {
+    padding: 0px 48px 0px 48px;
+    backdrop-filter: blur(30px);
+    background: var(--color-border2);
+    margin: 0;
+}
+.about-section-one .section-title {
+    padding-left: 0;
+}
+.room-suites-arrow-box .slider-next {
+    right: 30px;
+}
+.room-suites-arrow-box .slider-prev {
+    right: 90px;
+}
+.room-thumb figure img {
+    width: 100%;
+}
+.video__content a::before {
+    left: 43%;
+    top: 37%;
+}
+.ativities-luxury-section-one .section-title {
+    padding-left: 0;
+}
+.hero-section-two .hero-desc p {
+    width: 90%;
+}
+.about-section-two .section-title {
+    padding-left: 0;
+}
+.about-section-two .about-box-content p {
+    padding: 27px 0 65px;
+} 
+.our-room-suites-section-two .room-content p {
+    width: 100%;
+}
+.ativities-luxury-section-one .ativities-thumb img {
+    width: 100%;
+}
+.premium-facilities-section-one .add-border::after {
+    left: 578px;
+}
+.testimonial-section-two .testimonial-arrow-box .slider-next {
+    right: 30px;
+}
+.testimonial-section-two .testimonial-arrow-box .slider-prev {
+    right: 90px;
+}
+.owl-prev {
+    left: 80px;
+}
+.owl-next {
+    right:80px;
+}
+.team-section-one .single-team-box {
+    margin-bottom: 20px;
+}
+.testimonial-section-two-classic .testi-thumb2 {
+    right: 0;
+}
+.testimonial-section-two-classic .testi-thumb3 {
+    right: 0;
+}
+.about-section-three .section-title {
+    padding-left: 0;
+}
+.facilities-section-three .facilities-single-box .facilities-content {
+    padding: 25px 10px 25px;
+    margin: -65px 0px 0px;
+}
+.facilities-section-three .facilities-content-count {
+    margin-left: 0;
+}
+.testimonial-section-three .testi-thumb2 {
+    right: 0;
+}
+.testimonial-section-three .testi-thumb3 {
+    right: 0;
+}
+.booking-section-one .booking-button button {
+    padding: 12px 22px;
+}
+.room-suites-section-three-classic .room-suites-thumb .reveal {
+    width: 100%;
+}
+.rooms-suites-grid-section .rooms-suites-thumb .reveal {
+    width: 100%;
+}
+.rooms-suites-grid-section .rooms-suites-thumb img {
+    width: 100%;
+}
+.rooms-suites-grid-section .price-badge {
+    top: 40px;
+    left: 40px;
+}
+.video-section.mountain-classic .video-content {
+    width: 42%;
+}
+.brand-thumb img {
+    width: 100%;
+}
+
+/* inner page */
+
+.dine-section.style_two {
+    padding: 100px 20px 120px;
+}
+.dine-single-item{
+    margin-bottom: 20px;
+}
+.about-section-inner .section-title h1 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.about-section-inner .section-title h1 .title-gold {
+     font-size: 20px;
+    line-height: 30px;
+}
+.about-section-inner-dine .section-title h1 {
+     font-size: 20px;
+    line-height: 30px;
+}
+.about-section-inner-dine .section-title h1 span{
+     font-size: 20px;
+    line-height: 30px;
+}
+.about-section-inner-dine .section-title h1 .title-gold {
+     font-size: 20px;
+    line-height: 30px;
+}
+.restaurant-section .section-title h1 {
+     font-size: 20px;
+    line-height: 30px;
+}
+.restaurant-section .section-title h1 span{
+     font-size: 20px;
+    line-height: 30px;
+}
+.restaurant-section .section-title h1 .title-gold {
+     font-size: 20px;
+    line-height: 30px;
+}
+.about-section-inner .abou_list-item {
+    gap: 10px;
+}
+.restaurant-item {
+    display: block;
+}
+.dine-thumb img {
+    width: 100%;
+}
+
+}
+@media only screen and (max-width: 1170px){
+.header-sidbar-button a svg {
+    margin-right: 0;
+}
+.header-menu ul li a {
+    padding: 36px 9px 36px 9px;
+}
+.booking-section-one .booking-input-box {
+    padding: 7px;
+}
+.booking-section-one .booking-button button svg {
+    margin-left: 2px;
+}
+.booking-section-one .booking-button button {
+    padding: 12px 15px;
+}
+.about-section-one .about-counter-box {
+    display: none;
+}
+.video__content a::before {
+    left: 42.7%;
+    top: 34%;
+}
+.testimonial-section-one .section-title h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+.subcribe-section-one .section-title h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+.blog-section-one .section-title {
+    padding-left: 0;
+}
+.blog-section-one .blog-content h1 a {
+    font-size: 22px;
+    line-height: 32px;
+}
+.blog-section-one .blog-content h3 a {
+    font-size: 22px;
+    line-height: 32px;
+}
+.hotel-work-section-one .work-content p {
+    width: 100%;
+}
+.hero-section-two .hero-desc p {
+    width: 100%;
+}
+.about-section-two .about-list-item ul li {
+    display: flex;
+    align-items: baseline;
+}
+.about-section-two .about-desc p {
+    padding: 40px 0px 40px;
+}
+.premium-facilities-section-one .premium-facilitie-thumb.img-up {
+    margin-top: -64px;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 32px 40px 22px;
+}
+.hotelio-header-area.resort-classic .header-wrap {
+    padding: 0px 0px 0px 0px;
+    margin: 0;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 50%;
+}
+.about-section-two-classic .about-box {
+    display: block;
+}
+.about-section-two-classic .about-icon {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.galary-section-one.resort-classic .section-title h1 {
+    font-size: 30px;
+    line-height: 35px;
+}
+.galary-section-one.resort-classic .section-title h1 span{
+    font-size: 30px;
+    line-height: 35px;
+}
+.galary-section-one.resort-classic .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height: 35px;
+}
+.premium-facilities-section-two .add-border::after {
+    display: none;
+}
+.hero-section-three-classic .hero-title {
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: 2px;
+}
+.hero-section-three-classic .hero-desc {
+    width: 50%;
+}
+.about-section-three-classic .about-wrapper-right {
+    margin-left: 0;
+}
+.hotel-season-offer-section .offer-thumb {
+    right: -90px;
+}
+.hotel-season-offer-section .companies-title {
+    margin-bottom: 50px;
+}
+.testimonial-section-two-classic .testi-content-count {
+    position: relative;
+    z-index: 1;
+}
+.testimonial-section-two-classic .testi-quote {
+    position: absolute;
+    z-index: 1;
+}
+.hotelio-category-box {
+    padding: 40px 10px 30px;
+}
+.category-content {
+    padding-left: 10px;
+}
+.service .prices {
+    margin: 0 0 0 0;
+}
+.row.contact-info_item {
+    background-size: cover;
+}
+
+}
+@media only screen and (max-width: 1024px){
+.header-menu ul li a {
+    padding: 36px 7px 36px 7px;
+}
+.hero-section-one .hero_content h2 {
+    font-size: 70px;
+    line-height: 80px;
+}
+.hero-section-one .hero_content h2 span {
+    font-size:70px;
+    line-height:80px;
+}
+.booking-section-one .booking-box {
+    grid-template-columns: repeat(3, 1fr);
+}
+.booking-section-one .booking-input-box {
+    padding: 10px;
+}
+.booking-section-one .booking-button button {
+    padding: 12px 25px;
+}
+.ativities-luxury-section-one .ativities-title h2 {
+    font-size: 20px;
+    padding: 8px 0px;
+}
+.ativities-luxury-section-one .ativities-thumb::after {
+    width: 94%;
+    left: 10px;
+}
+.testimonial-section-one .section-title h1 {
+    font-size: 25px;
+    line-height: 40px;
+}
+.testimonial-section-one .testi-desc p {
+    font-size: 16px;
+}
+.testimonial-section-one .testimonial-arrow-box .slider-prev {
+    left: 70px;
+}
+.testimonial-section-one .testimonial-arrow-box .slider-next {
+    left: 130px;
+}
+.hero-section-one-classic .hero_content h2 {
+    font-size: 70px;
+    line-height: 80px;
+    letter-spacing: 2px;
+}
+.gallary-list .owl-item.center img {
+    height: 350px !important;
+}
+.gallary-list .gallary-thumb img {
+    width: 100%;
+    height: 350px;
+}
+.gallary-list .owl-item.center {
+    width: 500px !important;
+}
+.owl-prev {
+    left: 80px;
+    bottom: 150px;
+}
+.owl-next {
+    right: 80px;
+    bottom: 150px;
+}
+.about-section-one-classic .section-title h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+.testimonial-section-one-bg .section-title h1 {
+    font-size: 28px;
+    line-height: 40px;
+}
+.testimonial-section-one-classic .testi-desc p {
+    font-size: 20px;
+    line-height: 32px;
+}
+.hero-section-two {
+    padding: 0;
+}
+.hero-section-two  .hero-section-bg {
+    border-radius: 0;
+}
+.about-section-two {
+    border-radius: 0;
+}
+.our-room-suites-section-two .room-suites-bg {
+    padding: 20px 20px 20px 20px;
+    border-radius: 0px;
+}
+.our-room-suites-section-two .single-room-box {
+    padding-left: 20px;
+}
+.premium-facilities-section-one .add-border::after {
+    display: none;
+}
+.premium-facilities-section-one .premium-facilitie-thumb.img-up {
+    margin-top: -61px;
+}
+.marquee-block h3 {
+    font-size: 100px;
+    line-height: 100px;
+    letter-spacing: 10px;
+}
+.room-suites-section-two-classic .room-content {
+    bottom: 20px;
+    left: 20px;
+}
+.room-suites-section-two-classic .booking-tag a {
+    right: -36px;
+}
+.room-suites-section-two-classic .single-room-box::before {
+    left: 5px;
+}
+.room-suites-section-two-classic .single-room-box:hover::before {
+    width: 96%;
+}
+.room-suites-section-two-classic .single-room-box.two:hover::before {
+    width: 98%;
+}
+.room-suites-section-two-classic .single-room-box.two:hover::after {
+    width: 98%;
+}
+.room-suites-section-two-classic .single-room-box::after {
+    left: 5px;
+}
+.hero-section-three {
+    padding: 0;
+}
+.hero-section-three .hero-section-bg {
+    border-radius: 0;
+}
+.hero-section-three .booking-section-one .add-bg {
+    background:var(--color-black1);
+    border-radius: 0;
+}
+.hero-section-three .hero-bg-shape {
+    bottom: 100px;
+    left: 0;
+    right: 0;
+}
+.about-section-three .about-box {
+    display: block;
+}
+.about-section-three .about-icon {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.facilities-section-three .single-facilities-box {
+    padding: 40px 10px 130px;
+}
+.facilities-section-three .single-facilities-box .facilities-content h2 {
+    font-size: 24px;
+    line-height: 36px;
+}
+.facilities-section-three .facilities-box-content h3 {
+    font-size: 50px;
+}
+.facilities-section-three .facilities-box-content span {
+    font-size: 50px;
+}
+.rooms-section-one .rooms-title h1 {
+    font-size: 150px;
+}
+.our-room-suites-section-three .room-content p {
+    width: 80%;
+}
+.testimonial-section-three .testi-content-count {
+    padding: 35px 10px 45px;
+    position: relative;
+    z-index: 1;
+}
+.testimonial-section-three .testi-quote {
+    left: 48%;
+    z-index: 1;
+} 
+.about-section-three-classic .section-title h1 {
+    font-size: 25px;
+    line-height: 40px;
+}
+.video__content a::before {
+    left: 42%;
+    top: 34%;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 70px 40px 22px;
+}
+.header-sidbar-button {
+    display: none;
+}
+.rooms-details_list ul li {
+    margin: 0 20px 0 0;
+}
+
+}
+
+
+@media only screen and (max-width: 992px){
+.mobile-menu-area .sticky {
+    padding: 0 30px 0;
+}
+.mean-container .mean-nav ul li a i {
+    display: none;
+}
+.sticky {
+    padding: 0;
+}
+.hero-section-one {
+    padding: 0;
+}
+.about-section-one .section-title h1 {
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-one .section-title h1 span{
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-one .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height:40px;
+}
+.about-thumb .reveal {
+    width: 100%;
+}
+.room-suites-arrow-box .slider-prev {
+    right: 90px;
+    top: 240px;
+}
+.room-suites-arrow-box .slider-next {
+    right: 30px;
+    top: 240px;
+}
+.video__content a::before {
+    display: none;
+}
+.ativities-luxury-section-one .section-title h1 {
+    font-size: 30px;
+    line-height:40px;
+}
+.ativities-luxury-section-one .section-title h1 span{
+    font-size: 30px;
+    line-height:40px;
+}
+.ativities-luxury-section-one .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height:40px;
+}
+.subcribe-section-one .sec-title {
+    margin-bottom: 50px;
+}
+.subcribe-section-one .subscribe-box {
+    width: 80%;
+}
+.single-blog-box {
+    margin-bottom: 20px;
+}
+.main-footer-one .main-footer-section 
+.footer-widget-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+}
+.main-footer-one .footer-bottom .footer-bottom-menu {
+    text-align: left;
+}
+.main-footer-one .footer-bottom .footer-bottom-menu ul li {
+    margin-left: 10px;
+}
+.galary-section-one .section-title h1 {
+    font-size: 30px;
+    line-height:40px;
+}
+.galary-section-one .section-title h1 span{
+    font-size: 30px;
+    line-height:40px;
+}
+.galary-section-one .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-one-classic .about-counter-box {
+    width: 312px;
+}
+.about-section-one-classic {
+    padding: 120px 0px 70px;
+}
+.hotel-work-section-one .work-content-wrapper {
+    padding-left: 10px;
+    margin: 20px 0px;
+}
+.testimonial-section-one-classic .single-testi-box {
+    padding: 0px 0px 0px 15px;
+}
+.testimonial-section-one-classic .testimonial-arrow-box .slider-prev {
+    right: 50px;
+}
+.testimonial-section-one-classic .testimonial-arrow-box .slider-next {
+    right: 0px;
+}
+.hero-section-two .hero-main-title h1 {
+    font-size: 80px;
+}
+.hero-section-two .hero-video-thumb {
+    margin-top: 40px;
+}
+.about-section-two .section-title h1 {
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-two .section-title h1 span{
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-two .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height:40px;
+}
+.our-room-suites-section-two .single-room-box {
+    padding-left: 10px;
+    margin-top: 20px;
+}
+.premium-facilities-section-one .premium-facilitie-thumb {
+    width: 100%;
+}
+.premium-facilities-section-one .premium-facilitie-thumb.img-up {
+    margin-top: -95px;
+}
+.testimonial-section-two .testimonial-arrow-box .slider-prev {
+    right: 90px;
+    top: 240px;
+}
+.testimonial-section-two .testimonial-arrow-box .slider-next {
+    right: 30px;
+    top: 240px;
+}
+.subcribe-section-two .subscribe-box {
+    width: 80%;
+}
+.subcribe-section-two .sec-title {
+    margin-bottom: 40px;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 70%;
+}
+.galary-section-one.resort-classic .section-title h1 span{
+    font-size: 30px;
+    line-height: 35px;
+}
+.galary-section-one.resort-classic .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height: 35px;
+}
+.premium-facilities-section-two .add-border::after {
+    display: none;
+}
+.text-right {
+    text-align: left;
+}
+.premium-facilities-section-two .premium-facilitie-thumb.reveal {
+    margin: 20px 0px;
+    width: 100%;
+}
+.team-section-one .section-title h1 {
+    font-size: 35px;
+}
+.team-section-one .section-title h1 .title-gold{
+    font-size: 35px;
+}
+.testimonial-section-two-classic .testi-quote {
+    left: 50%;
+}
+.hero-section-three .hero_content .hero-title {
+    font-size: 100px;
+    margin-bottom: 10px;
+}
+.hero-section-three .hero_content .hero-sub-title {
+    letter-spacing: 5px;
+    font-size: 100px;
+}
+.hero-section-three .hero-bg-shape {
+    bottom: 150px;
+    left: 0;
+    right: 0;
+}
+.about-section-three .section-title h1 {
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-three .section-title h1 span{
+    font-size: 30px;
+    line-height:40px;
+}
+.about-section-three .section-title h1 .title-gold{
+    font-size: 30px;
+    line-height:40px;
+}
+.facilities-section-three .facilities-box-content {
+    display: block;
+    margin-right: 0;
+}
+.rooms-section-one .rooms-title h1 {
+    font-size: 100px;
+}
+.our-room-suites-section-three .room-content p {
+    width: 100%;
+}
+.our-room-suites-section-three .room-content h2 a {
+    font-size: 26px;
+}
+.hero-section-three-classic .hero-desc {
+    width: 70%;
+}
+.room-suites-section-three-classic .room-suites-arrow-box {
+    top: 0;
+}
+.video-section.mountain-classic .video-content {
+    width: 60%;
+}
+.video-section.mountain-classic .video-title h3 {
+    font-size: 20px;
+}
+.hotel-season-offer-section .single-offer-box {
+    padding: 30px 10px 30px;
+    margin-bottom: 20px;
+}
+
+/* inner page */
+.header-menu ul li a {
+    padding: 36px 6px 36px 6px;
+}
+.slider-arrow-dine {
+    top: 20%;
+    right: 0;
+}
+
+}
+
+@media only screen and (max-width: 768px){
+.mobile-menu-area .sticky {
+    position: absolute !important;
+    padding: 0 30px 0;
+}
+.mean-container .mean-nav ul li a i {
+    display: none;
+}
+.sticky {
+    padding: 0;
+}
+.hotelio-header-area {
+    display: none;
+}
+.hotelio-header-area.classic {
+    display: none;
+}
+.about-section-one .section-title h1 {
+    font-size: 24px;
+    line-height:36px;
+}
+.about-section-one .section-title h1 span{
+    font-size: 24px;
+    line-height:36px;
+}
+.about-section-one .section-title h1 .title-gold{
+    font-size: 24px;
+    line-height:36px;
+}
+.about-section-two .about-desc p {
+    padding: 25px 0px 30px;
+}
+.about-section-two-classic .about-thumb2 {
+    display: none;
+}
+.about-section-two-classic .about-counter-box {
+    top: 0;
+}
+.hotel-season-offer-section .offer-thumb {
+    right: 0;
+}
+.our-room-suites-section-one .section-title h1 {
+    font-size: 24px;
+    line-height:36px;
+}
+.our-room-suites-section-one .section-title h1 span{
+    font-size: 24px;
+    line-height:36px;
+}
+.our-room-suites-section-one .section-title h1 .title-gold{
+    font-size: 24px;
+    line-height:36px;
+}
+.room-suites-arrow-box .slider-prev {
+    right: 90px;
+    top: 230px;
+}
+.room-suites-arrow-box .slider-next {
+    right: 30px;
+    top: 230px;
+}
+.video__content a::before {
+    left: 36%;
+    top: 31%;
+}
+.ativities-luxury-section-one .section-title h1 {
+    font-size: 24px;
+    line-height:35px;
+}
+.ativities-luxury-section-one .section-title h1 span{
+    font-size: 24px;
+    line-height:35px;
+}
+.ativities-luxury-section-one .section-title h1 .title-gold{
+    font-size: 24px;
+    line-height:35px;
+}
+.ativities-luxury-section-one .ativities-thumb::after {
+    width: 93%;
+    left: 20px;
+}
+
+.blog-section-one .section-title h1 {
+    font-size: 24px;
+    line-height:35px;
+}
+.blog-section-one .section-title h1 span{
+    font-size: 24px;
+    line-height:35px;
+}
+.blog-section-one .section-title h1 .title-gold{
+    font-size: 24px;
+    line-height:35px;
+}
+.blog-section-one .blog-thumb figure {
+    width: 100%;
+}
+.blog-section-one .blog-thumb img{
+    width: 100%;
+}
+.hero-section-one-classic .hero_content h2 {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 2px;
+}
+.galary-section-one .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.galary-section-one .section-title h1 span{
+    font-size: 25px;
+    line-height:35px;
+}
+.galary-section-one .section-title h1 .title-gold{
+    font-size: 25px;
+    line-height:35px;
+}
+.about-section-one-classic .about-counter-box {
+    right: 35px;
+}
+.testimonial-section-one-bg .testi-counter-box {
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.testimonial-section-one-classic .testi-thumb .reveal {
+    margin-bottom: 30px;
+}
+.hero-section-two .hero-main-title h1 {
+    font-size: 60px;
+}
+.about-section-two .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.about-section-two .section-title h1 span{
+    font-size: 25px;
+    line-height:35px;
+}
+.about-section-two .section-title h1 .title-gold{
+    font-size: 25px;
+    line-height:35px;
+}
+.our-room-suites-section-two .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.our-room-suites-section-two .section-title h1 span{
+    font-size: 25px;
+    line-height:35px;
+}
+.our-room-suites-section-two .section-title h1 .title-gold{
+    font-size: 25px;
+    line-height:35px;
+}
+.premium-facilities-section-one .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.premium-facilities-section-one .section-title h1 span{
+    font-size: 25px;
+    line-height:35px;
+}
+.premium-facilities-section-one .section-title h1 .title-gold{
+    font-size: 25px;
+    line-height:35px;
+}
+.hero-section-two-classic .hero-title h2 {
+    font-size: 60px;
+    line-height: 70px;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 80%;
+}
+.section-title h1 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.section-title h1 span{
+    font-size: 30px;
+    line-height: 40px;
+}
+.section-title h1 .title-gold{
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-three .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.about-section-three .section-title h1 span{
+    font-size: 25px;
+    line-height:35px;
+}
+.about-section-three .section-title h1 .title-gold{
+    font-size: 25px;
+    line-height:35px;
+}
+.about-thumb1 figure{
+    width: 100%;
+}
+.about-thumb1 img{
+    width: 100%;
+}
+.about-thumb2 figure{
+    width: 100%;
+}
+.about-thumb2 img{
+    width: 100%;
+}
+.facilities-section-three .facilities-arrow-box {
+    display: none;
+}
+.facilities-section-three .single-facilities-box {
+    margin-bottom: 20px;
+}
+.facilities-section-three .facilities-thumb figure {
+    width: 100%;
+}
+.our-room-suites-section-three .single-room-box {
+    margin-bottom: 20px;
+}
+.hero-section-three-classic .hero-title {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: 0px;
+}
+.hero-section-three-classic .hero-desc {
+    width: 80%;
+}
+
+/* inner page */
+.about-section-inner .about-thumb {
+    margin-left: 0;
+    margin-top: 0;
+}
+.about-section-inner .about-thumb img{
+    width: 100%;
+}
+.overview_list ul li:first-child {
+    margin: 0 0px 0 0;
+}
+.overview_list ul li {
+    margin: 0 5px 0;
+}
+.contact-service-box:before {
+    display: none;
+}
+.google-map iframe {
+    width: 100%;
+}
+.restaurant-section.sports .restaurant-thumb {
+    margin-left: 0;
+    margin-top: 0;
+}
+.restaurant-section.sports .restaurant-thumb img{
+    width: 100%;
+}
+.about-thumb img{
+    width: 100%;
+}
+.over-view-content {
+    text-align: left;
+}
+.overview_list ul li {
+    font-size: 15px;
+    margin: 0 7px 0;
+}
+.comment-bx {
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+}
+
+
+@media only screen and (max-width: 600px){
+.testimonial-arrow-box {
+    display: none;
+}
+.hero-section-one .hero_content h2 {
+    font-size: 60px;
+    line-height: 70px;
+}
+.hero-section-one .hero_content h2 span {
+    font-size: 60px;
+    line-height: 70px;
+}
+.about-section-one-classic .about-thumb2 {
+    display: none;
+}
+.premium-facilities-section-one .premium-facilitie-thumb.img-up {
+    margin-top: 0;
+}
+.hero-section-two-classic .hero-title h2 {
+    font-size: 50px;
+    line-height: 60px;
+}
+.hero-section-three .hero_content .hero-title {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+.hero-section-three .hero_content .hero-sub-title {
+    letter-spacing: 3px;
+    font-size: 80px;
+}
+.hero-section-three-classic .hero-title {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 0px;
+}
+.hero-section-three-classic .hero-desc {
+    width: 90%;
+}
+.rooms-suites-grid-section .suites-grid_menu {
+    text-align: left;
+}
+.rooms-suites-grid-section .suites-grid_menu ul li {
+    padding: 9px 20px;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 32px 40px 22px;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 90%;
+}
+.our-room-suites-section-three .room-suites-thumb figure {
+    width: 100%;
+}
+.about-section-two-classic {
+    padding: 120px 0px 110px;
+}
+
+.hotelio-title h2 {
+    font-size: 28px;
+}
+.team-details {
+    padding: 30px;
+}
+.team-details-content {
+    padding: 0 0 0 0;
+}
+.rooms-details_list ul li {
+    margin: 0 10px 0 0;
+}
+p.room-detils-desc {
+    margin-right: 0;
+}
+.blog-content-text.text-left h2 {
+    margin: 0;
+    font-size: 25px;
+}
+p.qouik {
+    margin-right: 0;
+}
+p.qouik2 {
+    margin: 25px 0px 46px 0;
+}
+.blog-dtls-img{
+    margin-bottom: 20px;
+}
+.pagination-btns {
+    display: none;
+}
+.details_rcnt.style-two .category-content{
+    padding-right: 10px;
+}
+.blog-details-comment {
+    padding: 25px 20px 6px 15px;
+}
+.blog-details-comment.reply {
+    margin-left: 0;
+    padding: 25px 20px 6px 20px;
+}
+
+
+}
+@media only screen and (max-width: 576px){
+.hero-section-one .hero_content h2 {
+    font-size: 50px;
+    line-height: 60px;
+}
+.hero-section-one .hero_content h2 span {
+    font-size: 50px;
+    line-height: 60px;
+}
+.booking-section-one .booking-box {
+    grid-template-columns: repeat(2, 1fr);
+}
+.our-facilities-section-one .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.our-facilities-section-one .section-title h1 span {
+    font-size: 25px;
+    line-height:35px;
+}
+.our-facilities-section-one  .section-title h1 .title-gold {
+    font-size: 25px;
+    line-height:35px;
+}
+.hero-section-one-classic .hero_content h2 {
+    font-size: 40px;
+    line-height: 50px;
+    letter-spacing: 2px;
+}
+.gallary-list .owl-item.center {
+    width: 300px !important;
+}
+.hero-section-two .hero-main-title h1 {
+    font-size: 50px;
+}
+.hero-section-two-classic .hero-title h2 {
+    font-size: 40px;
+    line-height: 50px;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 90%;
+}
+.about-section-two-classic .about-counter-box {
+    top: 0;
+    right: 0;
+}
+.about-section-two-classic .about-thumb2 {
+    display: none;
+}
+.testimonial-section-two-classic .testi-content-count {
+    width: 55%;
+}
+.hero-section-three .hero_content .hero-title {
+    font-size: 60px;
+    margin-bottom: 0;
+    line-height: 80px;
+}
+.hero-section-three .hero_content .hero-sub-title {
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+.hero-section-three .hero-bg-shape {
+    bottom:250px;
+    left: 0;
+    right: 0;
+}
+.testimonial-section-three .testi-content-count {
+    width: 55%;
+}
+.hero-section-three-classic .hero-title {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+.room-suites-section-three-classic .room-suites-arrow-box {
+    display: none;
+}
+.rooms-suites-grid-section .suites-grid_menu ul li {
+    padding: 5px 16px;
+}
+.video-section.mountain-classic .video-content {
+    width: 90%;
+}
+.hotel-season-offer-section .offer-thumb {
+    display: none;
+}
+
+
+}
+@media only screen and (max-width: 480px){
+.room-suites-arrow-box {
+    display: none;
+}
+.subcribe-section-one .subscribe-box {
+    width: 90%;
+}
+.main-footer-one .footer-bottom .footer-bottom-menu ul li:first-child {
+    margin-left:0px;
+}
+.hero-section-one-classic .hero_content h2 {
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 0px;
+}
+.defult-btn a {
+    padding: 10px 20px;
+}
+.hotel-work-section-one .work-content h1 {
+    font-size: 25px;
+}
+.testimonial-section-one-bg .section-title h1 {
+    font-size: 25px;
+    line-height:35px;
+}
+.testimonial-section-one-classic .single-testi-box {
+    padding: 0;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding:70px 40px 22px;
+}
+.hero-section-two .hero-main-title h1 {
+    font-size: 30px;
+}
+.subcribe-section-two .subscribe-box {
+    width: 80%;
+}
+.hero-section-two-classic .hero-desc p {
+    width: 100%;
+}
+.about-section-two-classic .section-desc p {
+    width: 100%;
+}
+.rooms-suites-grid-section .suites-grid_menu ul li {
+    padding: 5px 16px;
+    margin-bottom: 10px;
+}
+.hotel-season-offer-section .companies-title h3 {
+    font-size: 25px;
+    line-height:35px;
+}
+.hotelio-title h2 {
+    font-size: 24px;
+}
+.breadcumb-content h1 {
+    font-size: 50px;
+}
+.slider-arrow-dine {
+    display: none;
+}
+.blog-content-text.text-left h2 {
+    font-size: 23px;
+}
+.blog-details-social {
+    display: block;
+}
+.single-blog-social-icon ul li {
+    margin-left: 0;
+    margin-top: 20px;
+}
+.details_rcnt .hotelio-category-items {
+    padding: 30px 10px 30px;
+}
+.blog-details-comment-thumb {
+    margin-right: 10px;
+}
+
+}
+@media only screen and (max-width: 424px){
+.hero-section-one .hero_content h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.hero-section-one .hero_content h2 span {
+     font-size: 30px;
+    line-height: 40px;
+}
+.booking-section-one .booking-box {
+    grid-template-columns: repeat(1, 1fr);
+}
+.about-section-one .about-list ul li {
+    display: flex;
+}
+.ativities-luxury-section-one .ativities-thumb::after {
+    display: none;
+}
+.subcribe-section-one .subscribe-box {
+    width: 100%;
+}
+.about-section-one-classic .about-counter-box {
+    right: 0;
+    width: 250px;
+}
+.our-facilities-section-one.classic .single-facilities-box {
+    padding: 50px 10px 43px;
+}
+.hotel-work-section-one .work-content h1 {
+    font-size: 20px;
+}
+.hotel-work-section-one .work-list ul li {
+    display: flex;
+}
+.our-room-suites-section-two .room-content h2 a {
+    font-size: 22px;
+}
+.our-room-suites-section-two .room-suites-bg {
+    padding: 20px 10px 20px 10px;
+    border-radius: 0px;
+}
+.testimonial-section-two .testi-btn a {
+    padding: 13px 20px;
+}
+.testimonial-section-two .testi-thumb {
+    display: none;
+}
+.testimonial-section-two .single-testi-box {
+    padding: 52px 10px 40px;
+}
+.testimonial-section-two .testi-box-content h3 {
+    font-size: 40px;
+}
+.testimonial-section-two .testi-box-content span {
+    font-size: 40px;
+}
+.testimonial-section-two .single-testi-box.cout-box {
+    padding: 32px 10px 22px;
+}
+.testimonial-section-two .testi-autor-box {
+    padding-top: 85px;
+}
+.subcribe-section-two .subscribe-box {
+    width: 100%;
+}
+.hero-section-two-classic .hero-title h2 {
+    font-size: 30px;
+    line-height: 40px;
+}
+.about-section-two-classic .about-thumb-wrapper::before {
+    display: none;
+}
+.about-section-two-classic .about-counter-box {
+    display: none;
+}
+.about-section-two-classic .about-list ul li {
+    display: flex;
+}
+.galary-section-one.resort-classic .section-title h1 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.galary-section-one.resort-classic .section-title h1 span{
+    font-size: 20px;
+    line-height: 30px;
+}
+.galary-section-one.resort-classic .section-title h1 .title-gold{
+    font-size: 20px;
+    line-height: 30px;
+}
+.section-title h1 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.section-title h1 span{
+    font-size: 20px;
+    line-height: 30px;
+}
+.section-title h1 .title-gold{
+    font-size: 20px;
+    line-height: 30px;
+}
+.room-suites-section-two-classic .booking-tag a {
+    right: -36px;
+    display: none;
+}
+.room-suites-section-two-classic .room-content .room-title h2 a {
+    font-size: 20px;
+}
+.room-suites-section-two-classic .room-content .price-tag a {
+    padding: 4px 16px;
+    margin: 4px 0 10px;
+}
+.room-suites-section-two-classic .room-content {
+    bottom: 0px;
+    left: 20px;
+}
+.room-suites-section-two-classic .single-room-box:hover::after {
+    display: none;
+}
+.room-suites-section-two-classic .single-room-box:hover::before {
+    display: none;
+}
+.room-suites-section-two-classic .single-room-box.two:hover::after {
+    display: none;
+}
+.room-suites-section-two-classic .single-room-box.two:hover::before {
+    display: none;
+}
+.room-suites-section-two-classic .room-info {
+    padding: 0px 0 15px;
+}
+.team-section-one .section-title h1 {
+    font-size: 25px;
+    line-height: 35px;
+}
+.team-section-one .section-title h1 .title-gold {
+    font-size: 25px;
+    line-height: 35px;
+}
+.testimonial-section-two-classic .testi-content-count {
+    width: 80%;
+}
+.testimonial-section-two-classic .testi-quote {
+    left: 50%;
+    top: 40%;
+}
+.testimonial-section-two-classic .testi-content-wrap {
+    padding: 45px 10px 50px 10px;
+}
+.testimonial-section-two-classic .testi-desc p {
+    font-size: 18px;
+}
+.hero-section-three .hero_content .hero-title {
+    font-size: 30px;
+    margin-bottom: 0;
+    line-height: 40px;
+}
+.hero-section-three .hero_content .hero-sub-title {
+    letter-spacing:0px;
+    font-size: 30px;
+}
+.hero-section-three .hero-bg-shape {
+    bottom: 480px;
+    left: 0;
+    right: 0;
+}
+.about-section-three .about-list ul li {
+    display: flex;
+}
+.rooms-section-one .rooms-title h1 {
+    font-size: 60px;
+}
+.our-room-suites-section-three .room-content h2 a {
+    font-size: 22px;
+}
+.testimonial-section-three .testi-quote {
+    display: none;
+}
+.testimonial-section-three .testi-content-count {
+    width: 100%;
+}
+.hero-section-three-classic .hero-title {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0px;
+}
+.hero-section-three-classic .hero-desc {
+    width: 100%;
+}
+.hero-section-three-classic .hero-counter-wrap {
+    gap: 10px;
+}
+.hero-section-three-classic .hero-box-content h3 {
+    font-size: 40px;
+    line-height: 40px;
+}
+.hero-section-three-classic .hero-box-content span {
+    font-size: 40px;
+    line-height: 40px;
+}
+.room-suites-section-three-classic .room-suites-title h2 a {
+    font-size: 20px;
+}
+.room-suites-section-three-classic .room-suites-title h2 a br{
+    display: none;
+}
+.about-section-three-classic .about-counter {
+    display: block;
+}
+.rooms-suites-grid-section .menu-filtering {
+    border: none;
+    padding: 0;
+}
+.rooms-suites-grid-section .room-details::before {
+    display: none;
+}
+.rooms-suites-grid-section .room-details::after{
+    display: none;
+}
+.rooms-suites-grid-section .room-details {
+    padding: 18px 0px 15px 5px;
+    grid-column-gap: 10px;
+    margin: 12px 0px 32px;
+}
+.rooms-suites-grid-section .rooms-suites-content {
+    margin: 18px 0px 0px;
+}
+.rooms-suites-grid-section .price-badge {
+    top: 20px;
+    left: 20px;
+}
+.video-section.mountain-classic .video-content {
+    width: 95%;
+}
+.video-section.mountain-classic .video-title {
+    padding: 28px 10px 26px;
+}
+.hotel-season-offer-section .offer-content .offer-title h2 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.hotel-season-offer-section .offer-content .offer-title span {
+    font-size: 20px;
+    line-height: 30px;
+}
+.hotel-season-offer-section .companies-title h3 {
+    font-size: 20px;
+    line-height: 30px;
+}
+.hotel-season-offer-section .companies-title h3 span {
+    font-size: 20px;
+    line-height: 30px;
+}
+.testimonial-section-two-classic .testi-content-count {
+    width: 100%;
+}
+.hotelio-title h2 {
+    font-size: 22px;
+}
+.about-section-inner .abou_list ul li {
+    display: flex;
+    align-items: center;
+}
+.breadcumb-content h1 {
+    font-size: 45px;
+}
+.blog-content-text.text-left h2 {
+    font-size: 20px;
+}
+
+}
+
+@media only screen and (max-width: 320px){
+.testimonial-section-two .single-testi-box.cout-box {
+    padding:70px 10px 22px;
+}
+.ativities-luxury-section-one .section-title h1 {
+    font-size: 18px;
+    line-height:32px;
+}
+.ativities-luxury-section-one .section-title h1 span{
+    font-size: 18px;
+    line-height:32px;
+}
+.ativities-luxury-section-one .section-title h1 .title-gold{
+    font-size: 18px;
+    line-height:32px;
+}
+
+.galary-section-one .section-title h1 {
+    font-size: 18px;
+    line-height:32px;
+}
+.galary-section-one .section-title h1 span{
+    font-size: 18px;
+    line-height:32px;
+}
+.galary-section-one .section-title h1 .title-gold{
+    font-size: 18px;
+    line-height:32px;
+}
+.about-section-one-classic .section-title h1 {
+    font-size: 18px;
+    line-height:32px;
+}
+.about-section-one-classic .section-title h1 span{
+    font-size: 18px;
+    line-height:32px;
+}
+.about-section-one-classic .section-title h1 .title-gold{
+    font-size: 18px;
+    line-height:32px;
+}
+.hotel-work-section-one .work-bg {
+    padding: 10px;
+}
+.our-room-suites-section-two .room-info {
+    display: block;
+}
+.breadcumb-content h1 {
+    font-size: 40px;
+}
+.hotelio-title h2 {
+    font-size: 22px;
+    line-height: 1.5;
+}
+.team-details {
+    padding: 10px;
+    border-radius: 0;
+}
+.team-details-content {
+    padding: 20px 0 10px 0;
+}
+.rooms-details-content h1 {
+    font-size: 25px;
+}
+p.room-detils-desc2 {
+    margin: 22px 0px 20px 0px;
+}
+h1.room-detils-title-2 {
+    font-size: 26px;
+}
+.about-section-inner .abou_list-item {
+    display: block;
+}
+.breadcumb-content h1 {
+    font-size: 30px;
+}
+.restaurant-author-itm {
+    display: block;
+}
+.restaurant-author {
+    margin-top: 20px;
+}
+.counter-single-box.box2 {
+    display: none;
+}
+.about-thumb{
+    margin-top: 30px;
+}
+.blog-content-text.text-left h2 {
+    font-size: 20px;
+    line-height: 1.3;
+}
+p.desc-style1 {
+    margin: 20px 0px 28px 0;
+}
+.blog-social-tags ul li a {
+    padding: 2px 16px;
+}
+.hotelio-category-items.d-flex {
+    display: block !important;
+}
+.blog-details-comment-thumb {
+    margin-right:0px;
+    float: inherit;
+}
+.category-content {
+    padding: 10px 0 0;
+}
+.portfolio_menu ul {
+    list-style: none;
+}
+.portfolio_nav ul li {
+    margin-bottom: 10px;
+}
+}
+
+@media only screen and (max-width: 991px){
+.hotelio-header-area.classic {
+    display: none;
+}
+.hotelio-header-area{
+    display: none;
+}
+
+}
+

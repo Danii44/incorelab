@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.name} | Case Study`,
+    title: `${project.name} | ${project.projectType === "demo" ? "Original Demo" : "Case Study"}`,
     description: project.headline,
     openGraph: {
       title: `${project.name} | incorelab`,
@@ -76,18 +76,27 @@ export default async function CaseStudyPage({ params }: Props) {
 
         {/* Project Title & Headline */}
         <div className="py-12 sm:py-20 border-b border-border">
+          {project.projectType === "demo" && (
+            <p className="mb-5 font-mono-custom text-xs text-accent">ORIGINAL PROJECT · DEMO</p>
+          )}
           <h1 className="font-display headline-huge font-bold uppercase tracking-tight text-text">
             {project.name}
           </h1>
           <p className="mt-6 max-w-3xl font-display text-xl sm:text-3xl font-normal text-muted leading-tight">
             {project.headline}
           </p>
+          {project.projectType === "demo" && project.liveUrl && (
+            <div className="mt-8 flex flex-wrap items-center gap-5">
+              <Button href={project.liveUrl} isExternal withArrow>Open demo</Button>
+              <span className="font-body text-sm text-muted">Design preview. Bookings, payments, and form submissions are disabled.</span>
+            </div>
+          )}
         </div>
 
         {/* Metadata Details Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 py-10 border-b border-border font-mono-custom text-xs">
           <div>
-            <span className="text-muted block mb-1">CLIENT</span>
+            <span className="text-muted block mb-1">{project.projectType === "demo" ? "PROJECT" : "CLIENT"}</span>
             <span className="text-text font-bold text-sm">{project.client}</span>
           </div>
           <div>
@@ -107,7 +116,7 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
 
         {/* Hero Full-Bleed Image */}
-        <div className="relative my-12 aspect-[16/9] w-full overflow-hidden rounded-2xl border border-border bg-surface">
+        <div className={`relative my-12 ${project.projectType === "demo" ? "aspect-[4/3]" : "aspect-[16/9]"} w-full overflow-hidden rounded-2xl border border-border bg-surface`}>
           <Image
             src={project.heroImage}
             alt={project.name}
@@ -144,7 +153,7 @@ export default async function CaseStudyPage({ params }: Props) {
               </div>
               <div>
                 <span className="font-mono-custom text-xs text-muted tracking-widest uppercase block mb-2">
-                  OUR ARCHITECTURAL SOLUTION
+                  {project.projectType === "demo" ? "DESIGN APPROACH" : "OUR ARCHITECTURAL SOLUTION"}
                 </span>
                 <p className="font-body text-sm text-muted leading-relaxed">
                   {project.solution}
@@ -155,7 +164,7 @@ export default async function CaseStudyPage({ params }: Props) {
         </div>
 
         {/* Results & Key Metrics Section */}
-        <div className="py-16 border-b border-border">
+        {project.metrics.length > 0 && <div className="py-16 border-b border-border">
           <div className="mb-10 flex items-center justify-between">
             <div>
               <span className="font-mono-custom text-xs text-accent tracking-widest uppercase block mb-2">
@@ -184,23 +193,25 @@ export default async function CaseStudyPage({ params }: Props) {
           </div>
         </div>
 
+        }
+
         {/* Image Gallery */}
         <div className="py-16 border-b border-border">
           <span className="font-mono-custom text-xs text-accent tracking-widest uppercase block mb-8">
             03 // VISUAL ARTIFACTS & DETAILS
           </span>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className={`grid grid-cols-1 ${project.projectType === "demo" ? "" : "md:grid-cols-3"} gap-6`}>
             {project.gallery.map((img, idx) => (
               <div
                 key={idx}
-                className="relative aspect-[4/3] overflow-hidden rounded-xl border border-border bg-surface"
+                className={`relative ${project.projectType === "demo" ? "aspect-[2/1]" : "aspect-[4/3]"} overflow-hidden rounded-xl border border-border bg-surface`}
               >
                 <Image
                   src={img}
                   alt={`${project.name} gallery ${idx + 1}`}
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes={project.projectType === "demo" ? "100vw" : "(max-width: 768px) 100vw, 33vw"}
                 />
               </div>
             ))}
@@ -231,7 +242,7 @@ export default async function CaseStudyPage({ params }: Props) {
               size="sm"
               withArrow
             >
-              Launch Live Preview
+              {project.projectType === "demo" ? "Open demo" : "Launch Live Preview"}
             </Button>
           )}
         </div>

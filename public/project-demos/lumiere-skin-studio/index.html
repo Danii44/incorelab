@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Lumière Skin Studio - Skin treatments, beauty care and wellness.">
+<title>Lumière Skin Studio | Your Natural Glow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="announcement">
+  <div class="container announcement-inner">
+    <span>Enjoy 15% Off Your First Skin Treatment</span>
+    <span>Book Your Glow Session Today <i class="fa-solid fa-arrow-right"></i></span>
+  </div>
+</div>
+
+<header class="header">
+  <div class="container header-inner">
+    <a href="#home" class="logo"><span class="logo-mark">✦</span> Lumière<span>Skin</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#services">Services</a>
+      <a href="#shop">Shop</a>
+      <a href="#team">Our Team</a>
+      <a href="#blog">Blog</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+15550102026" class="header-phone"><i class="fa-solid fa-phone-volume"></i><span>Call for Booking<small>+1 (555) 010-2026</small></span></a>
+      <a href="#appointment" class="btn btn-orange header-book">Book Appointment <i class="fa-solid fa-arrow-right"></i></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">DISCOVER YOUR NATURAL BEAUTY</span>
+      <h1>Beautiful Skin<br>Begins With<br><em>Gentle Care</em></h1>
+      <p>Personalized skincare, calming treatments and thoughtful beauty rituals designed to help your skin feel its best.</p>
+      <div class="hero-buttons">
+        <a href="#appointment" class="btn btn-orange">Book Your Visit <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="#services" class="play-link"><span><i class="fa-solid fa-play"></i></span> Explore Services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle"></div>
+      <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=1000&auto=format&fit=crop&q=85" alt="Skincare treatment and glowing skin">
+      <span class="hero-leaf">✳</span>
+    </div>
+  </div>
+  <span class="hero-outline">beauty & wellness</span>
+</section>
+
+<section class="beauty-gallery section-sm">
+  <div class="container">
+    <div class="section-title centered">
+      <span class="eyebrow">OUR BEAUTY PHILOSOPHY</span>
+      <h2>Healthy Skin, Beautiful Confidence</h2>
+    </div>
+    <div class="beauty-grid">
+      <img src="https://images.unsplash.com/photo-1611930022073-b7a4ba5fcccd?w=550&auto=format&fit=crop&q=85" alt="Natural skincare products">
+      <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=550&auto=format&fit=crop&q=85" alt="Facial skincare treatment">
+      <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=550&auto=format&fit=crop&q=85" alt="Skin treatment essentials">
+      <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=550&auto=format&fit=crop&q=85" alt="Beauty and skin wellness">
+    </div>
+  </div>
+</section>
+
+<section class="about section" id="about">
+  <div class="container about-grid">
+    <div class="about-images">
+      <img class="about-main" src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?w=750&auto=format&fit=crop&q=85" alt="Skincare beauty portrait">
+      <img class="about-small" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=500&auto=format&fit=crop&q=85" alt="Facial treatment">
+      <div class="about-years"><strong>12+</strong><span>Years of Beauty<br>Experience</span></div>
+    </div>
+    <div class="about-content">
+      <span class="eyebrow">GET TO KNOW US</span>
+      <h2>Discover Our Dedication to <em>Healthy Skin</em></h2>
+      <p>At Lumière Skin Studio, we believe skincare should be personal, relaxing and grounded in what your skin actually needs.</p>
+      <p>From refreshing facials to advanced beauty rituals, every appointment is designed to leave you feeling cared for and confident.</p>
+      <div class="about-points">
+        <span><i class="fa-solid fa-circle-check"></i> Personalized Skin Consultations</span>
+        <span><i class="fa-solid fa-circle-check"></i> Experienced Beauty Specialists</span>
+        <span><i class="fa-solid fa-circle-check"></i> Carefully Selected Products</span>
+        <span><i class="fa-solid fa-circle-check"></i> Relaxing Studio Environment</span>
+      </div>
+      <div class="about-bottom"><a href="#services" class="btn btn-orange">Discover More <i class="fa-solid fa-arrow-right"></i></a><div class="about-expert"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=120&auto=format&fit=crop&q=85" alt="Studio director"><span><strong>Emma Laurent</strong><small>Studio Director</small></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="services section" id="services">
+  <div class="container">
+    <div class="section-heading-row">
+      <div><span class="eyebrow">OUR SPECIALTIES</span><h2>Beauty and Skin Care<br><em>Services</em></h2></div>
+      <div class="heading-side"><p>Experience treatments that combine gentle techniques with a personal approach to skincare.</p><a href="#appointment" class="btn btn-orange">Explore Services <i class="fa-solid fa-arrow-right"></i></a></div>
+    </div>
+    <div class="service-grid">
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=650&auto=format&fit=crop&q=85" alt="Signature facial treatment"><div class="service-content"><span class="service-icon"><i class="fa-solid fa-spa"></i></span><h3>Signature Facial Therapy</h3><p>A refreshing facial tailored to cleanse, hydrate and revitalize your skin.</p><a href="#appointment">Explore Treatment <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=650&auto=format&fit=crop&q=85" alt="Beauty skincare ritual"><div class="service-content"><span class="service-icon"><i class="fa-solid fa-leaf"></i></span><h3>Radiance Renewal Ritual</h3><p>A relaxing treatment designed to refresh dull and tired-looking skin.</p><a href="#appointment">Explore Treatment <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="service-card"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=650&auto=format&fit=crop&q=85" alt="Hydrating skincare products"><div class="service-content"><span class="service-icon"><i class="fa-solid fa-droplet"></i></span><h3>Deep Hydration Care</h3><p>Restore comfort and softness with a moisture-focused skincare session.</p><a href="#appointment">Explore Treatment <i class="fa-solid fa-arrow-right"></i></a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="shop section" id="shop">
+  <div class="container">
+    <div class="section-title centered"><span class="eyebrow">THE BEAUTY EDIT</span><h2>Our Skin Care Collection</h2></div>
+    <div class="product-grid">
+      <article class="product"><div class="product-image"><span class="product-badge">NEW</span><img src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&auto=format&fit=crop&q=85" alt="Skin serum"></div><h3>Botanical Glow Serum</h3><div class="product-rating">★★★★★</div><strong>$38.00</strong></article>
+      <article class="product"><div class="product-image"><span class="product-badge">POPULAR</span><img src="https://images.unsplash.com/photo-1556229010-6c3f2c9ca5f8?w=500&auto=format&fit=crop&q=85" alt="Skincare cream"></div><h3>Daily Comfort Cream</h3><div class="product-rating">★★★★★</div><strong>$29.00</strong></article>
+      <article class="product"><div class="product-image"><img src="https://images.unsplash.com/photo-1601049541289-9b1b7bbbfe19?w=500&auto=format&fit=crop&q=85" alt="Skincare treatment product"></div><h3>Soft Renewal Mask</h3><div class="product-rating">★★★★★</div><strong>$32.00</strong></article>
+      <article class="product"><div class="product-image"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&auto=format&fit=crop&q=85" alt="Skin care essentials"></div><h3>Pure Hydration Set</h3><div class="product-rating">★★★★★</div><strong>$49.00</strong></article>
+    </div>
+  </div>
+</section>
+
+<section class="team section" id="team">
+  <div class="container">
+    <div class="section-heading-row team-heading"><div><span class="eyebrow">MEET THE SPECIALISTS</span><h2>Our Professional<br><em>Beauty Team</em></h2></div><a href="#contact" class="btn btn-orange">Meet Our Team <i class="fa-solid fa-arrow-right"></i></a></div>
+    <div class="team-layout">
+      <div class="team-grid">
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=550&auto=format&fit=crop&q=85" alt="Emma Laurent"><h3>Emma Laurent</h3><p>Lead Skin Therapist</p><div class="social"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-pinterest-p"></i></div></article>
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=550&auto=format&fit=crop&q=85" alt="Olivia Bennett"><h3>Olivia Bennett</h3><p>Facial Specialist</p><div class="social"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-pinterest-p"></i></div></article>
+        <article class="team-card"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=550&auto=format&fit=crop&q=85" alt="Sophia Reed"><h3>Sophia Reed</h3><p>Beauty Consultant</p><div class="social"><i class="fa-brands fa-facebook-f"></i><i class="fa-brands fa-instagram"></i><i class="fa-brands fa-pinterest-p"></i></div></article>
+      </div>
+      <img class="team-feature" src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&auto=format&fit=crop&q=85" alt="Beauty skincare close-up">
+    </div>
+  </div>
+</section>
+
+<section class="testimonials section">
+  <div class="container">
+    <div class="section-heading-row"><div><span class="eyebrow">KIND WORDS</span><h2>Real Stories From<br>Our Happy Clients</h2></div><div class="testimonial-summary"><div class="avatar-stack"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt=""><img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=100&auto=format&fit=crop" alt=""></div><span><strong>Client Experiences</strong><small>Feedback from our studio community</small></span></div></div>
+    <div class="testimonial-grid">
+      <article class="review"><div class="review-top"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Client portrait"><div><strong>Amelia Foster</strong><small>Sample client review</small></div><i class="fa-solid fa-quote-right"></i></div><div class="review-stars">★★★★★</div><p>“The entire appointment felt calm and thoughtful. I loved how clearly everything was explained and how comfortable my skin felt afterward.”</p></article>
+      <article class="review"><div class="review-top"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&auto=format&fit=crop" alt="Client portrait"><div><strong>Isabella Moore</strong><small>Sample client review</small></div><i class="fa-solid fa-quote-right"></i></div><div class="review-stars">★★★★★</div><p>“A beautiful studio with a welcoming team. The facial was relaxing, and I appreciated the personalized skincare advice.”</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="appointment section" id="appointment">
+  <div class="container appointment-grid">
+    <div class="appointment-left"><span class="eyebrow">YOUR MOMENT OF CARE</span><h2>Make an Appointment <em>Today!</em></h2>
+      <form id="appointmentForm" class="appointment-form">
+        <div class="form-row"><input type="text" name="name" placeholder="Your Name" required><input type="email" name="email" placeholder="Email Address" required></div>
+        <div class="form-row"><input type="tel" name="phone" placeholder="Phone Number" required><select name="service" required><option value="">Select Service</option><option>Signature Facial Therapy</option><option>Radiance Renewal Ritual</option><option>Deep Hydration Care</option></select></div>
+        <div class="form-row"><input type="date" name="date" required><input type="time" name="time" required></div>
+        <textarea name="message" placeholder="Your Message" rows="4"></textarea>
+        <button class="btn btn-orange" type="submit">Request Appointment <i class="fa-solid fa-arrow-right"></i></button>
+        <p id="appointmentMessage" class="form-message" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="appointment-visual"><img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=750&auto=format&fit=crop&q=85" alt="Skincare professional"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=750&auto=format&fit=crop&q=85" alt="Beauty professional"></div>
+  </div>
+</section>
+
+<section class="pricing section" id="pricing">
+  <div class="container">
+    <div class="section-title centered"><span class="eyebrow">SIMPLE BEAUTY PACKAGES</span><h2>Skin Care Pricing Plans</h2><p>Choose the experience that feels right for you.</p></div>
+    <div class="pricing-grid">
+      <article class="price-card"><span class="plan-name">Essential Glow</span><div class="plan-price">$39<small>/ session</small></div><p>Perfect for a quick refresh and everyday skin maintenance.</p><ul><li>Skin consultation</li><li>Gentle cleansing</li><li>Hydrating treatment</li><li>Relaxing facial massage</li><li>Aftercare guidance</li></ul><a href="#appointment" class="btn btn-orange">Book This Plan <i class="fa-solid fa-arrow-right"></i></a></article>
+      <article class="price-card"><span class="plan-name">Radiance Ritual</span><div class="plan-price">$59<small>/ session</small></div><p>Our signature session for a deeper beauty and wellness experience.</p><ul><li>Personal skin assessment</li><li>Deep cleansing ritual</li><li>Gentle exfoliation</li><li>Hydrating face mask</li><li>Facial massage</li></ul><a href="#appointment" class="btn btn-orange">Book This Plan <i class="fa-solid fa-arrow-right"></i></a></article>
+      <article class="price-card"><span class="plan-name">Luxury Renewal</span><div class="plan-price">$89<small>/ session</small></div><p>An extended treatment focused on comfort, care and relaxation.</p><ul><li>Detailed skin consultation</li><li>Customized facial ritual</li><li>Premium hydrating mask</li><li>Face and neck massage</li><li>Personal aftercare routine</li></ul><a href="#appointment" class="btn btn-orange">Book This Plan <i class="fa-solid fa-arrow-right"></i></a></article>
+    </div>
+  </div>
+</section>
+
+<section class="faq section">
+  <div class="container faq-grid">
+    <div><span class="eyebrow">YOUR QUESTIONS ANSWERED</span><h2>Frequently Asked <em>Questions</em></h2>
+      <div class="faq-list">
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">How do I choose the right facial? <i class="fa-solid fa-plus"></i></button><div class="faq-answer"><p>Our team can discuss your goals and recommend an appropriate treatment during your consultation.</p></div></div>
+        <div class="faq-item active"><button class="faq-question" aria-expanded="true">Do I need a consultation before treatment? <i class="fa-solid fa-minus"></i></button><div class="faq-answer"><p>A consultation helps us understand your skin, preferences and any sensitivities before starting a treatment.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">How long does a facial appointment take? <i class="fa-solid fa-plus"></i></button><div class="faq-answer"><p>Most sessions take around 45 to 90 minutes, depending on the treatment selected.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">Can I book a treatment for sensitive skin? <i class="fa-solid fa-plus"></i></button><div class="faq-answer"><p>Tell us about your sensitivities when booking so we can review suitable options with you.</p></div></div>
+        <div class="faq-item"><button class="faq-question" aria-expanded="false">What should I do after my appointment? <i class="fa-solid fa-plus"></i></button><div class="faq-answer"><p>Your therapist will explain any treatment-specific aftercare and recommended skincare steps.</p></div></div>
+      </div>
+    </div>
+    <div class="faq-image"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=800&auto=format&fit=crop&q=85" alt="Professional facial treatment"><span><i class="fa-solid fa-star"></i> Your comfort comes first</span></div>
+  </div>
+</section>
+
+<section class="service-prices section">
+  <div class="container service-prices-grid">
+    <div><span class="eyebrow">OUR TREATMENT MENU</span><h2>Beauty Services & <em>Prices</em></h2><p>Explore some of our most requested studio treatments.</p><div class="price-list"><div><span>Signature Facial</span><b>$39</b></div><div><span>Hydrating Skin Ritual</span><b>$49</b></div><div><span>Radiance Renewal Facial</span><b>$59</b></div><div><span>Relaxing Face Massage</span><b>$35</b></div><div><span>Luxury Skin Treatment</span><b>$89</b></div><div><span>Personal Skin Consultation</span><b>$20</b></div></div></div>
+    <div class="service-prices-image"><img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=800&auto=format&fit=crop&q=85" alt="Natural beauty skincare"></div>
+  </div>
+</section>
+
+<section class="why-us section">
+  <div class="container why-grid">
+    <div><span class="eyebrow">THE LUMIÈRE DIFFERENCE</span><h2>Why Trust Our <em>Skincare Studio?</em></h2><p>We believe great beauty care begins with listening, understanding and treating every client as an individual.</p><div class="why-point"><i class="fa-solid fa-hand-holding-heart"></i><div><h3>Thoughtful, Gentle Treatments</h3><p>We prioritize comfort and take time to understand your personal skincare goals.</p></div></div><div class="why-point"><i class="fa-solid fa-seedling"></i><div><h3>Carefully Chosen Products</h3><p>Our team selects products and treatments with attention to quality and suitability.</p></div></div></div>
+    <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=850&auto=format&fit=crop&q=85" alt="Skincare beauty products">
+  </div>
+</section>
+
+<div class="orange-marquee"><div class="marquee-track"><span>Gentle Care ✧ Natural Glow ✧ Skincare ✧ Beauty Rituals ✧ Self Care ✧ </span><span>Gentle Care ✧ Natural Glow ✧ Skincare ✧ Beauty Rituals ✧ Self Care ✧ </span></div></div>
+
+<section class="blog section" id="blog">
+  <div class="container">
+    <div class="section-title centered"><span class="eyebrow">THE BEAUTY JOURNAL</span><h2>Discover the Art of <em>Skin Wellness</em></h2><p>Helpful ideas and everyday inspiration for your skincare routine.</p></div>
+    <div class="blog-grid">
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=650&auto=format&fit=crop&q=85" alt="Spa beauty products"><div><span class="blog-date">SKINCARE TIPS</span><h3>Simple Daily Habits for Healthier-Looking Skin</h3><p>Build a practical skincare routine with a few thoughtful everyday steps.</p><a href="#contact">Read Article <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=650&auto=format&fit=crop&q=85" alt="Relaxing facial"><div><span class="blog-date">BEAUTY RITUALS</span><h3>What to Expect During Your First Facial Treatment</h3><p>Learn how to prepare for your appointment and enjoy your time at the studio.</p><a href="#contact">Read Article <i class="fa-solid fa-arrow-right"></i></a></div></article>
+      <article class="blog-card"><img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=650&auto=format&fit=crop&q=85" alt="Skincare essentials"><div><span class="blog-date">PRODUCT GUIDES</span><h3>Choosing Skincare Products That Suit Your Routine</h3><p>Understand the basics of selecting products for your skin's needs.</p><a href="#contact">Read Article <i class="fa-solid fa-arrow-right"></i></a></div></article>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-about"><a href="#home" class="logo"><span class="logo-mark">✦</span> Lumière<span>Skin</span></a><p>A welcoming space for thoughtful skincare, relaxing beauty treatments and everyday confidence.</p><form class="newsletter" id="newsletterForm"><input type="email" placeholder="Your email address" aria-label="Email address" required><button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form><div class="footer-social"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a></div></div>
+    <div class="footer-col"><h3>Quick Links</h3><a href="#home">Home</a><a href="#about">About Us</a><a href="#services">Services</a><a href="#shop">Our Products</a><a href="#team">Our Team</a><a href="#contact">Contact</a></div>
+    <div class="footer-col"><h3>Our Services</h3><a href="#services">Signature Facial</a><a href="#services">Hydration Therapy</a><a href="#services">Skin Renewal</a><a href="#services">Beauty Consultation</a><a href="#pricing">Pricing Plans</a></div>
+    <div class="footer-col"><h3>Contact Details</h3><p><i class="fa-solid fa-location-dot"></i> Your Studio Address</p><p><i class="fa-solid fa-phone"></i> +1 (555) 010-2026</p><p><i class="fa-solid fa-envelope"></i> hello@lumiere.example</p><p><i class="fa-regular fa-clock"></i> Mon - Sat, 9 AM - 6 PM</p></div>
+  </div>
+  <div class="footer-bottom"><div class="container"><span>© 2026 Lumière Skin Studio. All rights reserved.</span><span>Privacy Policy &nbsp; | &nbsp; Terms & Conditions</span></div></div>
+</footer>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>{
+  const open=nav.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded',String(open));
+  menuBtn.querySelector('i').className=open?'fa-solid fa-xmark':'fa-solid fa-bars';
+});
+document.querySelectorAll('.nav a').forEach(link=>link.addEventListener('click',()=>{
+  nav.classList.remove('open');
+  menuBtn.setAttribute('aria-expanded','false');
+}));
+document.querySelectorAll('.faq-question').forEach(button=>{
+  button.addEventListener('click',()=>{
+    const item=button.closest('.faq-item');
+    const wasOpen=item.classList.contains('active');
+    document.querySelectorAll('.faq-item').forEach(el=>{
+      el.classList.remove('active');
+      el.querySelector('button').setAttribute('aria-expanded','false');
+      el.querySelector('i').className='fa-solid fa-plus';
+    });
+    if(!wasOpen){
+      item.classList.add('active');
+      button.setAttribute('aria-expanded','true');
+      button.querySelector('i').className='fa-solid fa-minus';
+    }
+  });
+});
+document.getElementById('appointmentForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  document.getElementById('appointmentMessage').textContent='Demo form only. Connect a booking service or backend to receive appointments.';
+});
+document.getElementById('newsletterForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  alert('Newsletter demo: connect an email marketing service to activate subscriptions.');
+});
+</script>
+</body>
+</html>

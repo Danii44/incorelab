@@ -1,0 +1,417 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aurelia Stays - Boutique rooms, thoughtful hospitality and memorable getaways.">
+  <title>Aurelia Stays | Boutique Hotel & Retreat</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="home">
+  <div class="container nav">
+    <a href="#home" class="logo"><span class="logo-icon">✺</span> aurelia<span>.</span></a>
+
+    <button class="mobile-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#about">About Us</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#offers">Offers</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a href="#booking" class="nav-button">Reservation <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-image">
+      <div class="hero-shade"></div>
+      <div class="container hero-content">
+        <span class="hero-label">WELCOME TO AURELIA STAYS</span>
+        <h1>Experience the Ultimate Harmony<br>of Luxury</h1>
+        <p>Discover a place where beautiful spaces, quiet moments and thoughtful hospitality come together.</p>
+        <a href="#rooms" class="btn btn-gold">Explore Rooms <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section class="section rooms-section" id="rooms">
+    <div class="container narrow">
+      <div class="section-heading center">
+        <span class="eyebrow">Stay Your Way</span>
+        <h2>Explore Room</h2>
+        <p>Discover thoughtfully designed rooms and suites where every detail is made for comfort, relaxation and a beautiful stay.</p>
+      </div>
+
+      <div class="rooms-grid">
+        <article class="room-card">
+          <a href="#booking" class="room-image">
+            <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1000&auto=format&fit=crop&q=85" alt="Classic room with comfortable king bed">
+          </a>
+          <div class="room-meta"><span><i class="fa-solid fa-bed"></i> 1 King Bed</span><span><i class="fa-solid fa-user-group"></i> 2 Guests</span><strong>$180 <small>/ night</small></strong></div>
+          <h3>Classic Room</h3>
+        </article>
+
+        <article class="room-card">
+          <a href="#booking" class="room-image">
+            <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=1000&auto=format&fit=crop&q=85" alt="Superior room with bright interior">
+            <span class="image-tag">Best Selling</span>
+          </a>
+          <div class="room-meta"><span><i class="fa-solid fa-bed"></i> 1 King Bed</span><span><i class="fa-solid fa-user-group"></i> 2 Guests</span><strong>$240 <small>/ night</small></strong></div>
+          <h3>Superior Room</h3>
+        </article>
+
+        <article class="room-card">
+          <a href="#booking" class="room-image">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=1000&auto=format&fit=crop&q=85" alt="Executive room with warm interiors">
+          </a>
+          <div class="room-meta"><span><i class="fa-solid fa-bed"></i> 1 King Bed</span><span><i class="fa-solid fa-user-group"></i> 2 Guests</span><strong>$310 <small>/ night</small></strong></div>
+          <h3>Executive Room</h3>
+        </article>
+
+        <article class="room-card">
+          <a href="#booking" class="room-image">
+            <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=1000&auto=format&fit=crop&q=85" alt="Premium suite with luxury furniture">
+          </a>
+          <div class="room-meta"><span><i class="fa-solid fa-bed"></i> 2 Bedrooms</span><span><i class="fa-solid fa-user-group"></i> 4 Guests</span><strong>$420 <small>/ night</small></strong></div>
+          <h3>Premium Suite</h3>
+        </article>
+      </div>
+
+      <div class="center section-action">
+        <a href="#booking" class="btn btn-gold">View All Rooms <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section class="testimonial-banner">
+    <div class="testimonial-overlay"></div>
+    <div class="container testimonial-content">
+      <div class="review-score">
+        <span class="stars">★★★★★</span>
+        <strong>4.9</strong>
+        <small>Guest Experience</small>
+      </div>
+      <div class="review-quote">
+        <span class="quote-mark">“</span>
+        <blockquote>Impeccable attention to detail. Every moment felt personal and thoughtfully crafted during our stay.</blockquote>
+        <span class="review-name">AMELIA ROBERTS, GUEST</span>
+        <div class="review-dots"><i class="active"></i><i></i><i></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section class="section facilities" id="facilities">
+    <div class="container narrow">
+      <div class="section-heading center">
+        <span class="eyebrow">A Better Experience</span>
+        <h2>Hotel Facilities</h2>
+        <p>Every part of your visit is designed to feel effortless, from your first welcome to your final morning.</p>
+      </div>
+
+      <div class="facilities-grid">
+        <div class="facility-large">
+          <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&auto=format&fit=crop&q=85" alt="Beautiful hotel lounge and pool area">
+        </div>
+        <div class="facility-stat">
+          <span>Elegant Rooms</span>
+          <strong>180<span>+</span></strong>
+          <p>Comfortable stays designed for you</p>
+        </div>
+        <div class="facility-stat">
+          <span>Happy Guests</span>
+          <strong>8500<span>+</span></strong>
+          <p>Memorable guest experiences</p>
+        </div>
+        <div class="facility-stat">
+          <span>Guest Reviews</span>
+          <strong>65<span>+</span></strong>
+          <p>Thoughtful words from visitors</p>
+        </div>
+        <div class="facility-small">
+          <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?w=700&auto=format&fit=crop&q=85" alt="Welcoming guest service">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="gallery-section" id="gallery">
+    <div class="container narrow">
+      <div class="gallery-intro">
+        <div>
+          <span class="eyebrow">A Place to Unwind</span>
+          <h2>Experience Comfort,<br>Elegance, and Exceptional<br>Hospitality</h2>
+        </div>
+        <div>
+          <p>From restful mornings to evenings worth remembering, every space at Aurelia Stays is designed to make your time away feel special. Explore beautiful rooms, refined dining and inviting spaces.</p>
+          <div class="gallery-filters">
+            <button class="active" data-filter="all">View All</button>
+            <button data-filter="rooms">Rooms</button>
+            <button data-filter="dining">Dining</button>
+            <button data-filter="lifestyle">Lifestyle</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="gallery-grid">
+        <div data-category="rooms"><img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=600&auto=format&fit=crop&q=80" alt="Hotel bedroom"></div>
+        <div data-category="lifestyle"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=600&auto=format&fit=crop&q=80" alt="Relaxing spa"></div>
+        <div data-category="lifestyle"><img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=600&auto=format&fit=crop&q=80" alt="Spa treatment"></div>
+        <div data-category="rooms"><img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?w=600&auto=format&fit=crop&q=80" alt="Hotel suite"></div>
+        <div data-category="dining"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600&auto=format&fit=crop&q=80" alt="Restaurant dining"></div>
+        <div data-category="rooms"><img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=600&auto=format&fit=crop&q=80" alt="Modern room"></div>
+        <div data-category="lifestyle"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop&q=80" alt="Fitness facilities"></div>
+        <div data-category="rooms"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=600&auto=format&fit=crop&q=80" alt="Warm bedroom"></div>
+        <div data-category="lifestyle"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80" alt="Relaxing getaway"></div>
+        <div data-category="dining"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&fit=crop&q=80" alt="Hotel restaurant"></div>
+        <div data-category="rooms"><img src="https://images.unsplash.com/photo-1591088398332-8a7791972843?w=600&auto=format&fit=crop&q=80" alt="Luxury bedroom"></div>
+        <div data-category="lifestyle"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&auto=format&fit=crop&q=80" alt="Hotel pool"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="booking-section" id="booking">
+    <div class="container narrow">
+      <form class="booking-form" id="bookingForm">
+        <label>Check In
+          <input type="date" id="checkIn" required>
+        </label>
+        <label>Check Out
+          <input type="date" id="checkOut" required>
+        </label>
+        <label>Rooms
+          <select id="roomCount">
+            <option value="1">1 Room</option>
+            <option value="2">2 Rooms</option>
+            <option value="3">3 Rooms</option>
+            <option value="4">4 Rooms</option>
+          </select>
+        </label>
+        <label>Guests
+          <select id="guestCount">
+            <option value="1">1 Guest</option>
+            <option value="2" selected>2 Guests</option>
+            <option value="3">3 Guests</option>
+            <option value="4">4 Guests</option>
+            <option value="5">5 Guests</option>
+            <option value="6">6 Guests</option>
+          </select>
+        </label>
+        <button type="submit" class="btn btn-gold">Check Availability <i class="fa-solid fa-arrow-right"></i></button>
+      </form>
+      <p id="bookingMessage" class="form-message" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <!-- OFFERS -->
+  <section class="offers-section" id="offers">
+    <div class="container narrow">
+      <div class="section-heading center">
+        <span class="eyebrow">Special Moments</span>
+        <h2>Latest Hotel Offers</h2>
+      </div>
+      <div class="offers-grid">
+        <article class="offer-card">
+          <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?w=800&auto=format&fit=crop&q=85" alt="Romantic dinner">
+          <span class="offer-tag">SPECIAL OFFER</span>
+          <div class="offer-caption"><h3>Romantic Stay</h3><p>A thoughtful getaway for two</p></div>
+        </article>
+        <article class="offer-card featured-offer">
+          <div class="offer-top"><h3>Early Bird Deal</h3><p>Plan ahead and enjoy more</p></div>
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=800&auto=format&fit=crop&q=85" alt="Relaxing getaway">
+          <span class="offer-tag bottom-tag">SAVE MORE</span>
+        </article>
+        <article class="offer-card">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=800&auto=format&fit=crop&q=85" alt="Family holiday">
+          <div class="offer-caption"><h3>Family Getaway</h3><p>Make memories together</p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section faq-section">
+    <div class="container narrow faq-grid">
+      <div>
+        <span class="eyebrow">FAQs</span>
+        <h2>Everything You Need to<br>Know About Staying With Us</h2>
+      </div>
+      <div class="faq-list">
+        <details><summary>What time is check-in and check-out?</summary><p>Our sample check-in time is 3:00 PM and check-out is 11:00 AM. Confirm the final policy with the hotel.</p></details>
+        <details><summary>Do you offer airport transfers?</summary><p>Airport transfers may be arranged upon request, subject to availability.</p></details>
+        <details><summary>Are pets allowed at the hotel?</summary><p>Pet policies depend on the selected room and booking conditions.</p></details>
+        <details><summary>Is breakfast included in my stay?</summary><p>Breakfast inclusion depends on the room package selected.</p></details>
+        <details><summary>Can I cancel or modify my reservation?</summary><p>Cancellation and modification terms vary by booking package.</p></details>
+        <details><summary>Do you offer room service?</summary><p>Room service options and hours can be confirmed with reception.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="hotel-video">
+    <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?w=1800&auto=format&fit=crop&q=90" alt="Luxury hotel bedroom">
+    <button class="play-button" id="playVideo" aria-label="Play hotel video"><i class="fa-solid fa-play"></i></button>
+  </section>
+
+  <!-- BLOG -->
+  <section class="section blog-section" id="blog">
+    <div class="container narrow">
+      <div class="section-heading center">
+        <span class="eyebrow">Our Journal</span>
+        <h2>News & Articles</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=650&auto=format&fit=crop&q=85" alt="Boutique hotel exterior"><span class="date"><strong>20</strong> JUN</span></div>
+          <h3>Top Hotel Amenities That Guests Love in 2026</h3>
+          <p>Discover the small details that make a hotel stay truly memorable.</p>
+          <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?w=650&auto=format&fit=crop&q=85" alt="Luxury hotel bedroom"><span class="date"><strong>19</strong> JUN</span></div>
+          <h3>How to Choose the Perfect Room for Your Stay</h3>
+          <p>Simple things to consider when choosing your ideal accommodation.</p>
+          <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=650&auto=format&fit=crop&q=85" alt="Hotel restaurant"><span class="date"><strong>18</strong> JUN</span></div>
+          <h3>The Art of Hospitality: Behind Our Signature Service</h3>
+          <p>A closer look at the care and attention behind every guest experience.</p>
+          <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+        <article class="blog-card">
+          <div class="blog-image"><img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=650&auto=format&fit=crop&q=85" alt="Wellness spa"><span class="date"><strong>17</strong> JUN</span></div>
+          <h3>Why Location Matters When Choosing a Hotel</h3>
+          <p>Find the right balance of convenience, atmosphere and relaxation.</p>
+          <a href="#contact">Read More <i class="fa-solid fa-arrow-right"></i></a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="container footer-grid">
+    <div>
+      <h4>Address</h4>
+      <p>123 Garden Avenue<br>City Center, Your Location</p>
+    </div>
+    <div class="footer-center">
+      <a href="#home" class="logo"><span class="logo-icon">✺</span> aurelia<span>.</span></a>
+      <div class="socials">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+      </div>
+    </div>
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <p>hello@aureliastays.example<br>+00 123 456 7890</p>
+    </div>
+  </div>
+  <div class="container copyright">© 2026 Aurelia Stays. All rights reserved.</div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', String(open));
+  });
+
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  document.querySelectorAll('.gallery-filters button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelector('.gallery-filters .active')?.classList.remove('active');
+      button.classList.add('active');
+
+      const filter = button.dataset.filter;
+      document.querySelectorAll('.gallery-grid > div').forEach(item => {
+        item.hidden = filter !== 'all' && item.dataset.category !== filter;
+      });
+    });
+  });
+
+  const checkIn = document.getElementById('checkIn');
+  const checkOut = document.getElementById('checkOut');
+  const today = new Date();
+  const localDate = new Date(today.getTime() - today.getTimezoneOffset() * 60000).toISOString().slice(0,10);
+  checkIn.min = localDate;
+  checkOut.min = localDate;
+
+  checkIn.addEventListener('change', () => {
+    checkOut.min = checkIn.value || localDate;
+    if (checkOut.value && checkOut.value <= checkIn.value) checkOut.value = '';
+  });
+
+  document.getElementById('bookingForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const message = document.getElementById('bookingMessage');
+    if (checkOut.value <= checkIn.value) {
+      message.textContent = 'Check-out must be after check-in.';
+      return;
+    }
+    message.textContent = 'This is a booking demo. Connect your hotel reservation system to check live availability.';
+  });
+
+  document.getElementById('playVideo').addEventListener('click', () => {
+    alert('Add your hotel introduction video here.');
+  });
+
+  const backTop = document.getElementById('backTop');
+  backTop.addEventListener('click', () => window.scrollTo({top: 0, behavior: 'smooth'}));
+</script>
+
+</body>
+</html>

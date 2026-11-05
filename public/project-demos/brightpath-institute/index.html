@@ -1,0 +1,60 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BrightPath Institute | Courses & Training</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#1f2937;line-height:1.6;background:#f8fafc}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-size:24px;font-weight:900;color:#0f766e}
+nav a{margin-left:20px}.btn{background:#0f766e;color:#fff;padding:12px 22px;border-radius:10px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:40px 0 60px}
+.hero h1{font-size:50px;line-height:1.05}.hero h1 span{color:#0f766e}.hero p{color:#64748b;margin:18px 0}
+.search{background:#fff;padding:8px;border-radius:14px;display:flex;box-shadow:0 10px 30px rgba(0,0,0,.08)}.search input{border:0;flex:1;padding:12px;font:inherit;outline:none}
+.hero-imgs{display:grid;grid-template-columns:1fr 1fr;gap:14px}.hero-imgs img{width:100%;height:220px;object-fit:cover;border-radius:18px}.hero-imgs img:first-child{grid-column:span 2;height:260px}
+section{padding:50px 0}h2{font-size:34px;margin-bottom:8px}.sub{color:#64748b;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.card img{width:100%;height:180px;object-fit:cover}.card div{padding:22px}.tag{background:#ccfbf1;color:#0f766e;padding:5px 10px;border-radius:20px;font-size:12px;font-weight:800}
+.instructor{display:flex;gap:14px;align-items:center;background:#fff;padding:18px;border-radius:16px}.instructor img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+form{max-width:640px;margin:auto;background:#0f766e;color:#fff;padding:32px;border-radius:18px;display:grid;gap:13px}
+input,select{width:100%;padding:12px;border-radius:10px;border:0;font:inherit}footer{text-align:center;padding:30px;color:#94a3b8}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.hero h1{font-size:36px}nav a{display:none}}
+</style></head><body><div class="wrap">
+<header><div class="logo">🎓 BrightPath</div><nav><a href="#courses">Courses</a><a href="#teachers">Instructors</a><a href="#enroll">Enroll</a><a class="btn" href="#enroll">Enroll Now</a></nav></header>
+
+<div class="hero"><div><h1>Learn skills that <span>get you hired.</span></h1><p>Practical courses in tech, business and design — taught by industry experts, with certificates, projects and career support.</p>
+<div class="search"><input placeholder="Search courses: e.g. Web Development"><button class="btn">Search</button></div>
+<p style="font-size:14px;margin-top:16px">⭐ 4.9 rating • 18,000+ students • Online &amp; on-campus</p></div>
+<div class="hero-imgs"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=80"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80"></div></div>
+
+<section id="courses"><h2>Popular Courses</h2><p class="sub">Start this week. Learn at your own pace.</p><div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"><div><span class="tag">TECHNOLOGY</span><h3 style="margin:10px 0">Web Development Bootcamp</h3><p>HTML, CSS, JavaScript &amp; React. Build 10 real projects.</p><p style="margin-top:12px"><b>$299</b> • 12 weeks • ★ 4.9</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"><div><span class="tag">BUSINESS</span><h3 style="margin:10px 0">Digital Marketing Pro</h3><p>SEO, ads, social media and analytics from scratch.</p><p style="margin-top:12px"><b>$199</b> • 8 weeks • ★ 4.8</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=800&q=80"><div><span class="tag">DESIGN</span><h3 style="margin:10px 0">UI/UX Design Masterclass</h3><p>Figma, user research and portfolio-ready case studies.</p><p style="margin-top:12px"><b>$249</b> • 10 weeks • ★ 4.9</p></div></div>
+</div></section>
+
+<section id="teachers"><h2>Learn from the best</h2><p class="sub">Instructors with real industry experience.</p><div class="grid">
+<div class="instructor"><img src="https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=200&q=80"><div><b>Emma Wilson</b><br><small>Web Development • Ex-Google</small></div></div>
+<div class="instructor"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=80"><div><b>Ali Raza</b><br><small>Marketing • 10 yrs experience</small></div></div>
+<div class="instructor"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=200&q=80"><div><b>Sofia Ahmed</b><br><small>UI/UX Design • Product Lead</small></div></div>
+</div></section>
+
+<section id="enroll"><h2 style="text-align:center">Enroll Today</h2><p class="sub" style="text-align:center">Limited seats per batch. Early-bird 20% off.</p>
+<form><input placeholder="Full name" required><input type="email" placeholder="Email" required><select><option>Choose a course</option><option>Web Development Bootcamp</option><option>Digital Marketing Pro</option><option>UI/UX Design Masterclass</option></select><button class="btn" style="background:#fff;color:#0f766e">Enroll Now — Save 20%</button></form></section>
+<footer>© 2026 BrightPath Institute • Learn. Build. Grow.</footer>
+</div></body></html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html><html lang="en"><head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow"><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EverAfter Events | Weddings & Event Planning</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}body{font-family:'Segoe UI',Arial,sans-serif;color:#3f3f46;line-height:1.6;background:#fffaf9}
+.wrap{max-width:1150px;margin:auto;padding:0 22px}a{color:inherit;text-decoration:none}
+header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}.logo{font-family:Georgia,serif;font-size:28px;color:#9f1239}
+nav a{margin-left:20px}.btn{background:#9f1239;color:#fff;padding:12px 24px;border-radius:30px;font-weight:700;display:inline-block;border:0;cursor:pointer}
+.hero{height:74vh;min-height:500px;background:linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.55)),url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1600&q=80') center/cover;border-radius:26px;color:#fff;display:flex;align-items:flex-end;padding:50px;margin-top:10px}
+.hero h1{font-family:Georgia,serif;font-size:56px;line-height:1.05}.hero p{max-width:560px;margin:14px 0 22px;opacity:.95}
+section{padding:65px 0}h2{font-family:Georgia,serif;font-size:36px;text-align:center}.sub{text-align:center;color:#71717a;max-width:620px;margin:10px auto 35px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 6px 24px rgba(0,0,0,.06)}
+.card img{width:100%;height:210px;object-fit:cover}.card div{padding:22px}
+.price{font-size:30px;font-weight:900;color:#9f1239}.card ul{list-style:none;color:#52525b;margin:12px 0}.card li{padding:4px 0}
+form{max-width:640px;margin:auto;background:#fff;padding:32px;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08);display:grid;gap:13px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid #e4e4e7;font:inherit}footer{text-align:center;padding:30px;color:#a1a1aa}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.hero h1{font-size:38px}.hero{padding:30px 22px}nav a{display:none}}
+</style></head><body><div class="wrap">
+<header><div class="logo">EverAfter ♡</div><nav><a href="#portfolio">Portfolio</a><a href="#packages">Packages</a><a href="#inquiry">Inquiry</a><a class="btn" href="#inquiry">Plan My Event</a></nav></header>
+
+<div class="hero"><div><p style="letter-spacing:3px;text-transform:uppercase;font-size:13px">Weddings • Engagements • Corporate Events</p><h1>Your perfect day,<br>planned to perfection.</h1><p>From the first mood board to the last dance — venue, decor, catering, photography and everything in between, handled by one team.</p><a class="btn" style="background:#fff;color:#9f1239" href="#inquiry">Start Planning →</a></div></div>
+
+<section id="portfolio"><h2>Recent Celebrations</h2><p class="sub">Real weddings and events we've loved planning.</p><div class="grid">
+<div class="card"><img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=800&q=80"><div><b>Ayesha &amp; Omar — Garden Wedding</b><p>300 guests • Outdoor • Lahore</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80"><div><b>Luxury Corporate Gala</b><p>500 guests • Hotel Ballroom • Dubai</p></div></div>
+<div class="card"><img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80"><div><b>Sara &amp; Ali — Sunset Beach Wedding</b><p>200 guests • Beach • Karachi</p></div></div>
+</div></section>
+
+<section id="packages"><h2>Packages</h2><p class="sub">Clear pricing, flexible customisation.</p><div class="grid">
+<div class="card"><div><h3>Essential</h3><div class="price">$1,499</div><ul><li>Day-of coordination</li><li>Venue + vendor booking</li><li>Basic decor</li></ul><a class="btn" href="#inquiry">Enquire</a></div></div>
+<div class="card"><div><h3>Signature ★</h3><div class="price">$3,499</div><ul><li>Full planning from start to finish</li><li>Premium decor &amp; styling</li><li>Catering + photography team</li></ul><a class="btn" href="#inquiry">Enquire</a></div></div>
+<div class="card"><div><h3>Royal Luxury</h3><div class="price">$7,999</div><ul><li>Destination wedding</li><li>Designer decor &amp; entertainment</li><li>Dedicated planner + team</li></ul><a class="btn" href="#inquiry">Enquire</a></div></div>
+</div></section>
+
+<section id="inquiry"><h2>Event Inquiry</h2><p class="sub">Tell us your date and dream — we'll send a free quote within 24 hours.</p>
+<form><input placeholder="Your name" required><input type="email" placeholder="Email" required><select><option>Event type</option><option>Wedding</option><option>Engagement / Mehndi</option><option>Birthday</option><option>Corporate Event</option></select><input type="date"><input placeholder="Approx. guests & budget"><textarea rows="3" placeholder="Tell us about your event"></textarea><button class="btn">Send Inquiry</button></form></section>
+<footer>© 2026 EverAfter Events • Making memories since 2015</footer>
+</div></body></html>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="IronPulse Fitness - Strength training, personal coaching and group fitness classes.">
+  <title>IronPulse | Fitness & Training Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700;800;900&family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header" id="home">
+  <div class="container nav-wrap">
+    <a class="brand" href="#home">IRON<span>PULSE</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">HOME</a>
+      <a href="#about">ABOUT</a>
+      <a href="#services">SERVICES</a>
+      <a href="#classes">CLASSES</a>
+      <a href="#trainers">TRAINERS</a>
+      <a href="#pricing">PRICING</a>
+      <a href="#blog">BLOG</a>
+      <a href="#contact">CONTACT US</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-cut"></div>
+    <div class="container hero-content">
+      <span class="eyebrow">STRONGER EVERY DAY</span>
+      <h1>BUILD YOUR PERFECT BODY<br>AND HEALTHY GROWTH</h1>
+      <p>Push beyond your limits with expert coaching, structured workouts and a community that keeps you moving forward.</p>
+      <a href="#contact" class="red-btn">JOIN OUR CLUB <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+    <div class="hero-pagination"><span>01</span><i></i><span>02</span></div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <span class="vertical-word">NO PAIN NO GAIN</span>
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=950&auto=format&fit=crop&q=85" alt="Fitness training area">
+      </div>
+      <div class="about-text">
+        <span class="section-kicker">ABOUT IRONPULSE</span>
+        <h2>Giving Good Health To<br>Good People</h2>
+        <p>We believe fitness should make you stronger inside and outside the gym. Our training programs help you improve strength, build confidence and develop healthy habits.</p>
+        <ul class="tick-list">
+          <li>Professional coaching for every fitness level</li>
+          <li>Strength, conditioning and mobility programs</li>
+          <li>Supportive and motivating training environment</li>
+          <li>Flexible classes that fit your schedule</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container benefits-grid">
+      <article class="benefit"><span class="round-icon"><i class="fa-solid fa-dumbbell"></i></span><div><h3>Dedicated Services</h3><p>Personalized fitness plans focused on your goals, abilities and progress.</p></div></article>
+      <article class="benefit"><span class="round-icon"><i class="fa-solid fa-medal"></i></span><div><h3>Qualified Instructors</h3><p>Train with knowledgeable coaches who guide your technique and workouts.</p></div></article>
+      <article class="benefit"><span class="round-icon"><i class="fa-solid fa-heart-pulse"></i></span><div><h3>Organic Proteins</h3><p>Practical nutrition guidance to support recovery and balanced eating habits.</p></div></article>
+      <article class="benefit"><span class="round-icon"><i class="fa-solid fa-trophy"></i></span><div><h3>Award Progress</h3><p>Set meaningful milestones and celebrate improvements along the way.</p></div></article>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="video-banner">
+    <div class="container video-grid">
+      <div class="video-copy">
+        <span class="section-kicker">OUR MISSION</span>
+        <h2>Get In. Get Fit. Get<br>On With Life.</h2>
+        <p>Great workouts should challenge you and help you build a better lifestyle. Join a fitness community where every session has a purpose.</p>
+        <button class="video-link" id="videoButton"><span><i class="fa-solid fa-play"></i></span> WATCH VIDEO</button>
+      </div>
+      <div class="video-photo">
+        <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1000&auto=format&fit=crop&q=85" alt="Personal training session">
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container service-intro">
+      <div class="service-photo">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=850&auto=format&fit=crop&q=85" alt="Athlete training with weights">
+      </div>
+      <div class="service-description">
+        <span class="section-kicker">OUR SERVICES</span>
+        <h2>Solutions For Moving<br>Better And Feeling A<br>Healthier</h2>
+        <p>Our training programs combine strength, movement and consistent coaching. Whether you're just starting or building on years of experience, there's a place for you here.</p>
+        <p>Choose a program that matches your goals and work with our team to develop better training habits.</p>
+        <a href="#contact" class="red-btn">GET STARTED <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+    </div>
+    <div class="container service-tabs">
+      <a href="#classes"><i class="fa-solid fa-dumbbell"></i> Weight Lifting</a>
+      <a href="#classes"><i class="fa-solid fa-person-running"></i> Aerobics</a>
+      <a href="#classes"><i class="fa-solid fa-heart-pulse"></i> Cardio</a>
+      <a href="#classes"><i class="fa-solid fa-hand-fist"></i> Boxing Punch</a>
+      <a href="#classes"><i class="fa-solid fa-spa"></i> Power Yoga</a>
+      <a href="#classes"><i class="fa-solid fa-person-walking"></i> Zumba Class</a>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="container stats-grid">
+      <div><i class="fa-solid fa-dumbbell"></i><strong>80</strong><span>Expert Trainers</span></div>
+      <div><i class="fa-solid fa-people-group"></i><strong>80</strong><span>Fitness Classes</span></div>
+      <div><i class="fa-solid fa-calendar-check"></i><strong>79</strong><span>Training Programs</span></div>
+      <div><i class="fa-solid fa-trophy"></i><strong>70</strong><span>Fitness Awards</span></div>
+    </div>
+  </section>
+
+  <!-- SCHEDULE -->
+  <section class="schedule section" id="classes">
+    <div class="container">
+      <div class="section-title"><span class="section-kicker">OUR CLASSES</span><h2>Check Our Classes Schedule</h2></div>
+      <div class="schedule-scroll">
+        <table class="schedule-table">
+          <thead><tr><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Friday</th><th>Saturday</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Weight Lifting</strong><small>08:00 - 09:00</small><span>Coach Daniel</span></td><td><strong>Power Yoga</strong><small>08:30 - 09:30</small><span>Coach Olivia</span></td><td><strong>Cardio Blast</strong><small>07:30 - 08:30</small><span>Coach Ethan</span></td><td><strong>Weight Lifting</strong><small>08:00 - 09:00</small><span>Coach Daniel</span></td><td><strong>Boxing Punch</strong><small>09:00 - 10:00</small><span>Coach Marcus</span></td><td><strong>Zumba Class</strong><small>09:30 - 10:30</small><span>Coach Sophia</span></td></tr>
+            <tr><td><strong>Cardio Blast</strong><small>10:00 - 11:00</small><span>Coach Ethan</span></td><td><strong>Strength Training</strong><small>10:30 - 11:30</small><span>Coach Daniel</span></td><td><strong>Power Yoga</strong><small>10:00 - 11:00</small><span>Coach Olivia</span></td><td><strong>Boxing Punch</strong><small>10:30 - 11:30</small><span>Coach Marcus</span></td><td><strong>Functional Fitness</strong><small>11:00 - 12:00</small><span>Coach Ethan</span></td><td><strong>Weight Lifting</strong><small>11:00 - 12:00</small><span>Coach Daniel</span></td></tr>
+            <tr><td><strong>Power Yoga</strong><small>13:00 - 14:00</small><span>Coach Olivia</span></td><td><strong>Boxing Punch</strong><small>13:30 - 14:30</small><span>Coach Marcus</span></td><td><strong>Weight Lifting</strong><small>13:00 - 14:00</small><span>Coach Daniel</span></td><td><strong>Zumba Class</strong><small>13:30 - 14:30</small><span>Coach Sophia</span></td><td><strong>Power Yoga</strong><small>14:00 - 15:00</small><span>Coach Olivia</span></td><td><strong>Cardio Blast</strong><small>14:00 - 15:00</small><span>Coach Ethan</span></td></tr>
+            <tr><td><strong>Boxing Punch</strong><small>17:00 - 18:00</small><span>Coach Marcus</span></td><td><strong>Cardio Blast</strong><small>17:30 - 18:30</small><span>Coach Ethan</span></td><td><strong>Zumba Class</strong><small>17:00 - 18:00</small><span>Coach Sophia</span></td><td><strong>Strength Training</strong><small>17:30 - 18:30</small><span>Coach Daniel</span></td><td><strong>Weight Lifting</strong><small>18:00 - 19:00</small><span>Coach Daniel</span></td><td><strong>Power Yoga</strong><small>17:00 - 18:00</small><span>Coach Olivia</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-title light"><span class="section-kicker">TESTIMONIALS</span><h2>What Our Clients Says</h2></div>
+      <div class="testimonials-grid">
+        <article class="testimonial"><i class="fa-solid fa-quote-left"></i><p>“The coaching style is motivating and the classes are well organized. I feel stronger and more confident with my workouts.”</p><div class="review-author"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop" alt="Member"><div><strong>Emma Wilson</strong><span>Fitness Member</span><small>★★★★★</small></div></div></article>
+        <article class="testimonial"><i class="fa-solid fa-quote-left"></i><p>“I enjoy the variety of training sessions. The instructors explain each exercise clearly and help me stay consistent.”</p><div class="review-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop" alt="Member"><div><strong>James Cooper</strong><span>Fitness Member</span><small>★★★★★</small></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing section" id="pricing">
+    <div class="container">
+      <div class="section-title"><span class="section-kicker">PRICING PLANS</span><h2>Choose Your Pricing Plan</h2></div>
+      <div class="pricing-grid">
+        <article class="price-card">
+          <div class="price-photo" style="background-image:url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&auto=format&fit=crop')"><div><span>STARTER PLAN</span><strong>$29<small>/month</small></strong></div></div>
+          <ul><li>Gym Floor Access</li><li>Basic Workout Plan</li><li>Locker Facilities</li><li>Group Fitness Classes</li><li>Fitness Assessment</li></ul>
+          <a href="#contact" class="outline-red">JOIN NOW</a>
+        </article>
+        <article class="price-card">
+          <div class="price-photo" style="background-image:url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&auto=format&fit=crop')"><div><span>STANDARD PLAN</span><strong>$39<small>/month</small></strong></div></div>
+          <ul><li>Everything in Starter</li><li>Unlimited Group Classes</li><li>Personal Fitness Review</li><li>Workout Progress Tracking</li><li>Nutrition Guidance</li></ul>
+          <a href="#contact" class="outline-red">JOIN NOW</a>
+        </article>
+        <article class="price-card">
+          <div class="price-photo" style="background-image:url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=600&auto=format&fit=crop')"><div><span>PREMIUM PLAN</span><strong>$49<small>/month</small></strong></div></div>
+          <ul><li>Everything in Standard</li><li>Personal Training Sessions</li><li>Custom Workout Program</li><li>Progress Consultations</li><li>Priority Class Booking</li></ul>
+          <a href="#contact" class="outline-red">JOIN NOW</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PERSONAL TRAINING -->
+  <section class="training-banner">
+    <div class="container training-content">
+      <h2>Are You Looking For a<br>Personal Trainer For<br>Training?</h2>
+      <a href="#contact" class="red-btn">GET APPOINTMENT <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </section>
+
+  <!-- TRAINERS -->
+  <section class="trainers section" id="trainers">
+    <div class="container">
+      <div class="section-title"><span class="section-kicker">OUR TRAINERS</span><h2>Our Professional Trainer</h2></div>
+      <div class="trainers-grid">
+        <article class="trainer"><img src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?w=600&auto=format&fit=crop&q=85" alt="Fitness trainer"><div class="trainer-info"><h3>Daniel Carter</h3><span>Strength Coach</span><p>Focused on progressive strength training and safe lifting technique.</p><div><a href="#contact" aria-label="Contact trainer"><i class="fa-solid fa-envelope"></i></a></div></div></article>
+        <article class="trainer"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600&auto=format&fit=crop&q=85" alt="Fitness trainer"><div class="trainer-info"><h3>Olivia Bennett</h3><span>Yoga Instructor</span><p>Helping members improve flexibility, balance and mobility.</p><div><a href="#contact" aria-label="Contact trainer"><i class="fa-solid fa-envelope"></i></a></div></div></article>
+        <article class="trainer"><img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=600&auto=format&fit=crop&q=85" alt="Fitness trainer"><div class="trainer-info"><h3>Sophia Martin</h3><span>Fitness Coach</span><p>Creating practical workouts for better conditioning and endurance.</p><div><a href="#contact" aria-label="Contact trainer"><i class="fa-solid fa-envelope"></i></a></div></div></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPOINTMENT -->
+  <section class="appointment section" id="contact">
+    <div class="container appointment-grid">
+      <div class="appointment-copy">
+        <span class="section-kicker">JOIN IRONPULSE</span>
+        <h2>Every Day Is a Chance To<br>Become Better.</h2>
+        <p>Start with a simple conversation about your goals. Our team can help you choose a training plan and find the right class schedule.</p>
+        <div class="progress-item"><span>Strength Training <b>85%</b></span><div class="progress-track"><i style="width:85%"></i></div></div>
+        <div class="progress-item"><span>Fitness Coaching <b>95%</b></span><div class="progress-track"><i style="width:95%"></i></div></div>
+      </div>
+      <form class="appointment-form" id="appointmentForm">
+        <h2>Get Appointment</h2>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+        <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+        <button type="submit">SUBMIT NOW <i class="fa-solid fa-arrow-right"></i></button>
+        <p id="formMessage" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section class="blog section" id="blog">
+    <div class="container">
+      <div class="section-title"><span class="section-kicker">OUR BLOG</span><h2>Latest Blog Posts</h2></div>
+      <div class="blog-grid">
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=700&auto=format&fit=crop&q=85" alt="Strength training"><span>FITNESS / TRAINING</span><h3>Going to the gym for the first time doesn't need to be daunting</h3><a href="#contact">READ MORE <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=700&auto=format&fit=crop&q=85" alt="Gym workout"><span>WORKOUT / FITNESS</span><h3>The 10 best exercises to do in your home</h3><a href="#contact">READ MORE <i class="fa-solid fa-arrow-right"></i></a></article>
+        <article class="blog-card"><img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=700&auto=format&fit=crop&q=85" alt="Fitness coaching"><span>HEALTH / LIFESTYLE</span><h3>The interesting mental health benefits of exercise</h3><a href="#contact">READ MORE <i class="fa-solid fa-arrow-right"></i></a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <div class="container newsletter-wrap">
+    <div class="newsletter">
+      <div><i class="fa-regular fa-paper-plane"></i><h3>Get Latest Update<br>Of Fitness Tips</h3></div>
+      <form id="newsletterForm"><input type="email" placeholder="Email Address" aria-label="Email address" required><button type="submit" aria-label="Subscribe"><i class="fa-solid fa-arrow-right"></i></button></form>
+      <p id="newsletterMessage" aria-live="polite"></p>
+    </div>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand"><a href="#home" class="brand">IRON<span>PULSE</span></a><p>Build strength, improve movement and make fitness part of your everyday life.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a></div></div>
+    <div class="footer-column"><h3>Quick Links</h3><a href="#about">About Us</a><a href="#services">Our Services</a><a href="#pricing">Pricing Plans</a></div>
+    <div class="footer-column"><h3>Useful Links</h3><a href="#classes">Class Schedule</a><a href="#trainers">Our Trainers</a><a href="#blog">Latest News</a></div>
+    <div class="footer-column"><h3>Contact Us</h3><p><i class="fa-regular fa-envelope"></i> hello@ironpulse.example</p><p><i class="fa-regular fa-clock"></i> Mon - Sat: 6 AM - 10 PM</p></div>
+  </div>
+  <div class="container footer-bottom"><span>© 2026 IronPulse Fitness. All rights reserved.</span><a href="#home">BACK TO TOP ↑</a></div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.querySelector('i').className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('videoButton').addEventListener('click', () => {
+    alert('Demo video placeholder. Add your gym introduction video here.');
+  });
+  document.getElementById('appointmentForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('formMessage').textContent = 'Demo form only. Connect your backend or booking service to receive requests.';
+  });
+  document.getElementById('newsletterForm').addEventListener('submit', e => {
+    e.preventDefault();
+    document.getElementById('newsletterMessage').textContent = 'Demo signup. Connect an email service to save subscribers.';
+  });
+</script>
+</body>
+</html>

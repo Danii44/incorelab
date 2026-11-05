@@ -1,0 +1,1165 @@
+
+<!DOCTYPE html>
+<html lang="en-US">
+<head><script>
+(function(){
+  function notice(message){
+    var box=document.getElementById('incorelab-demo-notice');
+    if(!box){box=document.createElement('p');box.id='incorelab-demo-notice';box.setAttribute('role','status');box.style.cssText='position:fixed;bottom:20px;left:20px;right:20px;z-index:2147483647;padding:16px;background:#111;color:#fff;border-radius:8px;font:16px/1.5 Arial,sans-serif';document.body.appendChild(box);}
+    box.textContent=message;
+  }
+  function stopForm(event){event.preventDefault();event.stopImmediatePropagation();notice('This is a design demo. No request, booking, or payment has been sent.');}
+  document.addEventListener('submit',stopForm,true);
+  document.addEventListener('click',function(event){
+    var control=event.target.closest('button,input[type="submit"]');
+    if(control&&control.form&&control.type==='submit'){stopForm(event);return;}
+    var link=event.target.closest('a');if(!link)return;
+    var href=link.getAttribute('href')||'';
+    if(!href||href[0]==='#'||href==='index.html'||href.startsWith('index.html#'))return;
+    event.preventDefault();event.stopImmediatePropagation();notice('This link is part of the design demo.');
+  },true);
+})();
+</script><meta http-equiv="Content-Security-Policy" content="connect-src 'none'; form-action 'none'; object-src 'none'; frame-src 'none'"><meta name="robots" content="noindex,nofollow">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hotelio | Luxury Rooms, Suites & Exceptional Stays</title>
+    <meta name="description" content="Experience refined comfort at Hotelio. Explore luxury rooms, elegant suites, dining, wellness facilities and memorable stays.">
+
+    <!-- Original Template Stylesheets -->
+    <link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon.png">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/animation-text.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/meanmenu.min.css">
+    <link rel="stylesheet" href="css/odometer-theme.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/coustom-animation.css">
+    <link rel="stylesheet" href="css/scroll-up.css">
+</head>
+
+<body>
+
+<!-- PRELOADER -->
+<div class="preloader">
+    <div class="loader"></div>
+</div>
+
+<!-- HEADER -->
+<div class="hotelio-header-area" id="sticky-header">
+    <div class="container-fluid">
+        <div class="row header-wrap align-items-center">
+
+            <div class="col-lg-6">
+                <div class="header-menu">
+                    <div class="header-sidbar-button navSidebar-button">
+                        <a href="#" aria-label="Open sidebar">
+                            <svg width="30" height="18" viewBox="0 0 30 18" fill="none">
+                                <line y1="1" x2="30" y2="1" stroke="#C09763" stroke-width="2"/>
+                                <line y1="9" x2="30" y2="9" stroke="#C09763" stroke-width="2"/>
+                                <line y1="17" x2="20" y2="17" stroke="#C09763" stroke-width="2"/>
+                            </svg>
+                        </a>
+                    </div>
+
+                    <ul class="nav_scroll">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#rooms">Rooms & Suites</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-2">
+                <div class="header-logo">
+                    <a class="active_logo" href="index.html">
+                        <img src="images/logo.png" alt="Hotelio">
+                    </a>
+                    <a class="logo_two" href="index.html">
+                        <img src="images/footer-logo.png" alt="Hotelio">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="header-right-wrapper">
+                    <div class="header-call-info">
+                        <p>YOUR NEXT STAY STARTS HERE</p>
+                    </div>
+                    <div class="header-sidebar">
+                        <div class="header-btn">
+                            <a href="#booking">
+                                BOOK YOUR STAY
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END HEADER -->
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu-area sticky d-sm-block d-md-block d-lg-none">
+    <div class="mobile-menu">
+        <nav class="header-menu">
+            <div class="mobile-logo">
+                <a class="logo_img" href="index.html" title="Hotelio">
+                    <img src="images/footer-logo.png" alt="Hotelio">
+                </a>
+            </div>
+            <ul class="nav_scroll">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#rooms">Rooms & Suites</a></li>
+                <li><a href="#facilities">Facilities</a></li>
+                <li><a href="#experiences">Experiences</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- END MOBILE MENU -->
+
+<!-- SIDEBAR -->
+<div class="xs-sidebar-group info-group">
+    <div class="xs-overlay xs-bg-black"></div>
+    <div class="xs-sidebar-widget">
+        <div class="sidebar-widget-container">
+            <div class="widget-heading">
+                <a href="#" class="close-side-widget" aria-label="Close sidebar">
+                    <i class="far fa-times-circle"></i>
+                </a>
+            </div>
+
+            <div class="sidebar-textwidget">
+                <div class="sidebar-info-contents">
+                    <div class="content-inner">
+
+                        <div class="nav-logo">
+                            <a href="index.html">
+                                <img src="images/footer-logo.png" alt="Hotelio">
+                            </a>
+                        </div>
+
+                        <div class="content-box">
+                            <h2>Welcome to Hotelio</h2>
+                            <p class="text">
+                                A place where timeless elegance meets thoughtful
+                                hospitality. Discover inviting spaces, peaceful
+                                surroundings and experiences designed around
+                                your comfort.
+                            </p>
+                            <a href="#booking" class="theme-btn btn-style-two">
+                                <span>Plan Your Stay</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+
+                        <div class="contact-info">
+                            <h2>Explore Hotelio</h2>
+                            <ul class="list-style-one">
+                                <li>Luxury Rooms & Suites</li>
+                                <li>Fine Dining Experiences</li>
+                                <li>Wellness & Relaxation</li>
+                                <li>Personalized Guest Services</li>
+                            </ul>
+                        </div>
+
+                        <ul class="social-box">
+                            <li class="facebook">
+                                <a href="#" class="fab fa-facebook-f" aria-label="Facebook"></a>
+                            </li>
+                            <li class="instagram">
+                                <a href="#" class="fab fa-instagram" aria-label="Instagram"></a>
+                            </li>
+                            <li class="youtube">
+                                <a href="#" class="fab fa-youtube" aria-label="YouTube"></a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END SIDEBAR -->
+
+<main>
+
+<!-- HERO SECTION -->
+<section class="hero-section-one" id="home">
+    <div class="hero-section-bg" style="background-image:url('images/banner-bg-1.jpg');">
+        <div class="auto-container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="hero_content">
+
+                        <h2 class="text-anime-3">A WORLD OF</h2>
+                        <h2 class="text-anime-3">TIMELESS</h2>
+                        <h2 class="text-anime-3"><span>ELEGANCE</span></h2>
+
+                        <div class="hero-button">
+                            <div class="hero-btn wow fadeInUp" data-wow-delay="0.4s">
+                                <a href="#booking">
+                                    DISCOVER YOUR STAY
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- END HERO -->
+
+<!-- BOOKING SECTION -->
+<div class="booking-section-one wow fadeInUp" data-wow-delay="0.4s" id="booking">
+    <div class="auto-container">
+
+        <form action="#" method="GET" id="booking-form">
+            <div class="row add-bg align-items-center">
+                <div class="booking-box">
+
+                    <div class="booking-input-box">
+                        <input type="date" id="checkin" class="floatLabel" name="checkin" required>
+                        <label for="checkin" class="label-date">
+                            <i class="bi bi-calendar-check"></i> Check In
+                        </label>
+                    </div>
+
+                    <div class="booking-input-box">
+                        <input type="date" id="checkout" class="floatLabel" name="checkout" required>
+                        <label for="checkout" class="label-date">
+                            <i class="bi bi-calendar-check"></i> Check Out
+                        </label>
+                    </div>
+
+                    <div class="booking-input-box">
+                        <select name="adults" aria-label="Number of adults" required>
+                            <option value="1">1 Adult</option>
+                            <option value="2" selected>2 Adults</option>
+                            <option value="3">3 Adults</option>
+                            <option value="4">4 Adults</option>
+                            <option value="5">5 Adults</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-input-box">
+                        <select name="children" aria-label="Number of children">
+                            <option value="0">0 Children</option>
+                            <option value="1">1 Child</option>
+                            <option value="2">2 Children</option>
+                            <option value="3">3 Children</option>
+                            <option value="4">4 Children</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-input-box">
+                        <select name="rooms" aria-label="Number of rooms" required>
+                            <option value="1">1 Room</option>
+                            <option value="2">2 Rooms</option>
+                            <option value="3">3 Rooms</option>
+                            <option value="4">4 Rooms</option>
+                        </select>
+                    </div>
+
+                    <div class="booking-button">
+                        <button type="submit">
+                            CHECK AVAILABILITY
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </form>
+
+        <div id="status" role="status" aria-live="polite"></div>
+
+    </div>
+</div>
+<!-- END BOOKING SECTION -->
+
+<!-- ABOUT SECTION -->
+<div class="about-section-one" id="about">
+    <div class="auto-container">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="sec-title">
+                    <div class="section-sub-title">
+                        <span class="sub-title text-anime-3">THE HOTELIO EXPERIENCE</span>
+                    </div>
+                    <div class="section-border"></div>
+                    <div class="section-title">
+                        <h1 class="text-effect">More than a <span>place to stay</span>,</h1>
+                        <h1 class="title text-effect">a destination to <span>unwind</span></h1>
+                        <h1 class="title text-effect">and <span class="title-gold">rediscover comfort</span></h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="about-thumb">
+                    <figure class="reveal image-anime">
+                        <img src="images/about-thumb-1.jpg" alt="Elegant hotel interior">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6">
+                <div class="about-content">
+
+                    <div class="about-title">
+                        <h2 class="text-anime-1">WHERE EVERY DETAIL MATTERS</h2>
+                    </div>
+
+                    <div class="about-desc wow fadeInUp" data-wow-delay="0.4s">
+                        <p>
+                            At Hotelio, we believe exceptional hospitality
+                            is found in the smallest details. From beautifully
+                            designed rooms to welcoming shared spaces, every
+                            part of your experience is created with comfort
+                            and care in mind.
+                        </p>
+                        <p>
+                            Whether you're visiting for a weekend escape,
+                            a family holiday or a business trip, Hotelio
+                            offers a relaxing setting to make the most
+                            of your time away.
+                        </p>
+                    </div>
+
+                    <div class="about-list wow fadeInUp" data-wow-delay="0.5s">
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Thoughtfully Designed Accommodation
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check"></i>
+                                Warm, Attentive Hospitality
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="about-btn wow fadeInUp" data-wow-delay="0.6s">
+                        <a href="#facilities">
+                            DISCOVER HOTELIO
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="about-counter-box wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="about-icon reveal">
+                            <img src="images/about-icon1.png" alt="Hospitality">
+                        </div>
+                        <div class="about-box-content">
+                            <h3>YOUR</h3>
+                            <p>Comfort Is<br>Our Priority</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- END ABOUT -->
+
+<!-- ROOMS AND SUITES -->
+<div class="our-room-suites-section-one" id="rooms">
+    <div class="auto-container">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="sec-title">
+                    <div class="section-sub-title text-right">
+                        <span class="sub-title text-anime-1">ROOMS & SUITES</span>
+                    </div>
+                    <div class="section-border border-color"></div>
+                    <div class="section-title">
+                        <h1 class="text-effect text-white">
+                            Your personal space for <span>relaxation</span>
+                        </h1>
+                        <h1 class="title text-effect text-white">
+                            explore our <span class="title-gold">collection</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="swiper room-suites-active">
+                <div class="swiper-wrapper">
+
+                    <!-- ROOM 1 -->
+                    <div class="swiper-slide">
+                        <div class="single-room-box">
+                            <div class="room-thumb data-item-hover">
+                                <figure class="data-img-hover">
+                                    <img src="images/room-thumb1.jpg" alt="Deluxe room">
+                                </figure>
+                                <a href="#booking" class="price-tag">CHECK RATES</a>
+                            </div>
+
+                            <div class="room-content">
+                                <h2><a href="#booking">DELUXE ROOM</a></h2>
+                                <div class="room-info">
+                                    <p><i class="fa-solid fa-bed"></i> Elegant Bedding</p>
+                                    <p><i class="fa-solid fa-user-group"></i> Comfortable Stay</p>
+                                    <p><i class="fa-solid fa-wifi"></i> Modern Amenities</p>
+                                </div>
+                                <a href="#booking" class="explore-btn">
+                                    EXPLORE ROOM
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROOM 2 -->
+                    <div class="swiper-slide">
+                        <div class="single-room-box">
+                            <div class="room-thumb data-item-hover">
+                                <figure class="data-img-hover">
+                                    <img src="images/room-thumb2.jpg" alt="Signature suite">
+                                </figure>
+                                <a href="#booking" class="price-tag">CHECK RATES</a>
+                            </div>
+
+                            <div class="room-content">
+                                <h2><a href="#booking">SIGNATURE SUITE</a></h2>
+                                <div class="room-info">
+                                    <p><i class="fa-solid fa-couch"></i> Relaxing Living Area</p>
+                                    <p><i class="fa-solid fa-bed"></i> Premium Comfort</p>
+                                    <p><i class="fa-solid fa-mug-hot"></i> In-Room Amenities</p>
+                                </div>
+                                <a href="#booking" class="explore-btn">
+                                    EXPLORE SUITE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROOM 3 -->
+                    <div class="swiper-slide">
+                        <div class="single-room-box">
+                            <div class="room-thumb data-item-hover">
+                                <figure class="data-img-hover">
+                                    <img src="images/room-thumb3.jpg" alt="Executive room">
+                                </figure>
+                                <a href="#booking" class="price-tag">CHECK RATES</a>
+                            </div>
+
+                            <div class="room-content">
+                                <h2><a href="#booking">EXECUTIVE ROOM</a></h2>
+                                <div class="room-info">
+                                    <p><i class="fa-solid fa-briefcase"></i> Work-Friendly Space</p>
+                                    <p><i class="fa-solid fa-bed"></i> Refined Interiors</p>
+                                    <p><i class="fa-solid fa-bath"></i> Private Bathroom</p>
+                                </div>
+                                <a href="#booking" class="explore-btn">
+                                    EXPLORE ROOM
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ROOM 4 -->
+                    <div class="swiper-slide">
+                        <div class="single-room-box">
+                            <div class="room-thumb data-item-hover">
+                                <figure class="data-img-hover">
+                                    <img src="images/room-thumb1.jpg" alt="Premium suite">
+                                </figure>
+                                <a href="#booking" class="price-tag">CHECK RATES</a>
+                            </div>
+
+                            <div class="room-content">
+                                <h2><a href="#booking">PREMIUM SUITE</a></h2>
+                                <div class="room-info">
+                                    <p><i class="fa-solid fa-star"></i> Elegant Design</p>
+                                    <p><i class="fa-solid fa-couch"></i> Spacious Comfort</p>
+                                    <p><i class="fa-solid fa-bed"></i> Restful Nights</p>
+                                </div>
+                                <a href="#booking" class="explore-btn">
+                                    EXPLORE SUITE
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="room-suites-arrow-box">
+                <button class="slider-prev" aria-label="Previous room">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button class="slider-next" aria-label="Next room">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END ROOMS -->
+
+<!-- VIDEO SECTION -->
+<div class="video-section parallaxie"
+     style="background-image:url('images/video-bg-1.jpg');">
+
+    <div class="auto-container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="video__area">
+                    <div class="video__content">
+                        <a href="https://www.youtube.com/watch?v=wyqfYJX23lg"
+                           class="popup-video"
+                           aria-label="Play hotel video">
+                            <span class="play-now">
+                                <i class="fa-solid fa-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- END VIDEO -->
+
+<!-- FACILITIES -->
+<div class="our-facilities-section-one" id="facilities">
+    <div class="auto-container">
+        <div class="row align-items-center">
+
+            <div class="col-xl-6 col-lg-6">
+                <div class="facilities-thumb">
+                    <figure class="reveal image-anime">
+                        <img src="images/facilities-thumb-1.jpg" alt="Hotel facilities">
+                    </figure>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6">
+                <div class="sec-title facilities-wrap">
+                    <div class="section-title">
+                        <h1 class="text-effect">Every Comfort, <span>Considered</span></h1>
+                        <h1 class="title text-effect">
+                            Explore Our <span class="title-gold">Facilities</span>
+                        </h1>
+                    </div>
+                    <div class="section-border"></div>
+                </div>
+
+                <div class="row facilities-wrap">
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="facilities-box wow fadeInUp" data-wow-delay="0.3s">
+                            <div class="facilities-icon">
+                                <img src="images/facilities-icon1.png" alt="">
+                            </div>
+                            <div class="facilities-content">
+                                <h2>TRANSPORT SERVICES</h2>
+                                <p>Convenient travel arrangements for a comfortable arrival and departure.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="facilities-box wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="facilities-icon">
+                                <img src="images/facilities-icon2.png" alt="">
+                            </div>
+                            <div class="facilities-content">
+                                <h2>SWIMMING POOL</h2>
+                                <p>Take a refreshing dip or spend a peaceful afternoon by the water.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="facilities-box mr wow fadeInUp" data-wow-delay="0.5s">
+                            <div class="facilities-icon">
+                                <img src="images/facilities-icon3.png" alt="">
+                            </div>
+                            <div class="facilities-content">
+                                <h2>WI-FI & CONNECTIVITY</h2>
+                                <p>Stay connected with convenient internet access throughout your visit.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                        <div class="facilities-box mr wow fadeInUp" data-wow-delay="0.6s">
+                            <div class="facilities-icon">
+                                <img src="images/facilities-icon4.png" alt="">
+                            </div>
+                            <div class="facilities-content">
+                                <h2>GUEST SERVICES</h2>
+                                <p>Thoughtful assistance to make your stay comfortable and enjoyable.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="facilities-btn defult-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="#contact">
+                            ENQUIRE ABOUT FACILITIES
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END FACILITIES -->
+
+<!-- EXPERIENCES -->
+<div class="ativities-luxury-section-one" id="experiences">
+    <div class="auto-container">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="sec-title">
+                    <div class="section-sub-title">
+                        <span class="sub-title text-anime-3">HOTEL EXPERIENCES</span>
+                    </div>
+                    <div class="section-border"></div>
+                    <div class="section-title">
+                        <h1 class="text-effect">Make Every Moment <span>Memorable</span></h1>
+                        <h1 class="title text-effect">discover a world of</h1>
+                        <h1 class="title text-effect">
+                            <span class="title-gold">exceptional experiences</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single-ativities-box">
+                    <div class="ativities-thumb data-item-hover">
+                        <figure class="data-img-hover">
+                            <img src="images/ativities-thumb1.jpg" alt="Fitness and wellness">
+                        </figure>
+                        <div class="ativities-title">
+                            <h2><a href="#contact">FITNESS & WELLNESS</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single-ativities-box">
+                    <div class="ativities-thumb data-item-hover">
+                        <figure class="data-img-hover">
+                            <img src="images/ativities-thumb2.jpg" alt="Relaxation">
+                        </figure>
+                        <div class="ativities-title">
+                            <h2><a href="#contact">RELAX & RECHARGE</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-4 col-lg-4 col-md-6">
+                <div class="single-ativities-box">
+                    <div class="ativities-thumb data-item-hover">
+                        <figure class="data-img-hover">
+                            <img src="images/ativities-thumb3.jpg" alt="Hotel experiences">
+                        </figure>
+                        <div class="ativities-title">
+                            <h2><a href="#contact">LEISURE EXPERIENCES</a></h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END EXPERIENCES -->
+
+<!-- GUEST EXPERIENCE -->
+<div class="testimonial-section-one">
+    <div class="auto-container">
+
+        <div class="row">
+
+            <div class="col-xxl-4 col-xl-3 col-lg-3 col-md-5">
+                <div class="sec-title">
+                    <div class="section-sub-title">
+                        <span class="sub-title text-anime-3">OUR PHILOSOPHY</span>
+                    </div>
+                    <div class="section-title">
+                        <h1 class="title text-anime-1">HOSPITALITY</h1>
+                        <h1 class="title text-anime-1">WITH A</h1>
+                        <h1 class="title text-anime-1">PERSONAL TOUCH</h1>
+                    </div>
+                    <div class="section-border"></div>
+                    <div class="testi-counter-box">
+                        <h2>01</h2>
+                        <span class="client">Our Priority</span>
+                        <p>Your Comfort</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xxl-8 col-xl-9 col-lg-9 col-md-7">
+                <div class="row">
+                    <div class="swiper testimonial-active">
+                        <div class="swiper-wrapper">
+
+                            <div class="swiper-slide">
+                                <div class="single-testi-box">
+                                    <div class="testi-thumb">
+                                        <figure class="reveal">
+                                            <img src="images/testi-thumb1.png" alt="Guest experience">
+                                        </figure>
+                                    </div>
+                                    <div class="testi-content-wrap">
+                                        <div class="testi-quote">
+                                            <img src="images/quote-icon.png" alt="">
+                                        </div>
+                                        <div class="testi-desc">
+                                            <p>
+                                                From the moment you arrive, our focus
+                                                is on creating a welcoming atmosphere
+                                                where you can relax and feel at home.
+                                            </p>
+                                        </div>
+                                        <div class="testi-autor-box">
+                                            <div class="testi-autor-content">
+                                                <h3 class="autor-title">A WARM WELCOME</h3>
+                                                <p class="autor-desi">Thoughtful Hospitality</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="single-testi-box">
+                                    <div class="testi-thumb">
+                                        <figure class="reveal">
+                                            <img src="images/testi-thumb2.png" alt="Comfortable stay">
+                                        </figure>
+                                    </div>
+                                    <div class="testi-content-wrap">
+                                        <div class="testi-quote">
+                                            <img src="images/quote-icon.png" alt="">
+                                        </div>
+                                        <div class="testi-desc">
+                                            <p>
+                                                We believe the best stays combine
+                                                beautiful surroundings, comfortable
+                                                spaces and the freedom to enjoy
+                                                every moment at your own pace.
+                                            </p>
+                                        </div>
+                                        <div class="testi-autor-box">
+                                            <div class="testi-autor-content">
+                                                <h3 class="autor-title">DESIGNED FOR COMFORT</h3>
+                                                <p class="autor-desi">The Hotelio Experience</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="swiper-slide">
+                                <div class="single-testi-box">
+                                    <div class="testi-thumb">
+                                        <figure class="reveal">
+                                            <img src="images/testi-thumb3.png" alt="Memorable hotel stay">
+                                        </figure>
+                                    </div>
+                                    <div class="testi-content-wrap">
+                                        <div class="testi-quote">
+                                            <img src="images/quote-icon.png" alt="">
+                                        </div>
+                                        <div class="testi-desc">
+                                            <p>
+                                                Every stay is an opportunity
+                                                to create new memories, whether
+                                                you're celebrating a special occasion
+                                                or simply taking time for yourself.
+                                            </p>
+                                        </div>
+                                        <div class="testi-autor-box">
+                                            <div class="testi-autor-content">
+                                                <h3 class="autor-title">MOMENTS THAT MATTER</h3>
+                                                <p class="autor-desi">Meaningful Experiences</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END GUEST EXPERIENCE -->
+
+<!-- NEWSLETTER -->
+<div class="subscribe-section-one">
+    <div class="auto-container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+                <div class="sec-title">
+                    <div class="section-title">
+                        <h1 class="text-effect text-white">
+                            STAY INSPIRED WITH HOTELIO
+                        </h1>
+                        <h1 class="text-effect text-white">
+                            NEWS & SPECIAL OFFERS
+                        </h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-5">
+                <div class="subscribe-form">
+                    <form id="newsletter-form">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Enter your email address"
+                            aria-label="Email address"
+                            required>
+                        <button type="submit">
+                            SUBSCRIBE
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </form>
+                    <p class="text-white" id="newsletter-status" role="status"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- END NEWSLETTER -->
+
+<!-- JOURNAL -->
+<div class="blog-section-one" id="journal">
+    <div class="auto-container">
+
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="sec-title">
+                    <div class="section-sub-title">
+                        <span class="sub-title text-anime-3">THE HOTELIO JOURNAL</span>
+                    </div>
+                    <div class="section-border"></div>
+                    <div class="section-title">
+                        <h1 class="text-effect">
+                            STORIES, INSPIRATION & <span>TRAVEL</span>
+                        </h1>
+                        <h1 class="title text-effect">
+                            DISCOVER OUR <span class="title-gold">JOURNAL</span>
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <article>
+                    <img src="images/ativities-thumb1.jpg"
+                         class="img-fluid w-100"
+                         alt="Relaxing getaway">
+                    <div class="pt-4">
+                        <h3>The Art of a Relaxing Getaway</h3>
+                        <p>
+                            Discover simple ways to slow down, recharge
+                            and make the most of your next hotel stay.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <article>
+                    <img src="images/ativities-thumb2.jpg"
+                         class="img-fluid w-100"
+                         alt="Luxury travel">
+                    <div class="pt-4">
+                        <h3>Little Details, Lasting Memories</h3>
+                        <p>
+                            Explore how thoughtful surroundings and
+                            meaningful experiences shape a memorable trip.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <article>
+                    <img src="images/ativities-thumb3.jpg"
+                         class="img-fluid w-100"
+                         alt="Weekend escape">
+                    <div class="pt-4">
+                        <h3>Planning Your Perfect Weekend Escape</h3>
+                        <p>
+                            From choosing the right room to finding
+                            time to unwind, make every moment count.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<!-- END JOURNAL -->
+
+<!-- CONTACT -->
+<section id="contact" class="py-5">
+    <div class="auto-container">
+        <div class="row align-items-center">
+
+            <div class="col-lg-8">
+                <div class="sec-title">
+                    <div class="section-sub-title">
+                        <span class="sub-title">YOUR NEXT ESCAPE</span>
+                    </div>
+                    <div class="section-title">
+                        <h1>READY FOR AN <span>UNFORGETTABLE</span> STAY?</h1>
+                    </div>
+                </div>
+                <p>
+                    Discover a welcoming atmosphere, beautifully designed
+                    accommodation and moments worth remembering.
+                </p>
+            </div>
+
+            <div class="col-lg-4 text-lg-end">
+                <div class="about-btn">
+                    <a href="#booking">
+                        PLAN YOUR STAY
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- END CONTACT -->
+
+</main>
+
+<!-- FOOTER -->
+<footer class="main-footer-one">
+    <div class="auto-container">
+
+        <div class="row">
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="footer-widget">
+                    <a href="index.html">
+                        <img src="images/footer-logo.png" alt="Hotelio">
+                    </a>
+                    <p class="mt-4">
+                        A destination for refined comfort, thoughtful
+                        hospitality and memorable experiences.
+                        Discover a different way to stay at Hotelio.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-6 mb-4">
+                <div class="footer-widget">
+                    <h1 class="footer-title">Explore</h1>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Hotelio</a></li>
+                        <li><a href="#rooms">Rooms & Suites</a></li>
+                        <li><a href="#facilities">Facilities</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-widget">
+                    <h1 class="footer-title">Discover</h1>
+                    <ul>
+                        <li><a href="#experiences">Experiences</a></li>
+                        <li><a href="#journal">Travel Journal</a></li>
+                        <li><a href="#booking">Plan Your Stay</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="footer-widget">
+                    <h1 class="footer-title">Connect</h1>
+                    <p>
+                        Follow Hotelio for travel inspiration,
+                        hotel updates and new experiences.
+                    </p>
+                    <div class="social-box">
+                        <a href="#" aria-label="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <p>© 2026 Hotelio. All rights reserved.</p>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <p>Comfort. Elegance. Hospitality.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</footer>
+<!-- END FOOTER -->
+
+<!-- SCROLL UP -->
+<div class="scroll-up">
+    <a href="#home" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+</div>
+
+<!-- ORIGINAL TEMPLATE JAVASCRIPT -->
+<script src="js/jquery.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/waypoints.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/parallaxie.js"></script>
+<script src="js/gsap.min.js"></script>
+<script src="js/ScrollToPlugin.min.js"></script>
+<script src="js/ScrollTrigger.min.js"></script>
+<script src="js/SplitText.min.js"></script>
+<script src="js/hover.js"></script>
+<script src="js/three.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/jquery.meanmenu.js"></script>
+<script src="js/jquery.scrollUp.js"></script>
+<script src="js/jquery.barfiller.js"></script>
+<script src="js/animation-text.js"></script>
+<script src="js/swiper-bundle.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/imagesloaded.pkgd.min.js"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="js/custom.js"></script>
+<script src="js/main.js"></script>
+
+<!-- BOOKING DATE VALIDATION -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const checkin = document.getElementById("checkin");
+    const checkout = document.getElementById("checkout");
+    const bookingForm = document.getElementById("booking-form");
+    const bookingStatus = document.getElementById("status");
+
+    function formatDate(date) {
+        const year = date.getFullYear();
+        const month = String(date.getMonth() + 1).padStart(2, "0");
+        const day = String(date.getDate()).padStart(2, "0");
+        return `${year}-${month}-${day}`;
+    }
+
+    const today = formatDate(new Date());
+    checkin.min = today;
+    checkout.min = today;
+
+    checkin.addEventListener("change", function () {
+        if (!checkin.value) return;
+
+        const parts = checkin.value.split("-").map(Number);
+        const nextDay = new Date(parts[0], parts[1] - 1, parts[2]);
+        nextDay.setDate(nextDay.getDate() + 1);
+
+        checkout.min = formatDate(nextDay);
+
+        if (checkout.value && checkout.value < checkout.min) {
+            checkout.value = "";
+        }
+    });
+
+    bookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!checkin.value || !checkout.value || checkout.value <= checkin.value) {
+            bookingStatus.textContent = "Please select a valid check-in and check-out date.";
+            return;
+        }
+
+        bookingStatus.textContent =
+            "Your dates are valid. Live availability checking is not connected yet.";
+    });
+
+    const newsletterForm = document.getElementById("newsletter-form");
+    const newsletterStatus = document.getElementById("newsletter-status");
+
+    newsletterForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        newsletterStatus.textContent =
+            "Newsletter signup is not connected yet.";
+    });
+});
+</script>
+
+</body>
+</html>
